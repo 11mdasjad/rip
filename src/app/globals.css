@@ -1,26 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+@theme {
+  --color-k: #0e0d12;
+  --color-k2: #17161d;
+  --color-k3: #1e1c26;
+  --color-violett: #7c6af2;
+  --color-violett-hell: #a89bfa;
+  --color-violett-tief: #6b54ee;
+  --color-violett-dunkel: #5a44d8;
+  --color-hell: #efece7;
+  --color-hell-karte: #e7e3d9;
+  --color-t: #17161b;
+
+  --font-sans: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --k: #0e0d12;
+  --k2: #17161d;
+  --k3: #1e1c26;
+  --linie: rgba(255, 255, 255, 0.09);
+  --linie-hover: rgba(255, 255, 255, 0.18);
+  --w: #f4f2f7;
+  --w2: rgba(244, 242, 247, 0.72);
+  --w3: rgba(244, 242, 247, 0.5);
+  --violett: #7c6af2;
+  --violett-hell: #a89bfa;
+  --violett-tief: #6b54ee;
+  --violett-dunkel: #5a44d8;
+  
+  --hell: #efece7;
+  --hell-karte: #e7e3d9;
+  --hell-violett: #d9d4ec;
+  --tief-violett: #494060;
+  --t: #17161b;
+  --t2: rgba(23, 22, 27, 0.68);
+  --linie-h: rgba(23, 22, 27, 0.14);
+  --radius: 20px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #0e0d12;
+  color: #f4f2f7;
+  font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0e0d12;
+  color: #f4f2f7;
+  font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #6b54ee;
+  selection-color: #ffffff;
+}
+
+::selection {
+  background: #6b54ee;
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0d12;
+}
+::-webkit-scrollbar-thumb {
+  background: #252430;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c6af2;
+}
+
+/* Subtle glow utility */
+.glow-violet {
+  box-shadow: 0 0 50px -10px rgba(124, 106, 242, 0.25);
+}
+
+.glow-violet-lg {
+  box-shadow: 0 0 100px -20px rgba(107, 84, 238, 0.35);
+}
+
+/* Interactive Before / After comparison slider (.vn) */
+.vn-container {
+  position: relative;
+  user-select: none;
+  touch-action: pan-y;
+  cursor: ew-resize;
+  overflow: hidden;
+}
+
+.vn-before {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.vn-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.vn-handle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(14, 13, 18, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 13px;
+  cursor: ew-resize;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.vn-handle:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: rgba(14, 13, 18, 0.95);
+  border-color: #a89bfa;
+}
+
+/* Marquee keyframes */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: ticker 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
