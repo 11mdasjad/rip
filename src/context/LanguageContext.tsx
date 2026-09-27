@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { Language } from "@/data/imagineContent";
 
 interface LanguageContextType {
@@ -10,16 +10,18 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType>({
-  lang: "de",
+  lang: "en",
   toggleLang: () => {},
   setLang: () => {},
 });
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [lang, setLangState] = useState<Language>("de");
+  // Only English language as requested by user
+  const [lang, setLangState] = useState<Language>("en");
 
   const toggleLang = () => {
-    setLangState((prev) => (prev === "de" ? "en" : "de"));
+    // Keep English strictly
+    setLangState("en");
   };
 
   const setLang = (newLang: Language) => {

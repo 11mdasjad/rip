@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState, useRef, useEffect, MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from "react";
+import Link from "next/link";
 import { Play, ArrowUpRight, Sparkles, SlidersHorizontal } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useData } from "@/context/DataContext";
 import { PROJECTS_DATA, ProjectCard } from "@/data/imagineContent";
 
 interface ProjectsProps {
@@ -12,6 +14,8 @@ interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo }) => {
   const { lang } = useLanguage();
+  const { projects: contextProjects } = useData();
+  const projectsList = contextProjects && contextProjects.length > 0 ? contextProjects : PROJECTS_DATA;
   const [activeFilter, setActiveFilter] = useState<"all" | "film" | "animation" | "ki">("all");
 
   // State for EGYM Before/After slider
@@ -20,16 +24,16 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const filteredProjects = PROJECTS_DATA.filter((p) => {
+  const filteredProjects = projectsList.filter((p) => {
     if (activeFilter === "all") return true;
     return p.filterCat === activeFilter;
   });
 
-  const featuredProject = PROJECTS_DATA[0]; // DTM Red Bull
+  const featuredProject = projectsList[0] || PROJECTS_DATA[0]; // DTM Red Bull
   const otherProjects = filteredProjects.filter((p) => p.id !== featuredProject.id);
 
   // EGYM Project reference
-  const egymProject = PROJECTS_DATA.find((p) => p.id === "projekt-egym")!;
+  const egymProject = projectsList.find((p) => p.id === "projekt-egym") || PROJECTS_DATA.find((p) => p.id === "projekt-egym")!;
 
   const handleDrag = (clientX: number) => {
     if (!containerRef.current) return;
@@ -348,6 +352,33 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo
               </div>
             </article>
           ))}
+      </div>
+
+      {/* Discover Visual Gallery CTA Banner */}
+      <div className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-[#17161d] via-[#1f1d2b] to-[#17161d] border border-white/[0.1] flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-2xl relative overflow-hidden group">
+        <div className="absolute top-0 right-1/4 w-80 h-32 bg-[#7c6af2]/15 blur-[60px] pointer-events-none rounded-full" />
+        <div className="relative z-10">
+          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[#7c6af2]/20 text-[#a89bfa] text-[10px] font-mono uppercase tracking-wider mb-2 border border-[#7c6af2]/30">
+            <Sparkles className="w-3 h-3 text-[#E6C665]" />
+            <span>Interactive Archive</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+            Explore the Complete Visual Gallery & Stills Archive
+          </h3>
+          <p className="text-xs sm:text-sm text-white/60 mt-1 max-w-xl font-light">
+            Browse our full repertoire of commercial films, photorealistic AI syntheses, 3D visual motion, and behind-the-lens production documentaries.
+          </p>
+        </div>
+
+        <div className="relative z-10 flex-shrink-0">
+          <Link
+            href="/gallery"
+            className="inline-flex items-center space-x-2 px-6 py-3.5 rounded-full bg-white text-[#0e0d12] hover:bg-[#a89bfa] hover:text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95"
+          >
+            <span>Open Visual Gallery</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -1,29 +1,63 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowUpRight, Phone, Mail, CheckCircle2, Send } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import { ArrowUpRight, Phone, Mail, CheckCircle2, Send, Loader2 } from "lucide-react";
+import { useData } from "@/context/DataContext";
 
 interface KontaktProps {
   prefilledTopic?: string;
 }
 
 export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
-  const { lang } = useLanguage();
+  const { addInquiry } = useData();
 
   const [formState, setFormState] = useState({
     name: "",
     email: "",
     phone: "",
-    topic: prefilledTopic || "Filmproduktion",
+    topic: prefilledTopic || "Film Production",
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!formState.name.trim() || !formState.email.trim() || !formState.message.trim()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Save inquiry to DataContext
+    try {
+      addInquiry({
+        name: formState.name.trim(),
+        email: formState.email.trim(),
+        phone: formState.phone.trim() || undefined,
+        discipline: formState.topic,
+        message: formState.message.trim(),
+      });
+    } catch (err) {
+      console.error("Error submitting inquiry", err);
+    }
+
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }, 400);
+  };
+
+  const handleReset = () => {
+    setFormState({
+      name: "",
+      email: "",
+      phone: "",
+      topic: prefilledTopic || "Film Production",
+      message: "",
+    });
+    setSubmitted(false);
   };
 
   return (
@@ -47,31 +81,18 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
           {/* Left Column: Direct Person & Information */}
           <div className="lg:col-span-6">
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-3">
-              {lang === "de" ? "Direkter Kontakt" : "Get in Touch"}
+              Get in Touch
             </span>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7] mb-6 max-w-md">
-              {lang === "de"
-                ? "Lassen Sie uns über Ihr Projekt sprechen."
-                : "Let's talk about your next project."}
+              Let&apos;s talk about your next project.
             </h2>
 
             <p className="text-base text-[#f4f2f7b8] leading-relaxed mb-8 max-w-lg">
-              {lang === "de" ? (
-                <>
-                  Ob erster Gedanke, fertiges Briefing oder regelmäßiger Contentbedarf:{" "}
-                  <b className="text-white font-semibold">Gabor Brüning</b> bespricht mit Ihnen persönlich,
-                  welcher nächste Schritt zu Ihrer Aufgabe passt.{" "}
-                  <b className="text-[#a89bfa] font-semibold">In der Regel melden wir uns noch am selben Arbeitstag.</b>
-                </>
-              ) : (
-                <>
-                  Whether it is an initial thought, a finished brief or regular content production:{" "}
-                  <b className="text-white font-semibold">Gabor Brüning</b> will personally discuss with you
-                  which approach best fits your objectives.{" "}
-                  <b className="text-[#a89bfa] font-semibold">We typically respond within the same business day.</b>
-                </>
-              )}
+              Whether it is an initial thought, a finished brief or regular content production:{" "}
+              <b className="text-white font-semibold">Gabor Brüning</b> will personally discuss with you
+              which approach best fits your objectives.{" "}
+              <b className="text-[#a89bfa] font-semibold">We typically respond within the same business day.</b>
             </p>
 
             {/* Contact Person Box */}
@@ -84,7 +105,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
               <div>
                 <h3 className="text-base font-bold text-white">Gabor Brüning</h3>
                 <span className="text-xs text-[#a89bfa] block mb-1">
-                  {lang === "de" ? "Ihr zentraler Ansprechpartner" : "Your central point of contact"}
+                  Your central point of contact
                 </span>
                 <span className="text-[11px] font-mono text-[#D4AF37]/90 font-medium">
                   RFP Digital Productions
@@ -99,7 +120,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                 className="inline-flex items-center space-x-2 px-5 py-3 rounded-full bg-white hover:bg-white/90 text-[#0e0d12] text-xs font-semibold tracking-wide transition-all shadow-md active:scale-95"
               >
                 <Mail className="w-3.5 h-3.5" />
-                <span>{lang === "de" ? "E-Mail senden" : "Send an email"}</span>
+                <span>Send an email</span>
                 <ArrowUpRight className="w-3.5 h-3.5 ml-1" />
               </a>
 
@@ -116,32 +137,38 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
           {/* Right Column: Interactive Quick Inquiry Form */}
           <div className="lg:col-span-6 bg-[#0e0d12]/70 rounded-2xl p-6 sm:p-8 border border-white/[0.08] backdrop-blur-md">
             <h3 className="text-lg font-bold text-white mb-2">
-              {lang === "de" ? "Schnellanfrage senden" : "Send Quick Inquiry"}
+              Send Quick Inquiry
             </h3>
             <p className="text-xs text-[#f4f2f780] mb-6">
-              {lang === "de"
-                ? "Teilen Sie uns kurz mit, worum es geht – wir melden uns umgehend."
-                : "Briefly let us know what you have in mind – we will be in touch promptly."}
+              Briefly let us know what you have in mind – we will be in touch promptly.
             </p>
 
             {submitted ? (
-              <div className="p-8 rounded-xl bg-white/[0.05] border border-[#a89bfa]/30 text-center animate-in fade-in duration-300">
-                <CheckCircle2 className="w-12 h-12 text-[#a89bfa] mx-auto mb-3" />
-                <h4 className="text-lg font-bold text-white mb-1">
-                  {lang === "de" ? "Vielen Dank für Ihre Nachricht!" : "Thank you for reaching out!"}
-                </h4>
-                <p className="text-xs text-[#f4f2f780]">
-                  {lang === "de"
-                    ? "Gabor Brüning wird sich zeitnah persönlich bei Ihnen melden."
-                    : "Gabor Brüning will personally contact you shortly."}
-                </p>
+              <div className="p-8 rounded-xl bg-white/[0.05] border border-[#a89bfa]/30 text-center animate-in fade-in duration-300 space-y-4">
+                <CheckCircle2 className="w-12 h-12 text-[#a89bfa] mx-auto" />
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">
+                    Thank you for reaching out!
+                  </h4>
+                  <p className="text-xs text-white/70 max-w-sm mx-auto leading-relaxed">
+                    Your inquiry has been successfully transmitted directly to our studio dashboard. Gabor Brüning will review your brief and contact you shortly.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <button
+                    onClick={handleReset}
+                    className="px-5 py-2 rounded-full bg-white/[0.08] hover:bg-white/[0.15] text-xs font-medium text-white transition-all"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-[11px] font-mono uppercase tracking-wider text-white/60 block mb-1.5">
-                      {lang === "de" ? "Name *" : "Name *"}
+                      Name *
                     </label>
                     <input
                       type="text"
@@ -154,7 +181,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                   </div>
                   <div>
                     <label className="text-[11px] font-mono uppercase tracking-wider text-white/60 block mb-1.5">
-                      {lang === "de" ? "E-Mail *" : "Email *"}
+                      Email *
                     </label>
                     <input
                       type="email"
@@ -170,7 +197,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-[11px] font-mono uppercase tracking-wider text-white/60 block mb-1.5">
-                      {lang === "de" ? "Telefon" : "Phone"}
+                      Phone
                     </label>
                     <input
                       type="tel"
@@ -182,47 +209,53 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                   </div>
                   <div>
                     <label className="text-[11px] font-mono uppercase tracking-wider text-white/60 block mb-1.5">
-                      {lang === "de" ? "Bereich" : "Discipline"}
+                      Discipline
                     </label>
                     <select
                       value={formState.topic}
                       onChange={(e) => setFormState({ ...formState, topic: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl bg-[#17161d] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-sm text-white transition-colors"
                     >
-                      <option value="Filmproduktion">{lang === "de" ? "Filmproduktion" : "Film Production"}</option>
-                      <option value="B2B-Content">{lang === "de" ? "B2B-Content" : "B2B Content"}</option>
-                      <option value="KI-Filmproduktion">{lang === "de" ? "KI-Filmproduktion" : "AI Film Production"}</option>
-                      <option value="3D-Animation">{lang === "de" ? "3D-Animation" : "3D Animation"}</option>
-                      <option value="Erklärfilm">{lang === "de" ? "Erklärfilm" : "Explainer Film"}</option>
-                      <option value="KI-Workflows">{lang === "de" ? "KI-Workflows & Schulung" : "AI Workflows & Training"}</option>
+                      <option value="Film Production">Film Production</option>
+                      <option value="B2B Content">B2B Content</option>
+                      <option value="AI Film Production">AI Film Production</option>
+                      <option value="3D Animation">3D Animation</option>
+                      <option value="Explainer Film">Explainer Film</option>
+                      <option value="AI Workflows & Training">AI Workflows & Training</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label className="text-[11px] font-mono uppercase tracking-wider text-white/60 block mb-1.5">
-                    {lang === "de" ? "Projektbeschreibung / Nachricht *" : "Project Description / Message *"}
+                    Project Description / Message *
                   </label>
                   <textarea
                     required
                     rows={4}
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    placeholder={
-                      lang === "de"
-                        ? "Beschreiben Sie kurz Ihr Vorhaben, geplante Termine oder offene Fragen..."
-                        : "Briefly outline your goals, planned timeline, or initial questions..."
-                    }
+                    placeholder="Briefly outline your goals, planned timeline, or initial questions..."
                     className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-sm text-white placeholder-white/20 transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded-xl bg-[#6b54ee] hover:bg-[#7c6af2] text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center space-x-2 shadow-lg hover:shadow-[#6b54ee]/30 active:scale-98"
+                  disabled={isSubmitting}
+                  className="w-full py-3.5 px-6 rounded-xl bg-[#6b54ee] hover:bg-[#7c6af2] disabled:opacity-50 text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center space-x-2 shadow-lg hover:shadow-[#6b54ee]/30 active:scale-98"
                 >
-                  <span>{lang === "de" ? "Anfrage absenden" : "Submit Inquiry"}</span>
-                  <Send className="w-3.5 h-3.5 ml-1" />
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Sending Inquiry…</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Submit Inquiry</span>
+                      <Send className="w-3.5 h-3.5 ml-1" />
+                    </>
+                  )}
                 </button>
               </form>
             )}

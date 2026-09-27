@@ -1,28 +1,29 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { DataProvider } from "@/context/DataContext";
 
 export const metadata: Metadata = {
-  title: "RFP Digital Productions · Film, KI & 3D Cinema",
+  title: "RFP Digital Productions · Film, AI & 3D Cinema",
   description:
-    "RFP Digital Productions erzählt komplexe Themen stark – Filme und visuelle Inhalte für Marken und Unternehmen, im Realdreh, als 2D/3D-Animation oder mit generativer KI.",
+    "RFP Digital Productions tells complex stories powerfully – films and visual content for global brands and enterprises, live-action, 2D/3D animation, or generative AI.",
   keywords: [
     "RFP Digital Productions",
-    "Filmproduktion",
-    "KI-Filmproduktion",
+    "Film Production",
+    "AI Film Production",
     "Generative AI Video",
-    "3D-Animation",
-    "Produktvisualisierung",
+    "3D Animation",
+    "Product Visualization",
     "Commercials & Cinema",
   ],
   authors: [{ name: "RFP Digital Productions" }],
   openGraph: {
-    title: "RFP Digital Productions · Film, KI & 3D Cinema",
+    title: "RFP Digital Productions · Film, AI & 3D Cinema",
     description:
-      "RFP Digital Productions erzählt komplexe Themen stark – Filme und visuelle Inhalte für Marken und Unternehmen, im Realdreh, als 2D/3D-Animation oder mit KI.",
+      "RFP Digital Productions tells complex stories powerfully – films and visual content for global brands and enterprises, live-action, 2D/3D animation, or generative AI.",
     url: "https://rfpdigital.com",
     siteName: "RFP Digital Productions",
-    locale: "de_DE",
+    locale: "en_US",
     type: "website",
   },
   robots: {
@@ -44,9 +45,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="scroll-smooth antialiased dark">
+    <html lang="en" className="scroll-smooth antialiased dark">
       <body className="min-h-screen bg-[#0e0d12] text-[#f4f2f7] selection:bg-[#6b54ee] selection:text-white font-sans">
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <DataProvider>{children}</DataProvider>
+        </LanguageProvider>
       </body>
     </html>
   );
