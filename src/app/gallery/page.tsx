@@ -163,7 +163,7 @@ export default function GalleryPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search images, tools, clients..."
-                className="w-full pl-10 pr-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.1] text-xs text-white placeholder-white/40 focus:outline-none focus:border-[#a89bfa] transition-colors"
+                className="w-full pl-10 pr-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.1] text-base sm:text-xs text-white placeholder-white/40 focus:outline-none focus:border-[#a89bfa] transition-colors"
               />
               {searchQuery && (
                 <button
@@ -211,12 +211,13 @@ export default function GalleryPage() {
                   href={`/gallery/${item.id}`}
                   className="relative aspect-[16/10] w-full overflow-hidden bg-black/40 block"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    loading="lazy"
-                  />
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#17161d] via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
 
                   {/* Category Pill Top Left */}

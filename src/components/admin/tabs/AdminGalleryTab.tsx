@@ -181,15 +181,15 @@ export const AdminGalleryTab: React.FC = () => {
             {galleryItems.length} visual works · Upload & manage high-res images directly displayed on /gallery
           </p>
         </div>
-        <div className="flex items-center space-x-3">
-          <div className="relative">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+          <div className="relative flex-1 sm:flex-initial">
             <Search className="w-3.5 h-3.5 text-white/40 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search images..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="pl-8 pr-3 py-2 bg-black/40 border border-white/[0.1] rounded-full text-xs text-white placeholder-white/40 focus:outline-none focus:border-[#a89bfa] w-48"
+              className="pl-8 pr-3 py-2 bg-black/40 border border-white/[0.1] rounded-full text-base sm:text-xs text-white placeholder-white/40 focus:outline-none focus:border-[#a89bfa] w-full sm:w-48"
             />
           </div>
           <button
@@ -319,7 +319,7 @@ export const AdminGalleryTab: React.FC = () => {
                     placeholder="e.g. Cinematic Landscape Capture"
                     value={form.title}
                     onChange={(e) => setForm({ ...form, title: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
                   />
                 </div>
                 <div>
@@ -334,7 +334,7 @@ export const AdminGalleryTab: React.FC = () => {
                         category: e.target.value as GalleryItem["category"],
                       })
                     }
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
                   >
                     <option value="Cinema & Film">Cinema & Film</option>
                     <option value="AI & Generative">AI & Generative</option>
@@ -355,7 +355,7 @@ export const AdminGalleryTab: React.FC = () => {
                     placeholder="e.g. Red Bull, BMW, Studio Work"
                     value={form.client}
                     onChange={(e) => setForm({ ...form, client: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
                   />
                 </div>
                 <div>
@@ -366,7 +366,7 @@ export const AdminGalleryTab: React.FC = () => {
                     type="text"
                     value={form.year}
                     onChange={(e) => setForm({ ...form, year: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
                   />
                 </div>
               </div>
@@ -397,7 +397,7 @@ export const AdminGalleryTab: React.FC = () => {
                     placeholder="Or paste image URL / path..."
                     value={form.image}
                     onChange={(e) => setForm({ ...form, image: e.target.value })}
-                    className="w-full px-3.5 py-3 rounded-xl bg-black/40 border border-white/[0.1] text-xs text-white placeholder-white/30 focus:outline-none focus:border-[#7c6af2]"
+                    className="w-full px-3.5 py-3 rounded-xl bg-black/40 border border-white/[0.1] text-base sm:text-xs text-white placeholder-white/30 focus:outline-none focus:border-[#7c6af2]"
                   />
                 </div>
 
@@ -445,7 +445,7 @@ export const AdminGalleryTab: React.FC = () => {
                     placeholder="Or enter still image URL..."
                     value={form.newStillInput}
                     onChange={(e) => setForm({ ...form, newStillInput: e.target.value })}
-                    className="flex-1 px-3 py-2 rounded-xl bg-black/40 border border-white/[0.1] text-xs text-white placeholder-white/30 focus:outline-none focus:border-[#7c6af2]"
+                    className="flex-1 px-3 py-2 rounded-xl bg-black/40 border border-white/[0.1] text-base sm:text-xs text-white placeholder-white/30 focus:outline-none focus:border-[#7c6af2]"
                   />
                   <button
                     type="button"
@@ -494,7 +494,7 @@ export const AdminGalleryTab: React.FC = () => {
                   placeholder="One sentence describing the image work..."
                   value={form.summary}
                   onChange={(e) => setForm({ ...form, summary: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
                 />
               </div>
 
@@ -507,7 +507,7 @@ export const AdminGalleryTab: React.FC = () => {
                   placeholder="Details about camera optics, rendering engine, lighting setup, or artistic direction..."
                   value={form.description}
                   onChange={(e) => setForm({ ...form, description: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
                 />
               </div>
 
@@ -521,7 +521,7 @@ export const AdminGalleryTab: React.FC = () => {
                     placeholder="e.g. Midjourney, Unreal Engine 5, Blender, Sony FX9"
                     value={form.tools}
                     onChange={(e) => setForm({ ...form, tools: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
                   />
                 </div>
                 <div>
@@ -533,7 +533,7 @@ export const AdminGalleryTab: React.FC = () => {
                     placeholder="e.g. 8K Master Render, Key Visual Stills, 16:9 Billboard"
                     value={form.deliverables}
                     onChange={(e) => setForm({ ...form, deliverables: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
                   />
                 </div>
               </div>

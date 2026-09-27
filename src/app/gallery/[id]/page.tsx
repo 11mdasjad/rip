@@ -176,6 +176,8 @@ export default function GalleryDetailPage({
             <img
               src={currentDisplayImage}
               alt={item.title}
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0e0d12]/80 via-transparent to-black/30 pointer-events-none" />
@@ -235,7 +237,13 @@ export default function GalleryDetailPage({
                       : "border-white/[0.1] hover:border-white/[0.3] opacity-75 hover:opacity-100"
                   }`}
                 >
-                  <img src={imgUrl} alt={`Still ${idx + 1}`} className="w-full h-full object-cover" />
+                  <img
+                    src={imgUrl}
+                    alt={`Still ${idx + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                  />
                   <span className="absolute bottom-1 left-1 px-1.5 py-0.5 rounded text-[8px] font-mono bg-black/70 text-white/80">
                     #{idx + 1}
                   </span>
@@ -433,6 +441,8 @@ export default function GalleryDetailPage({
                     <img
                       src={rel.image}
                       alt={rel.title}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3">

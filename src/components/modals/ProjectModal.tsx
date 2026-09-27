@@ -62,7 +62,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            aria-label="Modal schließen"
+            aria-label="Close modal"
             className="p-1.5 text-white/70 hover:text-white hover:bg-white/[0.08] rounded-full transition-colors"
           >
             <X className="w-5 h-5" />
@@ -76,6 +76,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             <img
               src={project.poster}
               alt={project.title}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 md:p-8">
@@ -88,7 +90,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                     {project.title}
                   </h2>
                   <p className="text-xs font-mono text-[#a89bfa] mt-1">
-                    Imagine Yes Case Production
+                    RFP Digital Productions Case
                   </p>
                 </div>
 
@@ -100,7 +102,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                     className="inline-flex items-center space-x-2 px-5 py-2.5 bg-[#6b54ee] hover:bg-[#7c6af2] text-white text-xs uppercase tracking-widest font-mono font-semibold rounded-full transition-all shadow-lg hover:shadow-[#6b54ee]/40 active:scale-95"
                   >
                     <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>{lang === "de" ? "Film abspielen" : "Play Film"}</span>
+                    <span>Play Film</span>
                   </button>
                 )}
               </div>

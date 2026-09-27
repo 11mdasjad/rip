@@ -62,7 +62,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            aria-label="Video schließen"
+            aria-label="Close video"
             className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-colors"
           >
             <X className="w-5 h-5" />
@@ -82,15 +82,15 @@ export const VideoModal: React.FC<VideoModalProps> = ({
             />
           ) : (
             <div className="text-center p-8 text-white/60">
-              <p className="text-xl mb-2 text-white">Video wird geladen...</p>
+              <p className="text-xl mb-2 text-white">Loading video...</p>
             </div>
           )}
         </div>
 
         {/* Footer info bar */}
         <div className="flex items-center justify-between px-6 py-3 bg-[#0e0d12] text-[11px] text-white/50 tracking-wider font-mono">
-          <span>IMAGINE YES · CINEMATIC DCI 4K</span>
-          <span className="text-[#a89bfa]">ESC ZUM SCHLIESSEN</span>
+          <span>RFP DIGITAL PRODUCTIONS · CINEMATIC DCI 4K</span>
+          <span className="text-[#a89bfa]">PRESS ESC TO CLOSE</span>
         </div>
       </div>
     </div>

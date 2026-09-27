@@ -191,15 +191,15 @@ export const AdminInquiriesTab: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center space-x-3">
-          <div className="relative">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+          <div className="relative flex-1 sm:flex-initial">
             <Search className="w-3.5 h-3.5 text-white/40 absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search leads, emails..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="pl-8 pr-3 py-2 bg-black/40 border border-white/[0.1] rounded-full text-xs text-white placeholder-white/40 focus:outline-none focus:border-[#a89bfa] w-48"
+              className="pl-8 pr-3 py-2 bg-black/40 border border-white/[0.1] rounded-full text-base sm:text-xs text-white placeholder-white/40 focus:outline-none focus:border-[#a89bfa] w-full sm:w-48"
             />
           </div>
 
@@ -486,7 +486,7 @@ export const AdminInquiriesTab: React.FC = () => {
                 placeholder="Log internal follow-ups, calls, quotes sent, or project status..."
                 value={notesInput}
                 onChange={(e) => setNotesInput(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-xs text-white focus:outline-none focus:border-[#7c6af2]"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-xs text-white focus:outline-none focus:border-[#7c6af2]"
               />
             </div>
 

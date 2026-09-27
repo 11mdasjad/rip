@@ -155,7 +155,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
         </nav>
 
         {/* Right Actions */}
-        <div className="flex items-center space-x-2.5 sm:space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-3">
           <Link
             href={isHome ? "#kontakt" : "/#kontakt"}
             onClick={(e) => {
@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                 onOpenContact();
               }
             }}
-            className="group hidden sm:inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#f4f2f7] hover:bg-white text-[#0e0d12] text-xs font-semibold tracking-wide shadow-lg hover:shadow-[#7c6af2]/20 hover:shadow-xl transition-all duration-200 active:scale-95"
+            className="group hidden sm:inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#f4f2f7] hover:bg-white text-[#0e0d12] text-xs font-semibold tracking-wide shadow-lg hover:shadow-[#7c6af2]/20 transition-all duration-200 active:scale-95"
           >
             <span>Discuss Project</span>
             <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -172,49 +172,101 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-white/80 hover:text-white focus:outline-none"
+            className="md:hidden p-2.5 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-white/90 hover:text-white transition-colors focus:outline-none"
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer Backdrop & Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[60px] bg-[#0e0d12]/98 border-b border-white/[0.1] p-6 backdrop-blur-2xl shadow-2xl animate-in slide-in-from-top-4 duration-300">
-          <nav className="flex flex-col space-y-4">
-            <Link href={isHome ? "#projekte" : "/#projekte"} onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-white/90 hover:text-white py-1">
-              Projects
-            </Link>
+        <div className="md:hidden fixed inset-0 z-40 top-16">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200"
+            onClick={() => setMobileMenuOpen(false)}
+          />
 
-            <Link href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-[#a89bfa] hover:text-white py-1 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#a89bfa]" />
-              <span>Visual Gallery</span>
-            </Link>
-
-            <div className="py-1">
-              <div className="text-xs uppercase tracking-widest text-[#a89bfa] font-mono mb-2">Services</div>
-              <div className="grid grid-cols-1 gap-2 pl-3 border-l border-white/[0.1]">
-                {SERVICES_DATA.map((service) => (
-                  <Link key={service.id} href={isHome ? `#service-${service.id}` : `/#service-${service.id}`} onClick={() => setMobileMenuOpen(false)} className="text-sm text-white/70 hover:text-white py-1">
-                    {service.titleEn}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <Link href={isHome ? "#zusammenarbeit" : "/#zusammenarbeit"} onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-white/90 hover:text-white py-1">About</Link>
-            <Link href={isHome ? "#faq" : "/#faq"} onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-white/90 hover:text-white py-1">FAQ</Link>
-            <Link href={isHome ? "#kontakt" : "/#kontakt"} onClick={() => setMobileMenuOpen(false)} className="text-lg font-medium text-white/90 hover:text-white py-1">Contact</Link>
-
-            <div className="pt-4 border-t border-white/[0.08]">
-              <Link href={isHome ? "#kontakt" : "/#kontakt"} onClick={() => setMobileMenuOpen(false)} className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-full bg-[#f4f2f7] text-[#0e0d12] text-sm font-semibold">
-                <span>Discuss Project</span>
-                <ArrowUpRight className="w-4 h-4" />
+          {/* Drawer content */}
+          <div className="relative bg-[#0e0d12]/98 border-b border-white/[0.1] p-6 backdrop-blur-2xl shadow-2xl max-h-[calc(100vh-64px)] overflow-y-auto animate-in slide-in-from-top-4 duration-250">
+            <nav className="flex flex-col space-y-3">
+              <Link
+                href={isHome ? "#projekte" : "/#projekte"}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-semibold text-white/90 hover:text-white py-2 px-3 rounded-xl hover:bg-white/[0.04] transition-all"
+              >
+                Projects
               </Link>
-            </div>
-          </nav>
+
+              <Link
+                href="/gallery"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-semibold text-[#a89bfa] hover:text-white py-2 px-3 rounded-xl hover:bg-white/[0.04] flex items-center justify-between transition-all"
+              >
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#a89bfa]" />
+                  <span>Visual Gallery</span>
+                </div>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#7c6af2]/20 text-[#a89bfa] border border-[#7c6af2]/30">
+                  New
+                </span>
+              </Link>
+
+              <div className="py-2 px-3 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+                <div className="text-[11px] uppercase tracking-widest text-[#a89bfa] font-mono mb-2">
+                  Disciplines
+                </div>
+                <div className="grid grid-cols-1 gap-1.5 pl-2 border-l border-white/[0.1]">
+                  {SERVICES_DATA.map((service) => (
+                    <Link
+                      key={service.id}
+                      href={isHome ? `#service-${service.id}` : `/#service-${service.id}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-xs text-white/70 hover:text-white py-1.5 transition-colors block"
+                    >
+                      {service.titleEn}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <Link
+                href={isHome ? "#zusammenarbeit" : "/#zusammenarbeit"}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-semibold text-white/90 hover:text-white py-2 px-3 rounded-xl hover:bg-white/[0.04] transition-all"
+              >
+                About
+              </Link>
+              <Link
+                href={isHome ? "#faq" : "/#faq"}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-semibold text-white/90 hover:text-white py-2 px-3 rounded-xl hover:bg-white/[0.04] transition-all"
+              >
+                FAQ
+              </Link>
+              <Link
+                href={isHome ? "#kontakt" : "/#kontakt"}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-semibold text-white/90 hover:text-white py-2 px-3 rounded-xl hover:bg-white/[0.04] transition-all"
+              >
+                Contact
+              </Link>
+
+              <div className="pt-3 border-t border-white/[0.08]">
+                <Link
+                  href={isHome ? "#kontakt" : "/#kontakt"}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full inline-flex items-center justify-center space-x-2 px-5 py-3.5 rounded-full bg-[#f4f2f7] hover:bg-white text-[#0e0d12] text-xs font-bold uppercase tracking-wider shadow-lg active:scale-98 transition-all"
+                >
+                  <span>Discuss Project</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </nav>
+          </div>
         </div>
       )}
     </header>

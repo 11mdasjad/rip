@@ -73,6 +73,8 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
           <img
             src="/medien/logo/rfp-emblem.png"
             alt="RFP Emblem"
+            loading="lazy"
+            decoding="async"
             className="h-12 sm:h-16 w-auto object-contain filter drop-shadow-[0_2px_15px_rgba(212,175,55,0.4)] opacity-75 hover:opacity-100 hover:scale-110 transition-all duration-300"
           />
         </div>
@@ -100,6 +102,8 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
               <img
                 src="/medien/team/gabor-bruening.jpg"
                 alt="Portrait: Gabor Brüning"
+                loading="lazy"
+                decoding="async"
                 className="w-16 h-16 rounded-full object-cover border border-white/20 shadow-md"
               />
               <div>
@@ -116,7 +120,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
             {/* Quick Contact Buttons */}
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="mailto:film@imagineyes.de"
+                href="mailto:film@rfpdigital.com"
                 className="inline-flex items-center space-x-2 px-5 py-3 rounded-full bg-white hover:bg-white/90 text-[#0e0d12] text-xs font-semibold tracking-wide transition-all shadow-md active:scale-95"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -175,8 +179,8 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                       required
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      placeholder="Max Mustermann"
-                      className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-sm text-white placeholder-white/20 transition-colors"
+                      placeholder="Alex Morgan"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white placeholder-white/20 transition-colors"
                     />
                   </div>
                   <div>
@@ -188,8 +192,8 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                       required
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      placeholder="name@unternehmen.de"
-                      className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-sm text-white placeholder-white/20 transition-colors"
+                      placeholder="alex@company.com"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white placeholder-white/20 transition-colors"
                     />
                   </div>
                 </div>
@@ -204,7 +208,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                       value={formState.phone}
                       onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                       placeholder="+49 ..."
-                      className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-sm text-white placeholder-white/20 transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white placeholder-white/20 transition-colors"
                     />
                   </div>
                   <div>
@@ -214,7 +218,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                     <select
                       value={formState.topic}
                       onChange={(e) => setFormState({ ...formState, topic: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#17161d] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-sm text-white transition-colors"
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#17161d] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white transition-colors"
                     >
                       <option value="Film Production">Film Production</option>
                       <option value="B2B Content">B2B Content</option>
@@ -236,7 +240,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     placeholder="Briefly outline your goals, planned timeline, or initial questions..."
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-sm text-white placeholder-white/20 transition-colors resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white placeholder-white/20 transition-colors resize-none"
                   />
                 </div>
 

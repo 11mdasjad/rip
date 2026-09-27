@@ -1,7 +1,14 @@
 import type { Metadata, Viewport } from "next";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { DataProvider } from "@/context/DataContext";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-manrope",
+});
 
 export const metadata: Metadata = {
   title: "RFP Digital Productions · Film, AI & 3D Cinema",
@@ -45,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth antialiased dark">
+    <html lang="en" className={`scroll-smooth antialiased dark ${manrope.variable}`}>
       <body className="min-h-screen bg-[#0e0d12] text-[#f4f2f7] selection:bg-[#6b54ee] selection:text-white font-sans">
         <LanguageProvider>
           <DataProvider>{children}</DataProvider>

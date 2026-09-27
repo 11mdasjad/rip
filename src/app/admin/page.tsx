@@ -99,7 +99,7 @@ export default function AdminPage() {
                   placeholder="admin@rfpdigital.com"
                   value={email}
                   onChange={(e) => { setEmail(e.target.value); setError(""); }}
-                  className="w-full pl-11 pr-4 py-3 rounded-xl bg-black/50 border border-white/[0.1] text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#7c6af2] focus:ring-1 focus:ring-[#7c6af2]/50 transition-all"
+                  className="w-full pl-11 pr-4 py-3 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#7c6af2] focus:ring-1 focus:ring-[#7c6af2]/50 transition-all"
                 />
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function AdminPage() {
                   placeholder="Enter your admin password"
                   value={password}
                   onChange={(e) => { setPassword(e.target.value); setError(""); }}
-                  className="w-full pl-11 pr-12 py-3 rounded-xl bg-black/50 border border-white/[0.1] text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#7c6af2] focus:ring-1 focus:ring-[#7c6af2]/50 transition-all"
+                  className="w-full pl-11 pr-12 py-3 rounded-xl bg-black/50 border border-white/[0.1] text-base sm:text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#7c6af2] focus:ring-1 focus:ring-[#7c6af2]/50 transition-all"
                 />
                 <button
                   type="button"

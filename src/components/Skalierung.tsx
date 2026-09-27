@@ -35,7 +35,9 @@ export const Skalierung: React.FC = () => {
               <div className="sm:col-span-7 aspect-[4/4.8] rounded-2xl overflow-hidden bg-[#e7e3d9] relative shadow-md group">
                 <img
                   src={img1}
-                  alt="Making-of Imagine Yes On-Set"
+                  alt="Making-of RFP Digital Productions On-Set"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-opacity duration-700"
                 />
                 <span className="absolute top-3 left-3 text-[10px] font-mono tracking-widest text-white/90 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full uppercase">
@@ -49,6 +51,8 @@ export const Skalierung: React.FC = () => {
                   <img
                     src={img2}
                     alt="Making-of Detail"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-opacity duration-700"
                   />
                 </div>
@@ -56,6 +60,8 @@ export const Skalierung: React.FC = () => {
                   <img
                     src={img3}
                     alt="Making-of Crew"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-opacity duration-700"
                   />
                 </div>
@@ -66,7 +72,7 @@ export const Skalierung: React.FC = () => {
                 type="button"
                 onClick={() => setIsPaused(!isPaused)}
                 className="absolute bottom-4 right-4 z-20 w-10 h-10 rounded-full bg-[#0e0d12]/80 hover:bg-[#0e0d12] text-white border border-white/30 backdrop-blur-md flex items-center justify-center transition-transform hover:scale-105 shadow-lg active:scale-95"
-                aria-label={isPaused ? "Bildwechsel fortsetzen" : "Bildwechsel pausieren"}
+                aria-label={isPaused ? "Resume rotation" : "Pause rotation"}
               >
                 {isPaused ? <Play className="w-4 h-4 fill-current ml-0.5" /> : <Pause className="w-4 h-4" />}
               </button>

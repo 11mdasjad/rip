@@ -55,6 +55,8 @@ export const Prozess: React.FC<ProzessProps> = ({ onPlayVideo }) => {
           <img
             src="/medien/projekte/1und1-imagefilm-16x9.jpg"
             alt="1&1 Imagefilm Jung von Matt"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#17161d] hidden lg:block" />
