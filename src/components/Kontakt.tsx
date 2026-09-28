@@ -91,49 +91,59 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
             </h2>
 
             <p className="text-base text-[#f4f2f7b8] leading-relaxed mb-8 max-w-lg">
-              Whether it is an initial thought, a finished brief or regular content production:{" "}
-              <b className="text-white font-semibold">Gabor Brüning</b> will personally discuss with you
-              which approach best fits your objectives.{" "}
-              <b className="text-[#a89bfa] font-semibold">We typically respond within the same business day.</b>
+              Whether it is a corporate film, an institutional documentary, an election campaign, or social media management:{" "}
+              <b className="text-white font-semibold">RFP Digital Productions</b> is managed by seasoned media professionals and alumni from{" "}
+              <b className="text-[#a89bfa] font-semibold">AJK MCRC, Jamia Millia Islamia, New Delhi</b> with over 17+ years of media excellence.
             </p>
 
-            {/* Contact Person Box */}
+            {/* Production House Info Box */}
             <div className="flex items-center space-x-5 p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08] mb-8 max-w-md">
-              <img
-                src="/medien/team/gabor-bruening.jpg"
-                alt="Portrait: Gabor Brüning"
-                loading="lazy"
-                decoding="async"
-                className="w-16 h-16 rounded-full object-cover border border-white/20 shadow-md"
-              />
+              <div className="w-16 h-16 rounded-full bg-[#1c1a24] border border-[#D4AF37]/30 flex items-center justify-center p-2 shadow-md flex-shrink-0">
+                <img
+                  src="/medien/logo/rfp-emblem.png"
+                  alt="RFP Digital Productions"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-10 h-10 object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.4)]"
+                />
+              </div>
               <div>
-                <h3 className="text-base font-bold text-white">Gabor Brüning</h3>
+                <h3 className="text-base font-bold text-white">RFP Digital Productions</h3>
                 <span className="text-xs text-[#a89bfa] block mb-1">
-                  Your central point of contact
+                  AJK MCRC, JMI Alumni Media Leadership
                 </span>
                 <span className="text-[11px] font-mono text-[#D4AF37]/90 font-medium">
-                  RFP Digital Productions
+                  Lajpat Nagar 4, New Delhi - 110024
                 </span>
               </div>
             </div>
 
             {/* Quick Contact Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3">
               <a
-                href="mailto:film@rfpdigital.com"
+                href="mailto:rfpdigitalmedia@gmail.com"
                 className="inline-flex items-center space-x-2 px-5 py-3 rounded-full bg-white hover:bg-white/90 text-[#0e0d12] text-xs font-semibold tracking-wide transition-all shadow-md active:scale-95"
               >
                 <Mail className="w-3.5 h-3.5" />
-                <span>Send an email</span>
+                <span>rfpdigitalmedia@gmail.com</span>
                 <ArrowUpRight className="w-3.5 h-3.5 ml-1" />
               </a>
 
               <a
-                href="tel:+4917662077437"
+                href="tel:+911149963157"
                 className="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.03] hover:bg-white/[0.08] text-[#f4f2f7] text-xs font-medium tracking-wide transition-all"
               >
                 <Phone className="w-3.5 h-3.5 text-[#a89bfa]" />
-                <span>+49 176 62077437</span>
+                <span>+91-11-49963157</span>
+              </a>
+
+              <a
+                href="https://wa.me/919999963157"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-[#25D366]/40 hover:border-[#25D366] bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] text-xs font-medium tracking-wide transition-all"
+              >
+                <span>WhatsApp: +91 99999 63157</span>
               </a>
             </div>
           </div>
@@ -155,7 +165,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                     Thank you for reaching out!
                   </h4>
                   <p className="text-xs text-white/70 max-w-sm mx-auto leading-relaxed">
-                    Your inquiry has been successfully transmitted directly to our studio dashboard. Gabor Brüning will review your brief and contact you shortly.
+                    Your inquiry has been successfully transmitted directly to our studio dashboard. Our executive production team will review your brief and contact you shortly.
                   </p>
                 </div>
                 <div className="pt-2">
@@ -179,7 +189,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                       required
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      placeholder="Alex Morgan"
+                      placeholder="Your Full Name"
                       className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white placeholder-white/20 transition-colors"
                     />
                   </div>
@@ -192,7 +202,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                       required
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      placeholder="alex@company.com"
+                      placeholder="your@email.com"
                       className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white placeholder-white/20 transition-colors"
                     />
                   </div>
@@ -201,31 +211,31 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-[11px] font-mono uppercase tracking-wider text-white/60 block mb-1.5">
-                      Phone
+                      Phone / WhatsApp
                     </label>
                     <input
                       type="tel"
                       value={formState.phone}
                       onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                      placeholder="+49 ..."
+                      placeholder="+91 99999 ..."
                       className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white placeholder-white/20 transition-colors"
                     />
                   </div>
                   <div>
                     <label className="text-[11px] font-mono uppercase tracking-wider text-white/60 block mb-1.5">
-                      Discipline
+                      Service Requirement
                     </label>
                     <select
                       value={formState.topic}
                       onChange={(e) => setFormState({ ...formState, topic: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl bg-[#17161d] border border-white/[0.1] focus:border-[#a89bfa] focus:outline-none text-base sm:text-sm text-white transition-colors"
                     >
-                      <option value="Film Production">Film Production</option>
-                      <option value="B2B Content">B2B Content</option>
-                      <option value="AI Film Production">AI Film Production</option>
-                      <option value="3D Animation">3D Animation</option>
-                      <option value="Explainer Film">Explainer Film</option>
-                      <option value="AI Workflows & Training">AI Workflows & Training</option>
+                      <option value="Corporate Films">Corporate Films</option>
+                      <option value="Documentary Films">Documentary Films</option>
+                      <option value="Election Campaign Services">Election Campaign Services</option>
+                      <option value="Social Media Management">Social Media Management</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Photography & Event Coverage">Photography & Event Coverage</option>
                     </select>
                   </div>
                 </div>

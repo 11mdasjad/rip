@@ -5,23 +5,19 @@ import { useLanguage } from "@/context/LanguageContext";
 import { CLIENT_LOGOS } from "@/data/imagineContent";
 
 interface LogosProps {
-  titleDe?: string;
   titleEn?: string;
   items?: { name: string; src: string }[];
 }
 
 export const Logos: React.FC<LogosProps> = ({
-  titleDe = "Unternehmen, für die wir produziert haben",
-  titleEn = "Companies we have produced for",
+  titleEn = "Esteemed Clients & Organizations We Have Produced For",
   items = CLIENT_LOGOS.slice(0, 8),
 }) => {
-  const { lang } = useLanguage();
-
   return (
     <section className="py-12 lg:py-16 border-b border-white/[0.08] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-xs font-mono uppercase tracking-[0.2em] text-[#f4f2f780] mb-10">
-          {lang === "de" ? titleDe : titleEn}
+          {titleEn}
         </h2>
 
         {/* Logo Grid / Marquee */}

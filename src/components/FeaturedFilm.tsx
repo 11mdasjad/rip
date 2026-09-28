@@ -15,9 +15,9 @@ export const FeaturedFilm: React.FC<FeaturedFilmProps> = ({ onPlayFilm }) => {
     description:
       "A cinematic exploration of light, timber, and spatial restraint. Filmed across twilight transitions using bespoke anamorphic primes to capture organic materials in true form.",
     videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "https://www.youtube.com/embed/Rz2ZrNClYNs",
     poster:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1800&auto=format&fit=crop",
+      "https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg",
     specs: [
       { icon: Film, label: "4K DCI Anamorphic" },
       { icon: Clock, label: "18 Min Runtime" },

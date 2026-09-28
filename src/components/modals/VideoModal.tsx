@@ -15,8 +15,8 @@ export const VideoModal: React.FC<VideoModalProps> = ({
   isOpen,
   onClose,
   videoUrl,
-  title = "Imagine Yes Reel",
-  subtitle = "Filmproduktion · 3D · KI",
+  title = "RFP Digital Productions Showcase",
+  subtitle = "Video Production & Election Management",
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 

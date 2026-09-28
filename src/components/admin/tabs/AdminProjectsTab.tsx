@@ -43,10 +43,10 @@ export const AdminProjectsTab: React.FC = () => {
     if (!form.title.trim()) { showToast("Title is required"); return; }
     const tags = form.tags.split(",").map((t) => t.trim()).filter(Boolean);
     if (editingId) {
-      updateProject(editingId, { title: form.title, client: form.client, categoryEn: form.categoryEn, categoryDe: form.categoryEn, filterCat: form.filterCat, descEn: form.descEn, descDe: form.descEn, poster: form.poster, videoUrl: form.videoUrl || undefined, tags });
+      updateProject(editingId, { title: form.title, client: form.client, categoryEn: form.categoryEn, filterCat: form.filterCat, descEn: form.descEn, poster: form.poster, videoUrl: form.videoUrl || undefined, tags });
       showToast(`Updated "${form.title}"`);
     } else {
-      addProject({ slot: "slot-g", title: form.title, client: form.client, categoryEn: form.categoryEn, categoryDe: form.categoryEn, filterCat: form.filterCat, descEn: form.descEn, descDe: form.descEn, poster: form.poster, videoUrl: form.videoUrl || undefined, tags });
+      addProject({ slot: "slot-g", title: form.title, client: form.client, categoryEn: form.categoryEn, filterCat: form.filterCat, descEn: form.descEn, poster: form.poster, videoUrl: form.videoUrl || undefined, tags });
       showToast(`Added "${form.title}"`);
     }
     setModalOpen(false);

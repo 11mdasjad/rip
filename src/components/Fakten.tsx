@@ -14,7 +14,7 @@ export const Fakten: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#a89bfa] mb-8 text-center sm:text-left">
-          {lang === "de" ? "Kennzahlen · Stand 2026" : "Key Metrics · Status 2026"}
+          Key Metrics &amp; Achievements
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x divide-white/[0.08]">
@@ -29,10 +29,10 @@ export const Fakten: React.FC = () => {
                 {item.num}
               </div>
               <div className="text-sm font-semibold text-[#f4f2f7] mb-2">
-                {lang === "de" ? item.labelDe : item.labelEn}
+                {item.labelEn}
               </div>
               <p className="text-xs sm:text-sm text-[#f4f2f780] leading-relaxed">
-                {lang === "de" ? item.descDe : item.descEn}
+                {item.descEn}
               </p>
             </div>
           ))}

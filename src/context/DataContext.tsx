@@ -6,55 +6,55 @@ import { ProjectCard, PROJECTS_DATA } from "@/data/imagineContent";
 import { INITIAL_GALLERY_ITEMS } from "@/data/galleryData";
 
 const STORAGE_KEYS = {
-  GALLERY: "rfp_gallery_items_v1",
-  PROJECTS: "rfp_projects_items_v1",
-  SETTINGS: "rfp_site_settings_v1",
-  INQUIRIES: "rfp_inquiries_items_v1",
+  GALLERY: "rfp_gallery_items_v2",
+  PROJECTS: "rfp_projects_items_v2",
+  SETTINGS: "rfp_site_settings_v2",
+  INQUIRIES: "rfp_inquiries_items_v2",
 };
 
 const DEFAULT_SETTINGS: SiteSettings = {
   brandName: "RFP Digital Productions",
-  brandTagline: "Cinema, Generative AI & 3D Visual Effects",
-  email: "film@rfpdigital.com",
-  phone: "+49 176 62077437",
-  address: "Feringastraße 6",
-  city: "85774 Unterföhring / Munich",
-  country: "Germany",
+  brandTagline: "Video Production & Election Management Company",
+  email: "rfpdigitalmedia@gmail.com",
+  phone: "+91-11-49963157",
+  address: "Lajpat Nagar 4",
+  city: "New Delhi - 110024, Delhi NCR",
+  country: "India",
   aboutText:
-    "RFP Digital Productions tells complex stories powerfully – films and visual content for global brands and enterprises, live-action, 2D/3D animation, or generative AI.",
+    "RFP Digital Productions is a premier video production & election management company with over 17+ years of media excellence, led by alumni of AJK MCRC, Jamia Millia Islamia. We produce corporate films, documentaries, election campaigns, LED van prachar, and digital outreach across India.",
 };
 
 const INITIAL_INQUIRIES: Inquiry[] = [
   {
     id: "inq-1",
-    name: "Alexander Weber",
-    email: "a.weber@motorsport-media.de",
-    phone: "+49 89 2441 8900",
-    discipline: "Film Production",
-    message: "We are planning a 4-episode high-speed documentary series for the upcoming European endurance cup. Looking for anamorphic cinema optics, telemetry synchronization, and precision track footage similar to your DTM / Red Bull showcase.",
+    name: "Dr. R. K. Sharma",
+    email: "rksharma@aiims-health.org",
+    phone: "+91 98112 45890",
+    discipline: "Corporate & Institutional Films",
+    message: "We need a comprehensive institutional documentary highlighting our newly inaugurated clinical research center and patient outreach initiatives in New Delhi.",
     status: "new",
     createdAt: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
   },
   {
     id: "inq-2",
-    name: "Sarah Lindemann",
-    email: "sarah.lindemann@venture-studio.com",
-    phone: "+49 171 4982310",
-    discipline: "AI Workflows & Training",
-    message: "We want to produce our next global brand campaign using synthetic actors and custom LoRA generative pipelines. Can we schedule an intro consultation to review feasibility and turnaround?",
+    name: "Vikramaditya Verma",
+    email: "campaign@verma-vidhansabha.in",
+    phone: "+91 99992 10844",
+    discipline: "Election Campaign Management",
+    message: "Looking for complete election campaign media management: 6 mobile LED display vans, custom prachar anthem song, daily rally multi-camera coverage, and WhatsApp outreach.",
     status: "new",
     createdAt: new Date(Date.now() - 14 * 60 * 60 * 1000).toISOString(),
   },
   {
     id: "inq-3",
-    name: "Marcus von Berg",
-    email: "m.berg@industrial-dynamics.ch",
-    phone: "+41 44 892 1100",
-    discipline: "3D Animation",
-    message: "Need 8K photorealistic product renders and an exploded-view animation for our new turbine launch at the Zurich Expo. CAD engineering files are ready in STEP format.",
+    name: "Meenakshi Sundaram",
+    email: "m.sundaram@heritage-foundation.in",
+    phone: "+91 98200 44321",
+    discipline: "Documentary Films",
+    message: "Seeking a 30-minute archival documentary on cultural preservation and historical manuscripts for an upcoming national exhibition.",
     status: "contacted",
     createdAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
-    notes: "Initial consultation call completed. Sent portfolio reel & rate card.",
+    notes: "Initial consultation held. Sent portfolio reel of National Archives & University projects.",
   },
 ];
 

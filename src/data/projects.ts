@@ -19,7 +19,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     heroImage: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200&auto=format&fit=crop",
     aspectRatio: "wide",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    videoUrl: "https://www.youtube.com/embed/7MGQPvm2zl8",
     featured: true
   },
   {
@@ -40,7 +40,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     heroImage: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=1200&auto=format&fit=crop",
     aspectRatio: "video",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    videoUrl: "https://www.youtube.com/embed/jirysVZwPIE",
     featured: true
   },
   {
@@ -61,7 +61,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     heroImage: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
     aspectRatio: "square",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    videoUrl: "https://www.youtube.com/embed/91kFY2xs7cE",
     featured: false
   },
   {
@@ -82,7 +82,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     heroImage: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
     aspectRatio: "wide",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    videoUrl: "https://www.youtube.com/embed/hpacHvIGPNI",
     featured: true
   },
   {
@@ -103,7 +103,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     heroImage: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop",
     aspectRatio: "tall",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    videoUrl: "https://www.youtube.com/embed/KLfO_N4a6V8",
     featured: false
   },
   {
@@ -124,7 +124,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     heroImage: "https://images.unsplash.com/photo-1508974239320-0a029497e820?q=80&w=1200&auto=format&fit=crop",
     aspectRatio: "square",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4",
+    videoUrl: "https://www.youtube.com/embed/B8-5NEnLjQ8",
     featured: false
   },
   {
@@ -145,7 +145,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ],
     heroImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?q=80&w=1200&auto=format&fit=crop",
     aspectRatio: "wide",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+    videoUrl: "https://www.youtube.com/embed/1PeIeMgjyQc",
     featured: false
   }
 ];

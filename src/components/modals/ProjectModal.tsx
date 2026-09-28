@@ -54,7 +54,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/[0.08] bg-[#0e0d12]/90 backdrop-blur-md sticky top-0 z-10">
           <div className="flex items-center space-x-3">
             <span className="inline-block px-3 py-1 text-[10px] tracking-widest font-mono uppercase bg-white/[0.05] text-[#a89bfa] border border-white/[0.1] rounded-full">
-              {lang === "de" ? project.categoryDe : project.categoryEn}
+              {project.categoryEn}
             </span>
             <span className="text-xs text-white/50 font-mono">
               {project.client}
@@ -114,10 +114,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             <div className="md:col-span-2 space-y-4">
               <div>
                 <h4 className="text-xs uppercase tracking-[0.2em] font-mono text-[#a89bfa] mb-2">
-                  {lang === "de" ? "Projektbeschreibung" : "Project Summary"}
+                  Project Summary
                 </h4>
                 <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                  {lang === "de" ? project.descDe : project.descEn}
+                  {project.descEn}
                 </p>
               </div>
 
@@ -137,7 +137,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             <div className="space-y-4 bg-white/[0.03] p-5 rounded-2xl border border-white/[0.08]">
               <div>
                 <span className="text-[10px] uppercase tracking-widest font-mono text-white/40 block mb-1">
-                  {lang === "de" ? "Auftraggeber" : "Client"}
+                  Client
                 </span>
                 <p className="text-sm font-bold text-white">
                   {project.client}
@@ -146,10 +146,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
               <div>
                 <span className="text-[10px] uppercase tracking-widest font-mono text-white/40 block mb-1">
-                  {lang === "de" ? "Disziplin" : "Discipline"}
+                  Discipline
                 </span>
                 <p className="text-xs font-medium text-[#a89bfa]">
-                  {lang === "de" ? project.categoryDe : project.categoryEn}
+                  {project.categoryEn}
                 </p>
               </div>
 
@@ -159,7 +159,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                   onClick={onClose}
                   className="inline-flex items-center text-xs font-mono uppercase tracking-widest text-white hover:text-[#a89bfa] font-medium transition-colors"
                 >
-                  <span>{lang === "de" ? "Ähnliches Projekt anfragen" : "Inquire Similar Project"}</span>
+                  <span>Inquire Similar Project</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                 </a>
               </div>

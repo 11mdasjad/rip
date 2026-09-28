@@ -14,63 +14,15 @@ interface ProjectsProps {
 export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo }) => {
   const { projects: contextProjects } = useData();
   const projectsList = contextProjects && contextProjects.length > 0 ? contextProjects : PROJECTS_DATA;
-  const [activeFilter, setActiveFilter] = useState<"all" | "film" | "animation" | "ki">("all");
-
-  // State for EGYM Before/After slider
-  const [sliderPos, setSliderPos] = useState(55); // percentage (0 - 100)
-  const [activeAfterVariant, setActiveAfterVariant] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [activeFilter, setActiveFilter] = useState<"all" | "film" | "campaign" | "documentary" | "marketing">("all");
 
   const filteredProjects = projectsList.filter((p) => {
     if (activeFilter === "all") return true;
     return p.filterCat === activeFilter;
   });
 
-  const featuredProject = projectsList[0] || PROJECTS_DATA[0]; // DTM Red Bull
-  const otherProjects = filteredProjects.filter((p) => p.id !== featuredProject.id);
-
-  // EGYM Project reference
-  const egymProject = projectsList.find((p) => p.id === "projekt-egym") || PROJECTS_DATA.find((p) => p.id === "projekt-egym")!;
-
-  const handleDrag = (clientX: number) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const pct = Math.max(5, Math.min(95, (x / rect.width) * 100));
-    setSliderPos(pct);
-  };
-
-  const handleMouseDown = () => setIsDragging(true);
-  const handleTouchStart = () => setIsDragging(true);
-
-  useEffect(() => {
-    const handleMouseUp = () => setIsDragging(false);
-    const handleMouseMove = (e: globalThis.MouseEvent) => {
-      if (isDragging) {
-        handleDrag(e.clientX);
-      }
-    };
-    const handleTouchMove = (e: globalThis.TouchEvent) => {
-      if (isDragging && e.touches[0]) {
-        handleDrag(e.touches[0].clientX);
-      }
-    };
-
-    if (isDragging) {
-      window.addEventListener("mouseup", handleMouseUp);
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("touchend", handleMouseUp);
-      window.addEventListener("touchmove", handleTouchMove, { passive: false });
-    }
-
-    return () => {
-      window.removeEventListener("mouseup", handleMouseUp);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("touchend", handleMouseUp);
-      window.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, [isDragging]);
+  const featuredProject = projectsList[0] || PROJECTS_DATA[0];
+  const otherProjects = filteredProjects.filter((p) => p.id !== featuredProject?.id);
 
   return (
     <section id="projekte" className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -78,20 +30,21 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 lg:mb-16 gap-4 sm:gap-6">
         <div>
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-2">
-            Selected Work
+            Selected Portfolio
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7]">
-            What we do is best demonstrated:
+            Crafted Over Thousands of Videos:
           </h2>
         </div>
 
         {/* Filter Pills */}
         <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 p-1.5 rounded-full bg-[#17161d] border border-white/[0.08] self-start md:self-auto overflow-x-auto">
           {[
-            { id: "all", labelEn: "All" },
-            { id: "film", labelEn: "Live Action" },
-            { id: "animation", labelEn: "3D Animation" },
-            { id: "ki", labelEn: "Generative AI" },
+            { id: "all", labelEn: "All Work" },
+            { id: "film", labelEn: "Corporate Films" },
+            { id: "campaign", labelEn: "Election Campaigns" },
+            { id: "documentary", labelEn: "Documentaries" },
+            { id: "marketing", labelEn: "Social & Marketing" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -182,115 +135,8 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo
           </article>
         )}
 
-        {/* EGYM - Slot E: INTERACTIVE BEFORE/AFTER SLIDER */}
-        {(activeFilter === "all" || egymProject.filterCat === activeFilter) && (
-          <article className="relative group rounded-2xl sm:rounded-[26px] overflow-hidden bg-[#17161d] border border-white/[0.1] hover:border-[#a89bfa]/40 transition-all duration-500 shadow-2xl flex flex-col justify-between">
-            {/* Interactive Before / After Visual Canvas */}
-            <div
-              ref={containerRef}
-              style={{ touchAction: "none" }}
-              className="relative aspect-[4/3] w-full overflow-hidden vn-container bg-black/60 cursor-ew-resize select-none"
-              onMouseDown={handleMouseDown}
-              onTouchStart={handleTouchStart}
-            >
-              {/* AFTER IMAGE (Background Environment) */}
-              <img
-                src={egymProject.comparisonAfters?.[activeAfterVariant].src}
-                alt="EGYM AI Generated Environment"
-                loading="lazy"
-                decoding="async"
-                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-              />
-
-              {/* BEFORE IMAGE (Clipped Raw CAD Model) */}
-              <div
-                className="vn-before"
-                style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
-              >
-                <img
-                  src={egymProject.comparisonBefore}
-                  alt="EGYM 3D CAD Raw Model"
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                />
-              </div>
-
-              {/* Dividing Line & Drag Handle */}
-              <div className="vn-divider" style={{ left: `${sliderPos}%` }}>
-                <div className="vn-handle">
-                  <span className="font-mono text-[11px]">◂ ▸</span>
-                </div>
-              </div>
-
-              {/* Labels */}
-              <div className="absolute top-3 left-3 pointer-events-none">
-                <span className="px-2.5 py-1 rounded bg-black/70 backdrop-blur-md text-[10px] font-mono tracking-widest uppercase text-white font-bold border border-white/10">
-                  3D CAD
-                </span>
-              </div>
-
-              <div className="absolute top-3 right-3 flex items-center space-x-1.5 z-20">
-                {egymProject.comparisonAfters?.map((variant, idx) => (
-                  <button
-                    key={idx}
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setActiveAfterVariant(idx);
-                    }}
-                    className={`px-2.5 py-1 rounded-full text-[10px] font-mono tracking-wider uppercase transition-all backdrop-blur-md ${
-                      idx === activeAfterVariant
-                        ? "bg-[#6b54ee] text-white border border-[#6b54ee] font-bold"
-                        : "bg-black/60 text-white/70 border border-white/20 hover:text-white"
-                    }`}
-                  >
-                    {variant.label}
-                  </button>
-                ))}
-              </div>
-
-              <div className="absolute bottom-3 left-3 pointer-events-none">
-                <span className="px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-mono text-[#a89bfa]">
-                  ↔ Drag to compare
-                </span>
-              </div>
-            </div>
-
-            {/* Bottom Content */}
-            <div className="p-5 sm:p-6 flex flex-col justify-between flex-grow">
-              <div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#a89bfa] block mb-1">
-                  {egymProject.categoryEn}
-                </span>
-                <h3 className="text-lg sm:text-xl font-bold text-[#f4f2f7] mb-2 tracking-tight group-hover:text-white transition-colors">
-                  {egymProject.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#f4f2f7b8] leading-relaxed mb-4 font-light">
-                  {egymProject.descEn}
-                </p>
-              </div>
-
-              <div className="pt-3 border-t border-white/[0.08] flex items-center justify-between">
-                <span className="text-[10px] font-mono text-white/40">
-                  Interactive Comparison
-                </span>
-                <button
-                  onClick={() => onSelectProject(egymProject)}
-                  className="inline-flex items-center space-x-1 text-xs font-semibold text-[#a89bfa] hover:text-white transition-colors"
-                >
-                  <span>Details</span>
-                  <ArrowUpRight className="w-3 h-3" />
-                </button>
-              </div>
-            </div>
-          </article>
-        )}
-
-        {/* Regular Slots */}
-        {otherProjects
-          .filter((p) => p.id !== "projekt-egym")
-          .map((project) => (
+        {/* Authentic RFP Digital Projects */}
+        {otherProjects.map((project) => (
             <article
               key={project.id}
               className="relative group rounded-2xl sm:rounded-[26px] overflow-hidden bg-[#17161d] border border-white/[0.1] hover:border-[#a89bfa]/40 transition-all duration-500 shadow-2xl flex flex-col justify-between"

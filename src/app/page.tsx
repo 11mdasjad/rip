@@ -32,12 +32,12 @@ export default function Home() {
   });
 
   const [selectedProject, setSelectedProject] = useState<ProjectCard | null>(null);
-  const [contactTopic, setContactTopic] = useState<string>("Filmproduktion");
+  const [contactTopic, setContactTopic] = useState<string>("Corporate Films");
 
   const handleOpenVideo = (
-    url = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    title = "Imagine Yes Showreel",
-    subtitle = "Filmproduktion · 3D · KI"
+    url = "https://www.youtube.com/embed/Rz2ZrNClYNs?autoplay=1",
+    title = "RFP Digital Productions Showreel",
+    subtitle = "Video Production & Election Management"
   ) => {
     setVideoModal({
       isOpen: true,
@@ -64,56 +64,54 @@ export default function Home() {
       {/* Persistent Navigation Header */}
       <Header onOpenContact={() => handleOpenContactWithTopic()} />
 
-      {/* Main Page Flow matching Imagine Yes */}
+      {/* Main Page Flow */}
       <div className="relative z-10">
-        {/* 1. Hero with interactive rotating Projektbühne */}
+        {/* 1. Hero with interactive rotating visual stage */}
         <Hero onPlayVideo={(url, title, subtitle) => handleOpenVideo(url, title, subtitle)} />
 
-        {/* 2. Stand 2026 Key Metrics / Kennzahlen */}
+        {/* 2. Key Metrics & Credentials */}
         <Fakten />
 
         {/* 3. Client Logos Marquee 1 */}
         <Logos
-          titleDe="Unternehmen, für die wir produziert haben"
-          titleEn="Companies we have produced for"
+          titleEn="Esteemed Clients & Institutions We Have Produced For"
           items={CLIENT_LOGOS.slice(0, 8)}
         />
 
-        {/* 4. Selected Work with Bento Grid and Interactive EGYM Slider */}
+        {/* 4. Selected Work with Bento Grid and Video Showcase */}
         <Projects
           onSelectProject={(project) => setSelectedProject(project)}
           onPlayVideo={(url, title, subtitle) => handleOpenVideo(url, title, subtitle)}
         />
 
-        {/* 5. How We Collaborate / Zusammenarbeit */}
+        {/* 5. How We Collaborate */}
         <Zusammenarbeit />
 
-        {/* 6. Comprehensive Services / Leistungen */}
+        {/* 6. Comprehensive Services */}
         <Leistungen onOpenContact={(topic) => handleOpenContactWithTopic(topic)} />
 
-        {/* 7. Production Process & Jung von Matt Case Spotlight */}
+        {/* 7. Production Process & Acharya Narendra Dev College Spotlight */}
         <Prozess onPlayVideo={(url, title, subtitle) => handleOpenVideo(url, title, subtitle)} />
 
-        {/* 8. Scalable Production Editorial Light Canvas with Making-of Gallery */}
+        {/* 8. Scalable Production Making-of Gallery */}
         <Skalierung />
 
         {/* 9. Client Logos 2 */}
         <Logos
-          titleDe="Weitere Unternehmen, weitere Aufgaben"
-          titleEn="More companies, more challenges"
+          titleEn="Nationwide Organizations & Partners"
           items={CLIENT_LOGOS.slice(6)}
         />
 
-        {/* 10. AI in Enterprise / KI im Unternehmen */}
+        {/* 10. Election Campaign & Voter Outreach Management */}
         <KiWorkflows />
 
         {/* 11. FAQ Accordion */}
         <FAQ />
 
-        {/* 12. Signature Direct Contact with Gabor Brüning & Inquiry Form */}
+        {/* 12. Direct Contact with RFP Executive Production Team */}
         <Kontakt prefilledTopic={contactTopic} />
 
-        {/* 13. Obsidian Footer */}
+        {/* 13. Footer */}
         <Footer />
       </div>
 
@@ -132,7 +130,7 @@ export default function Home() {
         onClose={() => setSelectedProject(null)}
         onWatchReel={(url, title) => {
           setSelectedProject(null);
-          handleOpenVideo(url, title, "Imagine Yes Case");
+          handleOpenVideo(url, title, "RFP Digital Production Showcase");
         }}
       />
     </main>

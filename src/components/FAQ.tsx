@@ -18,10 +18,10 @@ export const FAQ: React.FC = () => {
       {/* Header */}
       <div className="mb-14">
         <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-3">
-          {lang === "de" ? "Kurz beantwortet" : "In Short"}
+          Frequently Asked Questions
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7]">
-          {lang === "de" ? "Gut zu wissen, bevor wir sprechen." : "Good to know before we talk."}
+          Good to know before we talk.
         </h2>
       </div>
 
@@ -38,7 +38,7 @@ export const FAQ: React.FC = () => {
                 aria-expanded={isOpen}
               >
                 <span className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-[#f4f2f7] group-hover:text-[#a89bfa] transition-colors pr-6">
-                  {lang === "de" ? item.qDe : item.qEn}
+                  {item.qEn}
                 </span>
 
                 <div
@@ -54,7 +54,7 @@ export const FAQ: React.FC = () => {
 
               {isOpen && (
                 <div className="pt-4 pr-12 text-sm sm:text-base text-[#f4f2f7b8] leading-relaxed animate-in fade-in duration-200">
-                  <p>{lang === "de" ? item.aDe : item.aEn}</p>
+                  <p>{item.aEn}</p>
                 </div>
               )}
             </div>

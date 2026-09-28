@@ -61,7 +61,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
             <span className="font-extrabold text-sm sm:text-base tracking-[0.16em] text-white font-mono leading-tight flex items-center gap-1.5">
               RFP
               <span className="text-[9px] font-sans font-semibold px-1.5 py-0.5 rounded-full bg-[#D4AF37]/15 text-[#E6C665] border border-[#D4AF37]/35 tracking-wider">
-                FILM & AI
+                MEDIA &amp; FILM
               </span>
             </span>
             <span className="text-[8.5px] sm:text-[9.5px] tracking-[0.28em] text-[#D4AF37]/85 font-mono uppercase font-semibold">

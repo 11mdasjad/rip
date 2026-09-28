@@ -18,17 +18,13 @@ export const Leistungen: React.FC<LeistungenProps> = ({ onOpenContact }) => {
       {/* Section Header */}
       <div className="max-w-3xl mb-16 lg:mb-20">
         <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-3">
-          {lang === "de" ? "Unsere Leistungen" : "Our Services"}
+          Our Core Capabilities
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7] mb-6">
-          {lang === "de"
-            ? "Die Aufgabe gibt die Richtung vor."
-            : "The objective dictates the direction."}
+          The project objective dictates the direction.
         </h2>
         <p className="text-base sm:text-lg text-[#f4f2f7b8] leading-relaxed">
-          {lang === "de"
-            ? "Wir wählen und verbinden die Produktionsmethoden, die Ihre Geschichte verständlich machen und Ihrer Marke gerecht werden – vom klassischen Realdreh bis zur KI-Pipeline."
-            : "We select and harmonize the production methodologies that articulate your narrative with clarity and elevate your brand – from classical cinematography to generative AI pipelines."}
+          From full corporate documentaries and university campus films to election campaigns and viral social media reels, we provide end-to-end creative direction, production, and execution.
         </p>
       </div>
 
@@ -50,9 +46,9 @@ export const Leistungen: React.FC<LeistungenProps> = ({ onOpenContact }) => {
                   </span>
                   <a
                     href="#kontakt"
-                    onClick={() => onOpenContact(lang === "de" ? service.titleDe : service.titleEn)}
+                    onClick={() => onOpenContact(service.titleEn)}
                     className="w-10 h-10 rounded-full bg-white/[0.04] group-hover:bg-[#6b54ee] border border-white/[0.1] group-hover:border-transparent flex items-center justify-center text-white/80 group-hover:text-white transition-all duration-300"
-                    aria-label={`Projekt anfragen: ${service.titleDe}`}
+                    aria-label={`Inquire Service: ${service.titleEn}`}
                   >
                     <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
@@ -60,20 +56,20 @@ export const Leistungen: React.FC<LeistungenProps> = ({ onOpenContact }) => {
 
                 {/* Service Title */}
                 <h3 className="text-2xl font-bold text-[#f4f2f7] mb-4 tracking-tight group-hover:text-white transition-colors">
-                  {lang === "de" ? service.titleDe : service.titleEn}
+                  {service.titleEn}
                 </h3>
 
                 {/* Description */}
                 <p className="text-sm text-[#f4f2f7b8] leading-relaxed mb-6 font-normal">
-                  {lang === "de" ? service.descDe : service.descEn}
+                  {service.descEn}
                 </p>
 
                 {/* Deliverables / Key Outputs */}
                 <div className="space-y-2 mb-6">
                   <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mb-2">
-                    {lang === "de" ? "Typische Ergebnisse:" : "Key Deliverables:"}
+                    Key Deliverables:
                   </div>
-                  {(lang === "de" ? service.deliverablesDe : service.deliverablesEn).map(
+                  {(service.deliverablesEn || []).map(
                     (del, idx) => (
                       <div key={idx} className="flex items-center space-x-2 text-xs text-[#f4f2f7]">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#a89bfa] flex-shrink-0" />
@@ -88,10 +84,10 @@ export const Leistungen: React.FC<LeistungenProps> = ({ onOpenContact }) => {
               <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
                 <a
                   href="#kontakt"
-                  onClick={() => onOpenContact(lang === "de" ? service.titleDe : service.titleEn)}
+                  onClick={() => onOpenContact(service.titleEn)}
                   className="text-xs font-semibold text-[#a89bfa] group-hover:text-white transition-colors flex items-center space-x-1"
                 >
-                  <span>{lang === "de" ? "Projekt besprechen" : "Discuss Project"}</span>
+                  <span>Discuss Service</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </div>

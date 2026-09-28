@@ -47,49 +47,49 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
           {/* Eyebrow Quick navigation chips */}
           <nav
             className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#f4f2f780] mb-5 sm:mb-6"
-            aria-label="Direct shortcuts to disciplines"
+            aria-label="Direct shortcuts to services"
           >
             <a
-              href="#service-filmproduktion"
+              href="#service-corporate-films"
               className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
             >
-              Live Action
+              Corporate Films
             </a>
             <span className="text-white/20">·</span>
             <a
-              href="#service-3d-animation"
+              href="#service-documentary-films"
               className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
             >
-              3D Animation
+              Documentaries
             </a>
             <span className="text-white/20">·</span>
             <a
-              href="#service-ki-filmproduktion"
+              href="#service-election-campaigns"
               className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
             >
-              Generative AI
+              Election Campaigns
             </a>
             <span className="text-white/20">·</span>
             <a
-              href="#ki-workflows"
+              href="#service-social-media-management"
               className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
             >
-              AI Workflows
+              Social Media
             </a>
           </nav>
 
           {/* Main Title */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#f4f2f7] leading-[1.1] mb-5 sm:mb-6">
-            Complex topics.
+            Video Production &amp;
             <br />
             <span className="bg-gradient-to-r from-[#a89bfa] via-[#7c6af2] to-[#c4b5fd] bg-clip-text text-transparent">
-              Boldly told.
+              Election Management.
             </span>
           </h1>
 
           {/* Lead Paragraph */}
           <p className="text-sm sm:text-base lg:text-lg text-[#f4f2f7b8] leading-relaxed mb-6 sm:mb-8 max-w-xl font-normal">
-            Film production, 3D animation, and generative AI for leading enterprises and creative brands. Flagship standalone productions and continuous B2B content — from Munich across the globe.
+            Hire RFP Digital Productions for your Digital Media needs. Managed by seasoned media professionals and alumni from AJK Mass Communication &amp; Research Center (AJK MCRC), Jamia Millia Islamia, New Delhi, bringing over 17+ years of media excellence.
           </p>
 
           {/* Action CTAs */}
@@ -102,12 +102,19 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
               <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
 
-            <a
-              href="#kontakt"
+            <button
+              onClick={() =>
+                onPlayVideo(
+                  "https://www.youtube.com/embed/Rz2ZrNClYNs?autoplay=1",
+                  "RFP Digital Productions Showreel",
+                  "17+ Years of Media Excellence"
+                )
+              }
               className="inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-full border border-white/[0.2] hover:border-white/[0.4] bg-white/[0.03] hover:bg-white/[0.08] text-[#f4f2f7] text-sm font-medium tracking-wide transition-all duration-200 active:scale-95 text-center"
             >
-              <span>Discuss Project</span>
-            </a>
+              <Play className="w-4 h-4 fill-current text-[#a89bfa]" />
+              <span>Watch Showreel</span>
+            </button>
           </div>
         </div>
 

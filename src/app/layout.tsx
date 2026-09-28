@@ -11,26 +11,29 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "RFP Digital Productions · Film, AI & 3D Cinema",
+  title: "RFP Digital Productions | Video Production & Election Management Company",
   description:
-    "RFP Digital Productions tells complex stories powerfully – films and visual content for global brands and enterprises, live-action, 2D/3D animation, or generative AI.",
+    "Hire RFP Digital Productions for your Digital Media needs. Managed by media professionals from AJK MCRC, Jamia Millia Islamia. Over 17+ years of media excellence in Corporate Films, Documentaries, Election Campaigns, Social Media Management, and Photography.",
   keywords: [
     "RFP Digital Productions",
-    "Film Production",
-    "AI Film Production",
-    "Generative AI Video",
-    "3D Animation",
-    "Product Visualization",
-    "Commercials & Cinema",
+    "video production company delhi",
+    "election management company",
+    "corporate films delhi",
+    "documentary films india",
+    "mobile LED vans",
+    "election prachar songs",
+    "social media management",
+    "digital marketing agency",
+    "event photography"
   ],
   authors: [{ name: "RFP Digital Productions" }],
   openGraph: {
-    title: "RFP Digital Productions · Film, AI & 3D Cinema",
+    title: "RFP Digital Productions | Video Production & Election Management Company",
     description:
-      "RFP Digital Productions tells complex stories powerfully – films and visual content for global brands and enterprises, live-action, 2D/3D animation, or generative AI.",
-    url: "https://rfpdigital.com",
+      "Hire RFP Digital Productions for your Digital Media needs. Over 17+ years of media excellence in Corporate Films, Documentaries, Election Campaigns, and Digital Media.",
+    url: "https://www.rfpdigital.com",
     siteName: "RFP Digital Productions",
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   robots: {

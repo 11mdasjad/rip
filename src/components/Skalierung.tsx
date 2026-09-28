@@ -82,48 +82,28 @@ export const Skalierung: React.FC = () => {
           {/* Right: Editorial Narrative Content */}
           <div className="lg:col-span-5 flex flex-col justify-center">
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#5a44d8] font-bold block mb-3">
-              {lang === "de"
-                ? "Skalierbare Produktion · weltweit"
-                : "Scalable Production · Worldwide"}
+              Scalable Production · Nationwide &amp; Global
             </span>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#17161b] leading-[1.12] mb-6">
-              {lang === "de"
-                ? "Genau so groß, wie Ihr Projekt es braucht."
-                : "Exactly as large as your vision demands."}
+              Exactly as extensive as your vision demands.
             </h2>
 
             <p className="text-base sm:text-lg text-[#17161ba8] leading-relaxed mb-6 font-normal">
-              {lang === "de" ? (
-                <>
-                  Manche Aufgaben lassen sich mit einem kompakten, erfahrenen Team realisieren. Für umfangreiche Produktionen stellen und führen wir größere Teams aus den passenden Spezialistinnen und Spezialisten –{" "}
-                  <b className="text-[#17161b] font-semibold">bis zu 45 Personen am Set</b> und{" "}
-                  <b className="text-[#17161b] font-semibold">bis zu zwölf Spezialisten in einer komplexen Postproduktion</b>.
-                </>
-              ) : (
-                <>
-                  Some briefs achieve optimal agility with a compact, elite squad. For expansive commercial productions, we curate and direct larger teams of dedicated specialists –{" "}
-                  <b className="text-[#17161b] font-semibold">up to 45 crew members on physical sets</b> and{" "}
-                  <b className="text-[#17161b] font-semibold">up to 12 specialists in complex post-production suites</b>.
-                </>
-              )}
+              From nimble documentary field crews to massive multi-camera event broadcasts and constituency-wide election campaigns, we curate and direct experienced media crews with precision and dedication.
             </p>
 
             <ul className="border-t border-[#17161b24] pt-6 space-y-4">
               <li className="flex items-start space-x-3 text-sm text-[#17161b]">
                 <span className="text-[#5a44d8] font-bold">▸</span>
                 <span>
-                  {lang === "de"
-                    ? "Das passende Setup, vom kompakten Run-and-Gun Dreh bis zum internationalen Großdreh"
-                    : "The right tactical setup, from agile documentary filming to multi-unit global productions"}
+                  The right operational setup, from intimate documentary shoots to nationwide campaign van deployments.
                 </span>
               </li>
               <li className="flex items-start space-x-3 text-sm text-[#17161b]">
                 <span className="text-[#5a44d8] font-bold">▸</span>
                 <span>
-                  {lang === "de"
-                    ? "Weiterverwendung von Footage, 3D-CAD-Daten, Bildwelten und Formaten von Beginn an mitgedacht"
-                    : "Long-term reusability of raw footage, CAD data, and aspect ratios architected from day one"}
+                  17+ years of broadcast pedigree, ensuring high-standard color science, crisp sound capture, and cinematic pacing.
                 </span>
               </li>
             </ul>

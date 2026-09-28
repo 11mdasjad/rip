@@ -1,12 +1,10 @@
-export type Language = "de" | "en";
+export type Language = "en";
 
 export interface StageScene {
   id: string;
   title: string;
-  artDe: string;
   artEn: string;
   poster: string;
-  loopVideo: string;
   fullVideoUrl: string;
   targetId: string;
 }
@@ -16,10 +14,8 @@ export interface ProjectCard {
   slot: "slot-g" | "slot-a" | "slot-b" | "slot-c" | "slot-d" | "slot-e" | "slot-f";
   title: string;
   client: string;
-  categoryDe: string;
   categoryEn: string;
-  filterCat: "film" | "animation" | "ki" | "b2b";
-  descDe: string;
+  filterCat: "film" | "campaign" | "documentary" | "marketing";
   descEn: string;
   poster: string;
   videoUrl?: string;
@@ -31,369 +27,391 @@ export interface ProjectCard {
 
 export const STAGE_SCENES: StageScene[] = [
   {
-    id: "dtm-red-bull",
-    title: "DTM / Red Bull",
-    artDe: "Realdreh + 3D",
-    artEn: "Live Action + 3D",
-    poster: "/medien/projekte/dtm-red-bull-16x9.jpg",
-    loopVideo: "/medien/hero/loop-dtm.mp4",
-    fullVideoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    targetId: "projekt-dtm-red-bull"
+    id: "andc-college",
+    title: "Acharya Narendra Dev College (ANDC)",
+    artEn: "Institutional & Documentary Film",
+    poster: "https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg",
+    fullVideoUrl: "https://www.youtube.com/embed/7MGQPvm2zl8?autoplay=1",
+    targetId: "projekt-andc"
   },
   {
-    id: "1und1",
-    title: "1&1",
-    artDe: "Realdreh + 3D",
-    artEn: "Live Action + 3D",
-    poster: "/medien/projekte/1und1-imagefilm-16x9.jpg",
-    loopVideo: "/medien/hero/loop-1und1.mp4",
-    fullVideoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    targetId: "projekt-1und1"
+    id: "election-campaigns",
+    title: "Election Campaign Management",
+    artEn: "LED Vans, Rallies & Voter Outreach",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f422e9e9.jpg",
+    fullVideoUrl: "https://www.youtube.com/embed/KLfO_N4a6V8?autoplay=1",
+    targetId: "projekt-election"
   },
   {
-    id: "generali",
-    title: "Generali",
-    artDe: "Vollständig KI-generiert",
-    artEn: "Fully AI-generated",
-    poster: "/medien/projekte/generali-bkv-16x9.jpg",
-    loopVideo: "/medien/hero/loop-generali.mp4",
-    fullVideoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    targetId: "projekt-generali"
+    id: "corporate-storytelling",
+    title: "Corporate & Brand Storytelling",
+    artEn: "Abbott, AIIMS, Jamia Hamdard",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f4297fd0.JPG",
+    fullVideoUrl: "https://www.youtube.com/embed/jirysVZwPIE?autoplay=1",
+    targetId: "projekt-corporate"
   },
   {
-    id: "rolls-royce",
-    title: "Rolls-Royce Power Systems",
-    artDe: "Cineastischer Realdreh",
-    artEn: "Cinematic Live Action",
-    poster: "/medien/projekte/rolls-royce-motorenbau-16x9.jpg",
-    loopVideo: "/medien/hero/loop-rolls-royce.mp4",
-    fullVideoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    targetId: "projekt-rolls-royce"
+    id: "documentary-heritage",
+    title: "Documentaries & Social Impact",
+    artEn: "Real Stories, Emotional Resonance",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42a4de6.jpg",
+    fullVideoUrl: "https://www.youtube.com/embed/91kFY2xs7cE?autoplay=1",
+    targetId: "projekt-documentary"
   }
 ];
 
 export const FAKTEN_DATA = [
   {
-    num: "2.000+",
-    labelDe: "realisierte Projekte",
-    labelEn: "realized projects",
-    descDe: "250+ KI-Projekte, 800+ 3D-Animationen und 700+ Erklärfilme.",
-    descEn: "250+ AI projects, 800+ 3D animations and 700+ explainer films."
+    num: "17+",
+    labelEn: "Years of Media Excellence",
+    descEn: "Headed by alumni of AJK MCRC, Jamia Millia Islamia, New Delhi."
   },
   {
-    num: "110–130",
-    labelDe: "Produktionen pro Jahr",
-    labelEn: "productions per year",
-    descDe: "Verlässliche Kapazitäten für Einzelprojekte und Content-Serien.",
-    descEn: "Reliable production capacity for single hero films and content series."
+    num: "1,000+",
+    labelEn: "Filming & Photo Sessions",
+    descEn: "High-definition corporate films, documentaries, and ad campaigns."
   },
   {
-    num: "15+",
-    labelDe: "Jahre Erfahrung",
-    labelEn: "years of experience",
-    descDe: "Erfahrung mit Großunternehmen und komplexen Produktionen.",
-    descEn: "Deep expertise with Fortune 500 enterprises and complex logistics."
+    num: "1,200+",
+    labelEn: "Events Covered Nationwide",
+    descEn: "From political conventions and expos to university convocations."
   },
   {
-    num: "34",
-    labelDe: "Länder weltweit",
-    labelEn: "countries worldwide",
-    descDe: "Produktionen auf sechs Kontinenten mit flexiblen Teams.",
-    descEn: "Filming and productions across six continents with agile squads."
+    num: "100%",
+    labelEn: "Client Satisfaction",
+    descEn: "Trusted by government bodies, leading colleges, and enterprise brands."
   }
 ];
 
 export const CLIENT_LOGOS = [
-  { name: "BMW", src: "/medien/logos/bmw.png" },
-  { name: "Sixt", src: "/medien/logos/sixt.png" },
-  { name: "Rolls-Royce", src: "/medien/logos/rolls-royce.png" },
-  { name: "Samsung", src: "/medien/logos/samsung.png" },
-  { name: "Generali", src: "/medien/logos/generali.png" },
-  { name: "1&1", src: "/medien/logos/1und1.png" },
-  { name: "KUKA", src: "/medien/logos/kuka.png" },
-  { name: "Golin Ketchum", src: "/medien/logos/golin-ketchum.png" },
-  { name: "ADAC", src: "/medien/logos/adac.png" },
-  { name: "EGYM", src: "/medien/logos/egym.jpg" },
-  { name: "IKEA", src: "/medien/logos/ikea.png" },
-  { name: "Payback", src: "/medien/logos/payback.webp" },
-  { name: "Roland Berger", src: "/medien/logos/roland-berger.png" },
-  { name: "Evonik", src: "/medien/logos/evonik.png" }
+  { name: "AIIMS Delhi", src: "https://rfpdigital.com/images/clientlogos/1200px-All_India_Institute_of_Medical_Sciences,_Delhi.svg.png" },
+  { name: "Abbott Healthcare", src: "https://rfpdigital.com/images/clientlogos/ABBOTT-LOGO.jpg" },
+  { name: "Atal Bihari Vajpayee Hindi Vishwavidyalaya", src: "https://rfpdigital.com/images/clientlogos/Atal-Bihari-Vajpayee-Hindi-Vishwavidyalaya.png" },
+  { name: "IIT Roorkee", src: "https://rfpdigital.com/images/clientlogos/IITR.png" },
+  { name: "Jamia Hamdard University", src: "https://rfpdigital.com/images/clientlogos/Jamia-Hamdard-University-New-Delhi.jpg" },
+  { name: "DD Kisan", src: "https://rfpdigital.com/images/clientlogos/DDKisanLogo.png" },
+  { name: "Haryana Police", src: "https://rfpdigital.com/images/clientlogos/haryana-plice-logo-BC5F526ACF-seeklogo.com.png" },
+  { name: "Bharat Construction", src: "https://rfpdigital.com/images/clientlogos/BHARAT-CONSTRUCTION.jpg" },
+  { name: "National Archives of India", src: "https://rfpdigital.com/images/clientlogos/National_Archives_of_India_Emblem.jpg" },
+  { name: "PlayerzPot", src: "https://rfpdigital.com/images/clientlogos/PlayerzPot-name-Rashmika-Mandanna-as-brand-ambassador.jpg" },
+  { name: "Smile India Foundation", src: "https://rfpdigital.com/images/clientlogos/Logo Smile India PNG.png" },
+  { name: "Brave Soul Foundation", src: "https://rfpdigital.com/images/clientlogos/Brave-Soul-Foundation.jpg" },
+  { name: "Jamia Co-operative Bank", src: "https://rfpdigital.com/images/clientlogos/jamia-co-operative-bank-ltd-jamia-nagar-delhi-banks-nduv7p.jpg" },
+  { name: "Modern Delhi Public School", src: "https://rfpdigital.com/images/clientlogos/logo.png" }
 ];
 
 export const PROJECTS_DATA: ProjectCard[] = [
   {
-    id: "projekt-dtm-red-bull",
+    id: "projekt-andc",
     slot: "slot-g",
-    title: "DTM / Red Bull",
-    client: "Red Bull Motorsports",
-    categoryDe: "Imagefilm · Realdreh + 3D",
-    categoryEn: "Brand Film · Live Action + 3D",
-    filterCat: "film",
-    descDe:
-      "Echte Motorsportszenen treffen auf eine Kamerafahrt durch einen präzise aufgebauten 3D-Motor – von der Beauftragung bis zum fertigen Film in dreieinhalb Wochen.",
+    title: "Acharya Narendra Dev College (ANDC)",
+    client: "ANDC / University of Delhi",
+    categoryEn: "Institutional & Campus Documentary",
+    filterCat: "documentary",
     descEn:
-      "High-speed motorsport meets a microscopic camera journey through a high-precision 3D engine – from greenlight to theatrical master in just 3.5 weeks.",
-    poster: "/medien/projekte/dtm-red-bull-16x9.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    tags: ["Realdreh", "3D-Animation", "Motorsport", "VFX"]
+      "A cinematic campus showcase capturing academic excellence, state-of-the-art research laboratories, and vibrant student community at Acharya Narendra Dev College, Delhi University.",
+    poster: "https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg",
+    videoUrl: "https://www.youtube.com/embed/7MGQPvm2zl8?autoplay=1",
+    tags: ["Institutional Film", "Delhi University", "Campus Documentary", "Full HD"]
   },
   {
-    id: "projekt-1und1",
+    id: "projekt-election",
     slot: "slot-a",
-    title: "1&1",
-    client: "1&1 Telecom / Jung von Matt",
-    categoryDe: "Imagefilm · Realdreh + 3D",
-    categoryEn: "Image Film · Live Action + 3D",
-    filterCat: "film",
-    descDe:
-      "Jung von Matt lieferte das Storyboard. Imagine Yes übernahm Location, Casting, Rechenzentrumsdreh, 3D-Integration und Postproduktion.",
+    title: "Election Campaign Management & Mobile LED Vans",
+    client: "State & Parliamentary Election Committees",
+    categoryEn: "Election Campaign Strategy & Media Operations",
+    filterCat: "campaign",
     descEn:
-      "Jung von Matt delivered the creative storyboard. Imagine Yes handled location scouting, casting, high-security server datacenter shoots, 3D integration, and post.",
-    poster: "/medien/projekte/1und1-imagefilm-16x9.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    tags: ["Jung von Matt", "Rechenzentrum", "3D-VFX"]
+      "Comprehensive election campaign rollout featuring high-visibility mobile LED display vans, ground rally coverage, audio anthems, Nukkad Natak street theatre, and constituency-wide digital media management.",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f422e9e9.jpg",
+    videoUrl: "https://www.youtube.com/embed/KLfO_N4a6V8?autoplay=1",
+    tags: ["Election Campaign", "LED Screen Vans", "Nukkad Natak", "Rally Coverage"]
   },
   {
-    id: "projekt-generali",
+    id: "projekt-corporate",
     slot: "slot-b",
-    title: "Generali",
-    client: "Generali Deutschland",
-    categoryDe: "Vollständig KI-generiert",
-    categoryEn: "Fully AI-generated",
-    filterCat: "ki",
-    descDe:
-      "Ein fotorealistischer Brandfilm ohne Realdreh. Komplette Bildwelten, Charaktere und dynamische Lichtstimmungen wurden mit generativer KI realisiert.",
+    title: "Corporate Storytelling & Brand Films",
+    client: "Abbott, AIIMS & Leading Enterprises",
+    categoryEn: "Corporate Brand Film",
+    filterCat: "film",
     descEn:
-      "A photorealistic brand narrative created without physical cameras. Entire worlds, characters, and dramatic lighting states crafted via generative AI pipelines.",
-    poster: "/medien/projekte/generali-bkv-16x9.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    tags: ["Generative KI", "Synthetischer Film", "Brand Film"]
+      "Crafting high-impact corporate videos, brand anthems, executive interviews, and facility walk-throughs that convey leadership, innovation, and trust across corporate stakeholders.",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f4297fd0.JPG",
+    videoUrl: "https://www.youtube.com/embed/jirysVZwPIE?autoplay=1",
+    tags: ["Corporate Film", "Healthcare", "Executive Interviews", "Branding"]
   },
   {
-    id: "projekt-uniklinik-freiburg",
+    id: "projekt-documentary",
     slot: "slot-c",
-    title: "Uniklinik Freiburg",
-    client: "Universitätsklinikum Freiburg",
-    categoryDe: "Patientenfilm · Cineastischer Realdreh",
-    categoryEn: "Patient Documentary · Cinematic",
-    filterCat: "film",
-    descDe:
-      "Einfühlsame Patientengeschichten und hochmoderne Medizintechnik in kinoreifer Ästhetik – respektvoll und transparent eingefangen.",
+    title: "Documentary Film Productions",
+    client: "National Archives & Universities",
+    categoryEn: "Social & Heritage Documentary",
+    filterCat: "documentary",
     descEn:
-      "Empathetic patient chronicles paired with state-of-the-art medical technology in cinematic depth – recorded with intimacy and scientific integrity.",
-    poster: "/medien/projekte/uniklinik-freiburg-still-16x9.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    tags: ["Healthcare", "Dokumentation", "Arthouse"]
+      "Compelling documentaries capturing human stories, cultural preservation, and institutional legacies with cinematic realism, archival research, and emotional resonance.",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42a4de6.jpg",
+    videoUrl: "https://www.youtube.com/embed/91kFY2xs7cE?autoplay=1",
+    tags: ["Documentary", "Cultural Heritage", "Archival Film", "Storytelling"]
   },
   {
-    id: "projekt-rolls-royce",
+    id: "projekt-social-media",
     slot: "slot-d",
-    title: "Rolls-Royce Power Systems",
-    client: "Rolls-Royce Solutions",
-    categoryDe: "Cineastischer Realdreh · Motorenbau",
-    categoryEn: "Cinematic Live Action · Engineering",
-    filterCat: "film",
-    descDe:
-      "Monumentale Motorenbau-Präzision in Friedrichshafen. Hochkontrastige Lichtsetzung, Macro-Optiken und cineastische Soundlandschaften.",
+    title: "Social Media Management & Digital Marketing",
+    client: "PlayerzPot, Startups & Commercial Brands",
+    categoryEn: "Social Media Content & Paid Growth",
+    filterCat: "marketing",
     descEn:
-      "Monumental industrial engineering in Friedrichshafen. High-contrast chiaroscuro lighting, macro optics, and immersive soundscapes.",
-    poster: "/medien/projekte/rolls-royce-motorenbau-16x9.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    tags: ["Industrie", "Engineering", "High-End"]
+      "End-to-end creative digital marketing, content calendars, vertical short-form reels, and targeted ad campaigns driving high customer engagement and measurable audience growth.",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42abf5c.jpg",
+    videoUrl: "https://www.youtube.com/embed/1PeIeMgjyQc?autoplay=1",
+    tags: ["Social Media", "Reels & Shorts", "Performance Marketing", "Content Strategy"]
   },
   {
-    id: "projekt-egym",
+    id: "projekt-school",
     slot: "slot-e",
-    title: "EGYM Fitness Tech",
-    client: "EGYM Global",
-    categoryDe: "3D-CAD + KI-Hintergrund Generierung",
-    categoryEn: "3D CAD + Generative AI Environment",
-    filterCat: "ki",
-    descDe:
-      "Interaktiver Vorher-Nachher-Vergleich: Original 3D-CAD Modell gegen KI-generierte Premium-Fitnessstudio-Umgebungen.",
+    title: "Modern Delhi Public School Showcase",
+    client: "Modern Delhi Public School, Faridabad",
+    categoryEn: "Campus & Academic Film",
+    filterCat: "film",
     descEn:
-      "Interactive Before/After slider: Raw CAD asset placed dynamically into synthetic photorealistic fitness environments.",
-    poster: "/medien/projekte/egym-ausgangsbild-4x3.jpg",
-    hasComparison: true,
-    comparisonBefore: "/medien/projekte/egym-ausgangsbild-4x3.jpg",
-    comparisonAfters: [
-      { label: "Studio Loft", src: "/medien/projekte/egym-ki-hintergrund-1-4x3.jpg" },
-      { label: "High-Tech Gym", src: "/medien/projekte/egym-ki-hintergrund-2-4x3.jpg" }
-    ],
-    tags: ["Interactive Slider", "Vorher/Nachher", "Generative KI"]
+      "An inspiring institutional walkthrough showcasing premier educational infrastructure, sports academies, artistic performances, and academic achievements under the leadership of Director Principal US Verma.",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42b2209.jpg",
+    videoUrl: "https://www.youtube.com/embed/B8-5NEnLjQ8?autoplay=1",
+    tags: ["Education", "Campus Infrastructure", "Event Coverage", "Faridabad"]
   },
   {
-    id: "projekt-bmw-babyracer",
+    id: "projekt-songs",
     slot: "slot-f",
-    title: "BMW Babyracer",
-    client: "BMW Group Lifestyle",
-    categoryDe: "3D-Animation & Charakterdesign",
-    categoryEn: "3D Animation & Product Motion",
-    filterCat: "animation",
-    descDe:
-      "Dynamische 3D-Produktinszenierung des ikonischen BMW Babyracers mit feinsten Materialreflektionen und studiofertigem Lighting.",
+    title: "Prachar Songs & Custom Campaign Music",
+    client: "Political Leaders & Campaign Fronts",
+    categoryEn: "Music Composition & Audio Production",
+    filterCat: "campaign",
     descEn:
-      "Dynamic 3D product motion showcasing the iconic BMW Babyracer with exquisite material shaders and studio illumination.",
-    poster: "/medien/projekte/bmw-babyracer-16x9.jpg",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    tags: ["BMW", "3D-Produktfilm", "Animation"]
+      "Original campaign song composition, lyric writing, studio vocal recording, and energetic music videos designed to rally voters and build emotional resonance on the campaign trail.",
+    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42bae0a.jpg",
+    videoUrl: "https://www.youtube.com/embed/TAv-50-CHjc?autoplay=1",
+    tags: ["Prachar Songs", "Audio Anthems", "Music Production", "Election Trail"]
   }
 ];
 
 export const SERVICES_DATA = [
   {
     num: "01",
-    id: "filmproduktion",
-    titleDe: "Filmproduktion",
-    titleEn: "Film Production",
-    descDe:
-      "Marken inszenieren, Menschen zeigen und Unternehmen erlebbar machen. Wir übernehmen Konzeption, weltweite Dreharbeiten, Cinema-Kamera-Crews und Regie für Imagefilme, Werbespots und Employer-Branding.",
+    id: "corporate-films",
+    titleEn: "Corporate Films",
     descEn:
-      "Showcasing brands, illuminating human stories, and bringing corporate vision to life. We manage creative concepting, global cinema crews, and visionary direction for brand films, commercials, and employer branding.",
-    deliverablesDe: ["Imagefilme & Brand Anthems", "TV & Web Werbespots", "Executive Interviews & Keynotes", "Recruiting & Kulturfilme"],
-    deliverablesEn: ["Brand Anthems & Image Films", "Broadcast & Digital Commercials", "Executive Keynotes & Interviews", "Recruiting & Culture Chronicles"]
+      "Professional corporate storytelling, brand films, product launches and company profile videos. We create impactful videos that showcase your brand’s vision and story.",
+    deliverablesEn: [
+      "Company Profile Videos",
+      "Brand Anthems & Commercials",
+      "Executive Interviews & Keynotes",
+      "Facility Walkthroughs & Industrial Films"
+    ]
   },
   {
     num: "02",
-    id: "b2b-contentproduktion",
-    titleDe: "B2B-Contentproduktion",
-    titleEn: "B2B Content Production",
-    descDe:
-      "Verlässliche, modulare Content-Serien für die laufende Unternehmenskommunikation. Wir produzieren wiederverwendbare Footage-Pools für Social Media, Messen, Investor Relations und Sales Funnels.",
+    id: "documentary-films",
+    titleEn: "Documentary Films",
     descEn:
-      "Reliable, modular content systems for continuous enterprise communication. We create versatile footage pools engineered for LinkedIn, industry expos, investor relations, and high-conversion sales funnels.",
-    deliverablesDe: ["Modularer Content-Baukasten", "LinkedIn Videoformate (9:16 & 1:1)", "Messe-Loops in 4K/8K", "Produkt-Erklärstrecken"],
-    deliverablesEn: ["Modular Content System", "LinkedIn Optimized Videos (9:16 & 1:1)", "4K/8K Expo Video Walls", "Product Feature Breakdowns"]
+      "Compelling documentaries that capture real stories with cinematic visuals and emotional impact. From cultural heritage to institutional history, we bring authenticity to the screen.",
+    deliverablesEn: [
+      "Institutional & Historical Documentaries",
+      "Social Impact & NGO Field Stories",
+      "Biographical Chronicles & Retrospectives",
+      "Archival Research & Narration"
+    ]
   },
   {
     num: "03",
-    id: "ki-filmproduktion",
-    titleDe: "KI-Filmproduktion",
-    titleEn: "AI Film Production",
-    descDe:
-      "Pioniere im Einsatz generativer KI für kommerzielle Filmprojekte. Wir verbinden Realdreh mit State-of-the-Art Diffusion Models, Sora/Runway-Pipelines und ComfyUI für Bildwelten, die sonst unbezahlbar wären.",
+    id: "social-media-management",
+    titleEn: "Social Media Management",
     descEn:
-      "Pioneering generative AI in commercial filmmaking. We fuse physical footage with cutting-edge diffusion models, Sora/Runway pipelines, and custom ComfyUI workflows for visuals that would otherwise be cost-prohibitive.",
-    deliverablesDe: ["Vollständig KI-generierte Spots", "Hybride KI-VFX & Hintergründe", "Virtuelle Protagonisten & Statisten", "Schnelle Mood- & Pitchfilme"],
-    deliverablesEn: ["100% Synthetic AI Commercials", "Hybrid AI-VFX & Environments", "Virtual Protagonists & Crowds", "Rapid AI Concept & Moodfilms"]
+      "Enhance your online presence with tailored strategies and creative content. Creative content planning, posting, branding and audience engagement across every platform.",
+    deliverablesEn: [
+      "Content Calendar & Strategy",
+      "High-Engagement Reels, Shorts & Videos",
+      "Brand Identity & Visual Guidelines",
+      "Community Engagement & Response Management"
+    ]
   },
   {
     num: "04",
-    id: "3d-animation",
-    titleDe: "3D-Animation & Visualisierung",
-    titleEn: "3D Animation & Product Viz",
-    descDe:
-      "Komplexe Produkte, Maschinen und Prozesse verständlich und ästhetisch visualisiert. Wir importieren Ihre CAD-Konstruktionsdaten direkt in fotorealistische Rendering-Pipelines.",
+    id: "digital-marketing",
+    titleEn: "Digital Marketing",
     descEn:
-      "Transforming complex machinery, industrial components, and software architectures into striking visual clarity. We import native CAD data into photorealistic cinematic rendering pipelines.",
-    deliverablesDe: ["CAD-Import & Modelloptimierung", "Explosionsansichten & Röntgenblicke", "Fotorealistisches Shading & Lighting", "Virtuelle Produktlaunches"],
-    deliverablesEn: ["CAD Import & Mesh Optimization", "Exploded Views & X-Ray Cutaways", "Photorealistic Materials & Lighting", "Virtual Product Launches"]
+      "Performance marketing, paid advertising, SEO and lead generation focused on measurable growth. Reach your exact target audience with data-driven creative campaigns.",
+    deliverablesEn: [
+      "Meta Ads & Google Ads Management",
+      "Targeted Lead Generation Campaigns",
+      "Search Engine Optimization (SEO)",
+      "Analytics Reporting & Conversion Funnels"
+    ]
   },
   {
     num: "05",
-    id: "erklaerfilm-produktion",
-    titleDe: "Erklärfilm-Produktion",
-    titleEn: "Explainer Films",
-    descDe:
-      "Schluss mit trockenen PowerPoints. Wir übersetzen anspruchsvolle Technologien, Software-Lösungen und regulatorische Themen in mitreißende 2D/3D-Erklärfilme mit glasklarer Dramaturgie.",
+    id: "election-campaigns",
+    titleEn: "Election Campaign Services",
     descEn:
-      "No more dry presentations. We translate intricate technologies, SaaS architectures, and regulatory frameworks into engaging 2D/3D explainers with razor-sharp dramaturgy.",
-    deliverablesDe: ["Didaktische Drehbuchentwicklung", "2D Motion Design & Isometric 3D", "Professionelle Sprecher (30+ Sprachen)", "Sounddesign & Audio-Mastering"],
-    deliverablesEn: ["Pedagogical Scriptwriting", "2D Motion Graphics & Isometric 3D", "Native Voiceovers (30+ Languages)", "Sound Design & Audio Master"]
+      "Complete political campaign strategy, media management, digital outreach and election branding. Run successful campaigns with innovative strategies and media coverage.",
+    deliverablesEn: [
+      "Mobile LED Display Screen Vans",
+      "Original Prachar Songs & Anthems",
+      "Nukkad Nataks (Street Play Performances)",
+      "WhatsApp Outreach & Constituency Social Marketing"
+    ]
   },
   {
     num: "06",
-    id: "ki-workflows-automatisierung",
-    titleDe: "KI-Workflows & Automatisierung",
-    titleEn: "AI Workflows & Automation",
-    descDe:
-      "Befähigen Sie Ihr eigenes Inhouse-Marketing- und Kreativteam. Wir entwickeln maßgeschneiderte KI-Workflows, Schnittstellen und führen intensive Praxis-Workshops in Ihrem Unternehmen durch.",
+    id: "photography-events",
+    titleEn: "Photography & Event Coverage",
     descEn:
-      "Empower your in-house marketing and creative teams. We design custom generative AI workflows, proprietary asset pipelines, and conduct hands-on training directly inside your organization.",
-    deliverablesDe: ["Inhouse KI-Schulungen & Prompting", "Automatisierte Lokalisierung & Lip-Sync", "Custom Model-Training & Brand-Tuning", "Governance & Urheberrechts-Leitfäden"],
-    deliverablesEn: ["In-House AI Training & Prompt Engineering", "Automated Localization & Lip-Sync", "Custom Model Training & Brand Tuning", "AI Governance & IP Compliance"]
+      "Preserve your precious moments with artistic and high-quality photographs. Multi-camera setup, candid photography, and live streaming for summits, expos, and ceremonies.",
+    deliverablesEn: [
+      "High-Resolution Event Photography",
+      "Corporate Headshots & Portfolios",
+      "Multi-Camera Live Event Streaming",
+      "Same-Day Edit Highlights & Retouching"
+    ]
   }
 ];
 
 export const PROCESS_STEPS = [
   {
     nr: "01",
-    titleDe: "Ziel klären",
-    titleEn: "Clarify the goal",
-    descDe: "Wir verstehen Zielgruppe, Kernbotschaft, Einsatzkanäle und Rahmenbedingungen.",
-    descEn: "We align on target audiences, core messaging, distribution channels, and technical requirements."
+    titleEn: "Consultation & Briefing",
+    descEn: "We understand your objectives, target audience, core campaign messaging, budget, and timelines."
   },
   {
     nr: "02",
-    titleDe: "Idee entwickeln",
-    titleEn: "Develop the idea",
-    descDe: "Wir entwickeln Story, Dramaturgie, Bildsprache und die passende Produktionsmethode.",
-    descEn: "We engineer narrative dramaturgy, visual language, and select the optimal production methodology."
+    titleEn: "Concept & Scriptwriting",
+    descEn: "Our team develops the creative concept, storyboards, screenplay, and visual moodboards."
   },
   {
     nr: "03",
-    titleDe: "Sichtbar machen",
-    titleEn: "Make it visible",
-    descDe: "Drehbuch, Storyboard und Look-Development schaffen eine verlässliche Entscheidungsgrundlage.",
-    descEn: "Scriptwriting, storyboards, and look development create a rock-solid foundation before cameras roll."
+    titleEn: "Filming & Production",
+    descEn: "We deploy experienced cinematographers, directors, cinema lighting, and 4K camera gear on location."
   },
   {
     nr: "04",
-    titleDe: "Sicher produzieren",
-    titleEn: "Produce with confidence",
-    descDe: "Wir stellen das beste Team zusammen und führen verlässlich durch Dreh, 3D oder KI-Generierung.",
-    descEn: "We assemble seasoned specialists and direct seamlessly through shoot, 3D render, or AI generation."
+    titleEn: "Post-Production & Sound Design",
+    descEn: "Masterful editing, color grading, voiceover narration, sound effects, and motion graphics integration."
   },
   {
     nr: "05",
-    titleDe: "Finalisieren & Skalieren",
-    titleEn: "Finalize & Scale",
-    descDe: "Schnitt, Sound, Colorgrading, Sprachfassungen und Formate werden für alle Kanäle meisterhaft fertiggestellt.",
-    descEn: "Editing, sound, color grading, multi-language localization, and aspect ratios mastered for all channels."
+    titleEn: "Final Delivery & Campaign Launch",
+    descEn: "Delivery in high-definition formats optimized for broadcast, YouTube, social media, or live LED walls."
   }
 ];
 
 export const FAQ_DATA = [
   {
-    qDe: "Brauchen wir bereits ein fertiges Konzept?",
-    qEn: "Do we already need a finished concept?",
-    aDe: "Eine Aufgabe, ein Briefing oder eine erste Idee reichen völlig aus. Wir entwickeln daraus Konzept, Dramaturgie und die passende Bildwelt. Liegt bereits ein Agentur-Storyboard vor, realisieren wir dieses mit höchster Präzision.",
-    aEn: "A brief, a business objective, or an initial idea is all that is needed. We craft concept, dramaturgy, and visual style from the ground up. If an agency storyboard already exists, we execute it with absolute fidelity."
+    qEn: "What services does RFP Digital Productions offer?",
+    aEn: "RFP Digital Productions is a full-service media production and election management company based in New Delhi. We specialize in corporate films, documentary films, social media management, digital marketing, election campaign management (LED vans, prachar songs, nukkad nataks), and professional photography."
   },
   {
-    qDe: "Können wir mit einem einzelnen Projekt starten?",
-    qEn: "Can we start with a single project?",
-    aDe: "Ja, absolut. Viele Partnerschaften beginnen mit einem einzelnen Leuchtturm-Projekt. Wenn Sie später fortlaufenden Content benötigen, bauen wir nahtlos auf den etablierten Markenwerten und Abläufen auf.",
-    aEn: "Yes, absolutely. Many of our collaborations begin with a single flagship project. If you subsequently require ongoing content, we seamlessly build upon established brand assets and established processes."
+    qEn: "Who leads the team at RFP Digital Productions?",
+    aEn: "Our production house is managed by seasoned media professionals and alumni from the prestigious AJK Mass Communication & Research Center (AJK MCRC), Jamia Millia Islamia, New Delhi, bringing over 17 years of industry experience."
   },
   {
-    qDe: "Können unsere Agenturen und internen Teams eingebunden bleiben?",
-    qEn: "Can our agencies and internal teams stay involved?",
-    aDe: "Ja, sehr gerne. Wir arbeiten partnerschaftlich sowohl direkt mit Unternehmen als auch mit Lead-Agenturen zusammen (wie z.B. Jung von Matt). Wir stimmen Schnittstellen und Freigaben flexibel ab.",
-    aEn: "Yes, gladly. We frequently partner both directly with enterprise clients and collaboratively with lead creative agencies (such as Jung von Matt), aligning interfaces and milestones flexibly."
+    qEn: "Can RFP Digital handle nationwide shoots across India?",
+    aEn: "Yes, absolutely. We have covered over 1,200+ events and productions across India, including Delhi NCR, Uttar Pradesh, Bihar, Haryana, Rajasthan, and nationwide locations with agile mobile camera crews."
   },
   {
-    qDe: "Wie binden Sie generative KI in bestehende Produktionen ein?",
-    qEn: "How do you integrate generative AI into existing productions?",
-    aDe: "Pragmatisch und qualitätsgetrieben: Wo KI schneller, flexibler oder kostengünstiger ist (z.B. Hintergrund-Generierung, Storyboarding, synthetische Szenen), setzen wir sie ein. Wo echter Realdreh oder physikalische 3D-Präzision unübertroffen sind, bleibt das Handwerk führend.",
-    aEn: "Pragmatically and quality-first: wherever AI delivers speed, flexibility, or impossible vistas (e.g. background extension, rapid storyboards, synthetic sets), we harness it. Where live cinematography or physical CAD precision remains superior, traditional craft leads."
+    qEn: "How does your Election Campaign Management service work?",
+    aEn: "We provide an integrated, turnkey election campaign engine: mobile LED screen vans, original prachar songs, street plays (Nukkad Nataks), manifesto designs, digital banners, WhatsApp outreach, and on-ground rally video coverage."
   },
   {
-    qDe: "Wie schnell können wir ein Projekt starten?",
-    qEn: "How fast can we kick off a project?",
-    aDe: "Nach unserem ersten Gespräch erhalten Sie in der Regel innerhalb von 24–48 Stunden einen klaren Fahrplan und eine transparente Budgetschätzung. Bei dringenden Vorhaben können wir auch innerhalb weniger Tage dreh- und produktionsbereit sein.",
-    aEn: "Following our initial discussion, you typically receive a clear production roadmap and transparent budget outline within 24–48 hours. For time-critical launches, we can mobilize within days."
+    qEn: "How do we get a quote or discuss a project?",
+    aEn: "You can reach out directly via WhatsApp, call us at +91-11-49963157 or +91 99999 63157, email rfpdigitalmedia@gmail.com, or submit the inquiry form on this site. Our team typically responds within the same day."
+  }
+];
+
+export const REAL_YOUTUBE_VIDEOS = [
+  {
+    id: "7MGQPvm2zl8",
+    title: "ANDC | Acharya Narendra Dev College",
+    desc: "An immersive institutional experience captured in high definition.",
+    embedUrl: "https://www.youtube.com/embed/7MGQPvm2zl8"
+  },
+  {
+    id: "jirysVZwPIE",
+    title: "ANDC Campus Tour & Research Labs",
+    desc: "Official academic documentary and campus facilities walkthrough.",
+    embedUrl: "https://www.youtube.com/embed/jirysVZwPIE"
+  },
+  {
+    id: "91kFY2xs7cE",
+    title: "University & Corporate Documentary",
+    desc: "A moment that speaks a thousand words – real human storytelling.",
+    embedUrl: "https://www.youtube.com/embed/91kFY2xs7cE"
+  },
+  {
+    id: "hpacHvIGPNI",
+    title: "Social & Community Initiative Film",
+    desc: "A cinematic view of healthcare, public health, and social welfare programs.",
+    embedUrl: "https://www.youtube.com/embed/hpacHvIGPNI"
+  },
+  {
+    id: "KLfO_N4a6V8",
+    title: "Election Campaign Rally & Anthem",
+    desc: "Vibrant ground-level campaign coverage and public rally visuals.",
+    embedUrl: "https://www.youtube.com/embed/KLfO_N4a6V8"
+  },
+  {
+    id: "B8-5NEnLjQ8",
+    title: "Modern Delhi Public School Showcase",
+    desc: "Educational excellence, student achievements, and campus life.",
+    embedUrl: "https://www.youtube.com/embed/B8-5NEnLjQ8"
+  },
+  {
+    id: "1PeIeMgjyQc",
+    title: "Brand Promotional Commercial",
+    desc: "High-impact storytelling driving business and customer reach.",
+    embedUrl: "https://www.youtube.com/embed/1PeIeMgjyQc"
+  },
+  {
+    id: "TAv-50-CHjc",
+    title: "Creative Production & Music Reel",
+    desc: "Cinematic visual craftsmanship, custom song compositions, and post-production.",
+    embedUrl: "https://www.youtube.com/embed/TAv-50-CHjc"
+  },
+  {
+    id: "OgZJC0msHm8",
+    title: "Studio & On-Location Production",
+    desc: "Dynamic commercial cinematography and creative visual arts.",
+    embedUrl: "https://www.youtube.com/embed/OgZJC0msHm8"
+  }
+];
+
+export const CLIENT_TESTIMONIALS = [
+  {
+    author: "Ajeet Sharma",
+    designation: "MLA, Bhagalpur",
+    quote: "RFP Digital Productions delivered outstanding media and campaign coverage. Their dedication, timely execution, and video storytelling on the ground were exceptional.",
+    videoUrl: "https://rfpdigital.com/images/client-videos/video1.mp4"
+  },
+  {
+    author: "Supporters of Nilesh Kumar",
+    designation: "Chairman, Mokama (Bihar)",
+    quote: "The election campaign videos, songs, and mobile LED van displays created by RFP Digital reached every corner of the constituency and built immense enthusiasm among voters.",
+    videoUrl: "https://rfpdigital.com/images/client-videos/video2.mp4"
+  },
+  {
+    author: "US Verma",
+    designation: "Director Principal, Modern Delhi Public School, Faridabad",
+    quote: "RFP Digital Productions captured the essence of our educational institution with supreme cinematic quality. Their team is thorough, creative, and remarkably professional.",
+    videoUrl: "https://rfpdigital.com/images/client-videos/video3.mp4"
   }
 ];
 
 export const MAKING_OF_IMAGES = [
-  "/medien/making-of/making-of-01.jpg",
-  "/medien/making-of/making-of-02.jpg",
-  "/medien/making-of/making-of-03.jpg",
-  "/medien/making-of/making-of-04.jpg",
-  "/medien/making-of/making-of-05.jpg",
-  "/medien/making-of/making-of-06.jpg",
-  "/medien/making-of/making-of-07.jpg",
-  "/medien/making-of/making-of-08.jpg",
-  "/medien/making-of/making-of-10.jpg"
+  "https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg",
+  "https://rfpdigital.com/images/gallery/1740382018_67bc1f422e9e9.jpg",
+  "https://rfpdigital.com/images/gallery/1740382018_67bc1f4297fd0.JPG",
+  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42a4de6.jpg",
+  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42abf5c.jpg",
+  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42b2209.jpg",
+  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42bae0a.jpg",
+  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42c2d85.jpg",
+  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42caf8c.jpg"
 ];

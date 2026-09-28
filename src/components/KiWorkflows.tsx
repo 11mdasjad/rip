@@ -1,48 +1,33 @@
 "use client";
 
 import React from "react";
-import { ArrowUpRight, Sparkles, Languages, Wand2, Shield } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import { ArrowUpRight, Tv, Music, Users, MessageSquare } from "lucide-react";
 
 export const KiWorkflows: React.FC = () => {
-  const { lang } = useLanguage();
-
   const workflows = [
     {
-      icon: Sparkles,
-      titleDe: "1. Rapid AI Concepting & Moodfilms",
-      titleEn: "1. Rapid AI Concepting & Moodfilms",
-      descDe:
-        "Generierung konsistenter Storyboards, Moodboards und Bewegtbild-Pitches innerhalb von 24 Stunden für schnelle interne Abstimmungen und Vorstandspräsentationen.",
+      icon: Tv,
+      titleEn: "1. Mobile LED Display Screen Vans",
       descEn:
-        "Generating consistent storyboards, visual moodfilms, and motion pitches within 24 hours for rapid stakeholder alignment and executive presentations."
+        "High-brightness, weather-resistant daylight LED display vans deployed across constituencies with hydraulic masts, sound systems, and daily broadcast schedules."
     },
     {
-      icon: Languages,
-      titleDe: "2. Automatisierte Lokalisierung & Lip-Sync",
-      titleEn: "2. Automated Localization & Lip-Sync",
-      descDe:
-        "Übersetzung von Filmen in 30+ Sprachen mit nativer Stimmklonung des Originalsprechers und KI-gestütztem Lippenabgleich für globale Rollouts.",
+      icon: Music,
+      titleEn: "2. Custom Prachar Songs & Anthems",
       descEn:
-        "Translating hero videos into 30+ languages featuring voice cloning of original speakers and synthetic lip-sync alignment for international campaigns."
+        "Original lyric writing, professional studio recording, catchy rhythms, and high-energy music videos tailored to candidate manifestos and regional cultural appeal."
     },
     {
-      icon: Wand2,
-      titleDe: "3. Synthetische Set- & Hintergrunderweiterung",
-      titleEn: "3. Synthetic Set & Background Extension",
-      descDe:
-        "Realdreh im Greenscreen-Studio oder vor schlichter Kulisse – fotorealistisch versetzt in futuristische Fabriken, Hochgebirge oder sterile Reinräume.",
+      icon: Users,
+      titleEn: "3. Nukkad Natak & Street Theatre",
       descEn:
-        "Physical filming in studio conditions seamlessly transposed into futuristic gigafactories, alpine summits, or cleanrooms using diffusion models."
+        "Engaging on-ground street play performances by seasoned theatrical artists connecting directly with voters in weekly haats, town plazas, and residential sectors."
     },
     {
-      icon: Shield,
-      titleDe: "4. Rechtssichere Enterprise-Pipelines",
-      titleEn: "4. Enterprise Compliance & Brand Governance",
-      descDe:
-        "Etablierung lokaler, geschützter KI-Workflows ohne Datenspeicherung durch Drittanbieter – mit klaren Leitfäden für Urheberrecht und Markenschutz.",
+      icon: MessageSquare,
+      titleEn: "4. WhatsApp Outreach & Digital Campaigns",
       descEn:
-        "Implementing proprietary, secure AI architectures that protect confidential corporate IP, with explicit copyright and governance frameworks."
+        "Targeted constituency-level digital messaging, graphic manifesto banners, short video clips, and high-frequency voter engagement across social platforms."
     }
   ];
 
@@ -52,33 +37,27 @@ export const KiWorkflows: React.FC = () => {
         {/* Left Column: Heading & Mission */}
         <div className="lg:col-span-5">
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-3">
-            {lang === "de" ? "KI im Unternehmen" : "AI for the Enterprise"}
+            Election Management &amp; Outreach
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7] mb-6">
-            {lang === "de"
-              ? "Gute Ergebnisse. Eingespielte Abläufe."
-              : "Exceptional results. Refined workflows."}
+            Turnkey Campaign Execution.
           </h2>
           <p className="text-base sm:text-lg text-[#f4f2f7b8] leading-relaxed mb-8">
-            {lang === "de"
-              ? "Sie möchten KI auch im eigenen Team produktiv einsetzen? Wir entwickeln passende Workflows, führen bestehende Plattformen ein und schulen Ihre Mitarbeitenden – von der ersten Orientierung bis zur täglichen Nutzung."
-              : "Looking to deploy generative AI productively within your own creative or marketing departments? We engineer custom workflows, onboard intuitive tools, and upskill your personnel – from orientation to daily production."}
+            RFP Digital Productions runs end-to-end election campaign media operations. From mobile LED vans and catchy prachar songs to street theatre and constituency-wide digital voter outreach, we bring candidates directly to the people.
           </p>
 
           <div className="p-6 rounded-2xl bg-[#17161d] border border-white/[0.1] shadow-xl">
             <span className="text-xs font-mono uppercase tracking-widest text-[#a89bfa] block mb-2">
-              {lang === "de" ? "Unternehmenseinsatz" : "Enterprise Deployment"}
+              Constituency Strategy
             </span>
             <p className="text-sm text-[#f4f2f7] font-medium mb-4">
-              {lang === "de"
-                ? "Vier produktive KI-Workflows im laufenden Einsatz bei führenden Konzernen und mittelständischen Marktführern."
-                : "Four production-grade AI pipelines currently deployed across global corporations and market leaders."}
+              Integrated political campaign solutions deployed across Vidhan Sabha and Lok Sabha elections nationwide.
             </p>
             <a
               href="#kontakt"
               className="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-[#a89bfa] hover:text-white transition-colors"
             >
-              <span>{lang === "de" ? "KI-Workshop anfragen" : "Request AI Workshop"}</span>
+              <span>Inquire Campaign Services</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -98,10 +77,10 @@ export const KiWorkflows: React.FC = () => {
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-base font-bold text-[#f4f2f7] mb-2 tracking-tight">
-                    {lang === "de" ? wf.titleDe : wf.titleEn}
+                    {wf.titleEn}
                   </h3>
                   <p className="text-xs text-[#f4f2f780] leading-relaxed">
-                    {lang === "de" ? wf.descDe : wf.descEn}
+                    {wf.descEn}
                   </p>
                 </div>
               </div>
@@ -112,3 +91,4 @@ export const KiWorkflows: React.FC = () => {
     </section>
   );
 };
+
