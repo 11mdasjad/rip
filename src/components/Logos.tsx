@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useLanguage } from "@/context/LanguageContext";
 import { CLIENT_LOGOS } from "@/data/imagineContent";
 
 interface LogosProps {
@@ -11,26 +10,27 @@ interface LogosProps {
 
 export const Logos: React.FC<LogosProps> = ({
   titleEn = "Esteemed Clients & Organizations We Have Produced For",
-  items = CLIENT_LOGOS.slice(0, 8),
+  items = CLIENT_LOGOS.slice(0, 7),
 }) => {
   return (
-    <section className="py-12 lg:py-16 border-b border-white/[0.08] overflow-hidden">
+    <section className="py-12 sm:py-16 border-b border-white/[0.08] overflow-hidden bg-[#0a090e]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-xs font-mono uppercase tracking-[0.2em] text-[#f4f2f780] mb-10">
+        <h2 className="text-center text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] mb-8 sm:mb-10 font-medium">
           {titleEn}
         </h2>
 
-        {/* Logo Grid / Marquee */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 sm:gap-8 items-center justify-items-center">
+        {/* Logo Cards with crisp white contrast for original full-color visibility */}
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-5">
           {items.map((logo, idx) => (
             <div
               key={idx}
-              className="h-12 w-28 sm:w-32 flex items-center justify-center p-2 rounded-xl bg-white/[0.02] border border-white/[0.05] hover:border-white/[0.2] hover:bg-white/[0.06] transition-all duration-300 filter grayscale brightness-125 opacity-70 hover:opacity-100 hover:scale-105"
+              title={logo.name}
+              className="w-[calc(50%-8px)] sm:w-[calc(33.33%-12px)] md:w-[calc(25%-14px)] lg:w-[calc(14.28%-16px)] min-w-[130px] max-w-[170px] h-16 sm:h-20 flex items-center justify-center p-3 rounded-2xl bg-white shadow-md hover:shadow-xl hover:shadow-white/10 hover:-translate-y-1 transition-all duration-300 border border-white/20 group"
             >
               <img
                 src={logo.src}
                 alt={logo.name}
-                className="max-h-7 max-w-full object-contain"
+                className="max-h-11 sm:max-h-12 max-w-[85%] sm:max-w-[88%] w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
               />
             </div>

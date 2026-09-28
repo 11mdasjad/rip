@@ -75,7 +75,7 @@ export default function Home() {
         {/* 3. Client Logos Marquee 1 */}
         <Logos
           titleEn="Esteemed Clients & Institutions We Have Produced For"
-          items={CLIENT_LOGOS.slice(0, 8)}
+          items={CLIENT_LOGOS.slice(0, 7)}
         />
 
         {/* 4. Selected Work with Bento Grid and Video Showcase */}
@@ -99,7 +99,7 @@ export default function Home() {
         {/* 9. Client Logos 2 */}
         <Logos
           titleEn="Nationwide Organizations & Partners"
-          items={CLIENT_LOGOS.slice(6)}
+          items={CLIENT_LOGOS.slice(7)}
         />
 
         {/* 10. Election Campaign & Voter Outreach Management */}
