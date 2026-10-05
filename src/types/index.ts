@@ -31,6 +31,7 @@ export interface ProjectItem {
   heroImage: string;
   aspectRatio?: "video" | "square" | "tall" | "wide";
   videoUrl?: string; // sample direct stream or embed
+  youtubeUrl?: string;
   featured?: boolean;
 }
 
@@ -52,15 +53,32 @@ export interface TestimonialItem {
   organization: string;
   verified: boolean;
   projectCategory?: string;
+  year?: string;
+  rating?: number;
+  clientAvatar?: string;
+  fullReview?: string;
+  videoUrl?: string;
+  youtubeUrl?: string;
+  videoThumbnail?: string;
+  challengesSolved?: string[];
+  keyDeliverables?: string[];
+  stats?: { label: string; value: string }[];
 }
 
 export interface TeamMemberItem {
   id: string;
   name: string;
   role: string;
-  department: "Direction" | "Production" | "Post-production" | "Digital";
+  department: "Direction" | "Production" | "Post-production" | "Digital" | "Leadership";
   bio: string;
   image: string;
+  credentials?: string;
+  experience?: string;
+  specialties?: string[];
+  keyWorks?: string[];
+  gearExpertise?: string[];
+  philosophy?: string;
+  email?: string;
 }
 
 export interface CampaignServiceItem {

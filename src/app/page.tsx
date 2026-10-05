@@ -35,9 +35,9 @@ export default function Home() {
   const [contactTopic, setContactTopic] = useState<string>("Corporate Films");
 
   const handleOpenVideo = (
-    url = "https://www.youtube.com/embed/Rz2ZrNClYNs?autoplay=1",
-    title = "RFP Digital Productions Showreel",
-    subtitle = "Video Production & Election Management"
+    url = "https://www.youtube.com/watch?v=Rz2ZrNClYNs",
+    title = "Showreels",
+    subtitle = "RFP Digital Productions"
   ) => {
     setVideoModal({
       isOpen: true,
@@ -75,7 +75,7 @@ export default function Home() {
         {/* 3. Client Logos Marquee 1 */}
         <Logos
           titleEn="Esteemed Clients & Institutions We Have Produced For"
-          items={CLIENT_LOGOS.slice(0, 7)}
+          items={CLIENT_LOGOS}
         />
 
         {/* 4. Selected Work with Bento Grid and Video Showcase */}
@@ -99,7 +99,8 @@ export default function Home() {
         {/* 9. Client Logos 2 */}
         <Logos
           titleEn="Nationwide Organizations & Partners"
-          items={CLIENT_LOGOS.slice(7)}
+          items={[...CLIENT_LOGOS].reverse()}
+          reverse
         />
 
         {/* 10. Election Campaign & Voter Outreach Management */}

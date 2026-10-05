@@ -37,57 +37,62 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
 
   const isHome = pathname === "/";
   const isGallery = pathname?.startsWith("/gallery");
+  const isTeam = pathname?.startsWith("/team");
+  const isTestimonials = pathname?.startsWith("/testimonials");
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0e0d12]/92 backdrop-blur-md border-b border-white/[0.08] py-3.5 shadow-2xl"
-          : "bg-transparent py-5"
+          ? "bg-[#0a090e]/95 backdrop-blur-xl border-b border-white/[0.12] py-3.5 sm:py-4 shadow-2xl shadow-black/80"
+          : "bg-[#0a090e]/75 backdrop-blur-md border-b border-white/[0.06] py-5 sm:py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between">
+        {/* Magnified Logo */}
         <Link
           href="/"
-          className="relative flex items-center space-x-3 transition-transform hover:opacity-95 active:scale-98 group"
+          className="relative flex items-center space-x-3.5 transition-transform hover:opacity-95 active:scale-98 group shrink-0"
           aria-label="RFP Digital Productions – Home"
         >
           <img
             src="/medien/logo/rfp-emblem.png"
             alt="RFP Crest"
-            className="h-9 sm:h-10 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(212,175,55,0.35)] transition-transform duration-300 group-hover:scale-105"
+            className="h-11 sm:h-13 md:h-14 w-auto object-contain filter drop-shadow-[0_2px_14px_rgba(212,175,55,0.45)] transition-transform duration-300 group-hover:scale-105"
           />
           <div className="flex flex-col justify-center">
-            <span className="font-extrabold text-sm sm:text-base tracking-[0.16em] text-white font-mono leading-tight flex items-center gap-1.5">
-              RFP
-              <span className="text-[9px] font-sans font-semibold px-1.5 py-0.5 rounded-full bg-[#D4AF37]/15 text-[#E6C665] border border-[#D4AF37]/35 tracking-wider">
+            <div className="flex items-center gap-2 leading-none">
+              <span className="font-extrabold text-lg sm:text-xl md:text-2xl tracking-[0.16em] text-white font-mono">
+                RFP
+              </span>
+              <span className="text-[10px] sm:text-[11px] font-sans font-bold px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#F3E5AB] border border-[#D4AF37]/45 tracking-wider uppercase">
                 MEDIA &amp; FILM
               </span>
-            </span>
-            <span className="text-[8.5px] sm:text-[9.5px] tracking-[0.28em] text-[#D4AF37]/85 font-mono uppercase font-semibold">
+            </div>
+            <span className="text-[10px] sm:text-[11px] md:text-[12px] tracking-[0.28em] text-[#D4AF37] font-mono uppercase font-bold mt-1">
               Digital Productions
             </span>
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Main Navigation">
+        {/* Desktop Navigation - Magnified and Clearly Visualized */}
+        <nav className="hidden lg:flex items-center space-x-1.5 xl:space-x-2" aria-label="Main Navigation">
           <Link
             href={isHome ? "#projekte" : "/#projekte"}
-            className="px-3.5 py-2 text-sm text-[#f4f2f7b8] hover:text-white rounded-full transition-colors font-medium"
+            className="px-4 py-2.5 text-[15px] xl:text-[16px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold"
           >
             Projects
           </Link>
 
           <Link
             href="/gallery"
-            className={`px-3.5 py-2 text-sm rounded-full transition-all font-medium flex items-center gap-1.5 ${
+            className={`px-4 py-2.5 text-[15px] xl:text-[16px] rounded-xl transition-all font-semibold flex items-center gap-2 ${
               isGallery
-                ? "text-white bg-white/[0.08] border border-[#a89bfa]/30 shadow-[0_0_15px_rgba(168,155,250,0.15)]"
-                : "text-[#f4f2f7b8] hover:text-white hover:bg-white/[0.04]"
+                ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
+                : "text-white/85 hover:text-white hover:bg-white/[0.08]"
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#a89bfa]" />
+            <Sparkles className="w-4 h-4 text-[#a89bfa]" />
             <span>Gallery</span>
           </Link>
 
@@ -96,13 +101,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
               type="button"
               onClick={() => setServicesOpen(!servicesOpen)}
               onMouseEnter={() => setServicesOpen(true)}
-              className="flex items-center space-x-1.5 px-3.5 py-2 text-sm text-[#f4f2f7b8] hover:text-white rounded-full transition-colors font-medium focus:outline-none"
+              className="flex items-center space-x-1.5 px-4 py-2.5 text-[15px] xl:text-[16px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold focus:outline-none"
               aria-expanded={servicesOpen}
             >
               <span>Services</span>
               <ChevronDown
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                  servicesOpen ? "rotate-180 text-[#a89bfa]" : ""
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  servicesOpen ? "rotate-180 text-[#a89bfa]" : "text-white/60"
                 }`}
               />
             </button>
@@ -110,20 +115,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
             {servicesOpen && (
               <div
                 onMouseLeave={() => setServicesOpen(false)}
-                className="absolute top-full left-0 mt-2 w-72 bg-[#17161d] border border-white/[0.12] rounded-2xl p-2.5 shadow-2xl backdrop-blur-xl z-50 animate-in fade-in slide-in-from-top-2 duration-200"
+                className="absolute top-full left-0 mt-2 w-80 bg-[#17161d] border border-white/[0.15] rounded-2xl p-3 shadow-2xl backdrop-blur-xl z-50 animate-in fade-in slide-in-from-top-2 duration-200"
               >
-                <div className="text-[10px] font-mono tracking-widest text-[#a89bfa] uppercase px-3 py-1.5 border-b border-white/[0.08] mb-1">
-                  Disciplines
+                <div className="text-[11px] font-mono tracking-widest text-[#a89bfa] uppercase px-3 py-1.5 border-b border-white/[0.08] mb-1 font-bold">
+                  Core Disciplines
                 </div>
                 {SERVICES_DATA.map((service) => (
                   <Link
                     key={service.id}
                     href={isHome ? `#service-${service.id}` : `/#service-${service.id}`}
                     onClick={() => setServicesOpen(false)}
-                    className="group flex items-center justify-between px-3 py-2 text-xs text-[#f4f2f7b8] hover:text-white hover:bg-white/[0.05] rounded-xl transition-all"
+                    className="group flex items-center justify-between px-3.5 py-2.5 text-sm text-white/85 hover:text-white hover:bg-white/[0.08] rounded-xl transition-all font-medium"
                   >
                     <span>{service.titleEn}</span>
-                    <span className="text-[10px] font-mono text-white/30 group-hover:text-[#a89bfa]">
+                    <span className="text-xs font-mono text-white/40 group-hover:text-[#a89bfa] font-semibold">
                       {service.num}
                     </span>
                   </Link>
@@ -133,29 +138,51 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           </div>
 
           <Link
+            href="/team"
+            className={`px-4 py-2.5 text-[15px] xl:text-[16px] rounded-xl transition-all font-semibold ${
+              isTeam
+                ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
+                : "text-white/85 hover:text-white hover:bg-white/[0.08]"
+            }`}
+          >
+            Team
+          </Link>
+
+          <Link
+            href="/testimonials"
+            className={`px-4 py-2.5 text-[15px] xl:text-[16px] rounded-xl transition-all font-semibold ${
+              isTestimonials
+                ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
+                : "text-white/85 hover:text-white hover:bg-white/[0.08]"
+            }`}
+          >
+            Testimonials
+          </Link>
+
+          <Link
             href={isHome ? "#zusammenarbeit" : "/#zusammenarbeit"}
-            className="px-3.5 py-2 text-sm text-[#f4f2f7b8] hover:text-white rounded-full transition-colors font-medium"
+            className="px-4 py-2.5 text-[15px] xl:text-[16px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold"
           >
             About
           </Link>
 
           <Link
             href={isHome ? "#faq" : "/#faq"}
-            className="px-3.5 py-2 text-sm text-[#f4f2f7b8] hover:text-white rounded-full transition-colors font-medium"
+            className="px-4 py-2.5 text-[15px] xl:text-[16px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold"
           >
             FAQ
           </Link>
 
           <Link
             href={isHome ? "#kontakt" : "/#kontakt"}
-            className="px-3.5 py-2 text-sm text-[#f4f2f7b8] hover:text-white rounded-full transition-colors font-medium"
+            className="px-4 py-2.5 text-[15px] xl:text-[16px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold"
           >
             Contact
           </Link>
         </nav>
 
-        {/* Right Actions */}
-        <div className="flex items-center space-x-2 sm:space-x-3">
+        {/* Right Actions - Magnified Button */}
+        <div className="flex items-center space-x-3 shrink-0">
           <Link
             href={isHome ? "#kontakt" : "/#kontakt"}
             onClick={(e) => {
@@ -164,26 +191,26 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                 onOpenContact();
               }
             }}
-            className="group hidden sm:inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#f4f2f7] hover:bg-white text-[#0e0d12] text-xs font-semibold tracking-wide shadow-lg hover:shadow-[#7c6af2]/20 transition-all duration-200 active:scale-95"
+            className="group hidden sm:inline-flex items-center space-x-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white hover:bg-[#f4f2f7] text-[#0e0d12] text-sm sm:text-[15px] font-bold tracking-wide shadow-xl hover:shadow-[#7c6af2]/30 transition-all duration-200 active:scale-95"
           >
             <span>Discuss Project</span>
-            <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2.5 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-white/90 hover:text-white transition-colors focus:outline-none"
+            className="lg:hidden p-3 rounded-xl bg-white/[0.08] hover:bg-white/[0.15] text-white transition-colors focus:outline-none"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Backdrop & Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 top-16">
+        <div className="lg:hidden fixed inset-0 z-40 top-20">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200"
@@ -213,6 +240,24 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#7c6af2]/20 text-[#a89bfa] border border-[#7c6af2]/30">
                   New
                 </span>
+              </Link>
+
+              <Link
+                href="/team"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-semibold text-white/90 hover:text-white py-2 px-3 rounded-xl hover:bg-white/[0.04] flex items-center justify-between transition-all"
+              >
+                <span>Creative Team</span>
+                <span className="text-xs text-[#a89bfa]">✦</span>
+              </Link>
+
+              <Link
+                href="/testimonials"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-semibold text-white/90 hover:text-white py-2 px-3 rounded-xl hover:bg-white/[0.04] flex items-center justify-between transition-all"
+              >
+                <span>Client Testimonials</span>
+                <span className="text-xs text-[#a89bfa]">★</span>
               </Link>
 
               <div className="py-2 px-3 rounded-xl bg-white/[0.02] border border-white/[0.06]">

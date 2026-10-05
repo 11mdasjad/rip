@@ -113,7 +113,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                   AJK MCRC, JMI Alumni Media Leadership
                 </span>
                 <span className="text-[11px] font-mono text-[#D4AF37]/90 font-medium">
-                  Lajpat Nagar 4, New Delhi - 110024
+                  156, First Floor, Sarai Julena (NFC), New Delhi - 110065
                 </span>
               </div>
             </div>
@@ -130,20 +130,28 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
               </a>
 
               <a
-                href="tel:+911149963157"
+                href="tel:+919711791403"
                 className="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.03] hover:bg-white/[0.08] text-[#f4f2f7] text-xs font-medium tracking-wide transition-all"
               >
                 <Phone className="w-3.5 h-3.5 text-[#a89bfa]" />
-                <span>+91-11-49963157</span>
+                <span>+91 97117 91403</span>
               </a>
 
               <a
-                href="https://wa.me/919999963157"
+                href="tel:+919599099320"
+                className="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.03] hover:bg-white/[0.08] text-[#f4f2f7] text-xs font-medium tracking-wide transition-all"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#a89bfa]" />
+                <span>+91 95990 99320</span>
+              </a>
+
+              <a
+                href="https://wa.me/919711791403"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-[#25D366]/40 hover:border-[#25D366] bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] text-xs font-medium tracking-wide transition-all"
               >
-                <span>WhatsApp: +91 99999 63157</span>
+                <span>WhatsApp: +91 97117 91403</span>
               </a>
             </div>
           </div>

@@ -94,17 +94,30 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                   </p>
                 </div>
 
-                {project.videoUrl && (
-                  <button
-                    onClick={() => {
-                      onWatchReel(project.videoUrl!, project.title);
-                    }}
-                    className="inline-flex items-center space-x-2 px-5 py-2.5 bg-[#6b54ee] hover:bg-[#7c6af2] text-white text-xs uppercase tracking-widest font-mono font-semibold rounded-full transition-all shadow-lg hover:shadow-[#6b54ee]/40 active:scale-95"
-                  >
-                    <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>Play Film</span>
-                  </button>
-                )}
+                <div className="flex flex-wrap items-center gap-2.5">
+                  {project.videoUrl && (
+                    <button
+                      onClick={() => {
+                        onWatchReel(project.videoUrl!, project.title);
+                      }}
+                      className="inline-flex items-center space-x-2 px-5 py-2.5 bg-[#6b54ee] hover:bg-[#7c6af2] text-white text-xs uppercase tracking-widest font-mono font-semibold rounded-full transition-all shadow-lg hover:shadow-[#6b54ee]/40 active:scale-95"
+                    >
+                      <Play className="w-3.5 h-3.5 fill-current" />
+                      <span>Play Film</span>
+                    </button>
+                  )}
+                  {(project.youtubeUrl || (project.videoUrl && project.videoUrl.includes("youtu"))) && (
+                    <a
+                      href={project.youtubeUrl || project.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-1.5 px-4 py-2.5 bg-red-600/90 hover:bg-red-600 text-white text-xs uppercase tracking-widest font-mono font-semibold rounded-full transition-all shadow-md active:scale-95"
+                    >
+                      <span>YouTube</span>
+                      <ArrowRight className="w-3.5 h-3.5 -rotate-45" />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>

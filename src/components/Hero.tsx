@@ -1,29 +1,18 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ArrowUpRight, Play } from "lucide-react";
-import { STAGE_SCENES } from "@/data/imagineContent";
 
 interface HeroProps {
   onPlayVideo: (url: string, title: string, subtitle?: string) => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
-  const [activeSceneIndex, setActiveSceneIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  const currentScene = STAGE_SCENES[activeSceneIndex];
-
-  // Auto-rotate stage scenes every 7 seconds if not paused
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveSceneIndex((prev) => (prev + 1) % STAGE_SCENES.length);
-      setIsVideoLoaded(false);
-    }, 7000);
-    return () => clearInterval(interval);
-  }, [isPaused]);
+  const showreelVideo = {
+    title: "Showreels",
+    videoUrl: "https://www.youtube.com/watch?v=Rz2ZrNClYNs",
+    thumbnail: "/medien/showreel-thumbnail.jpg",
+  };
 
   return (
     <section className="relative pt-24 sm:pt-36 pb-14 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
@@ -74,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
               href="#service-social-media-management"
               className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
             >
-              Social Media
+              Social Media Management
             </a>
           </nav>
 
@@ -83,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
             Video Production &amp;
             <br />
             <span className="bg-gradient-to-r from-[#a89bfa] via-[#7c6af2] to-[#c4b5fd] bg-clip-text text-transparent">
-              Election Management.
+              Election Management Co.
             </span>
           </h1>
 
@@ -105,9 +94,9 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
             <button
               onClick={() =>
                 onPlayVideo(
-                  "https://www.youtube.com/embed/Rz2ZrNClYNs?autoplay=1",
-                  "RFP Digital Productions Showreel",
-                  "17+ Years of Media Excellence"
+                  showreelVideo.videoUrl,
+                  showreelVideo.title,
+                  "RFP Digital Productions"
                 )
               }
               className="inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-full border border-white/[0.2] hover:border-white/[0.4] bg-white/[0.03] hover:bg-white/[0.08] text-[#f4f2f7] text-sm font-medium tracking-wide transition-all duration-200 active:scale-95 text-center"
@@ -118,75 +107,55 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
           </div>
         </div>
 
-        {/* Right Column: High-Performance Lightweight Visual Stage */}
+        {/* Right Column: Single Showreels Video Showcase */}
         <div className="lg:col-span-7 relative">
           <div
-            className="relative w-full aspect-[16/10] sm:aspect-[16/9.5] rounded-2xl sm:rounded-[32px] overflow-hidden bg-[#17161d] border border-white/[0.12] shadow-2xl group"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
+            className="relative w-full aspect-[16/10] sm:aspect-[16/9.5] rounded-2xl sm:rounded-[32px] overflow-hidden bg-[#17161d] border border-white/[0.12] shadow-2xl group cursor-pointer"
+            onClick={() =>
+              onPlayVideo(
+                showreelVideo.videoUrl,
+                showreelVideo.title,
+                "RFP Digital Productions"
+              )
+            }
           >
             {/* Ambient inner glow */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent z-10 pointer-events-none" />
             <div className="absolute -inset-1 bg-gradient-to-r from-[#7c6af2]/20 via-transparent to-[#6b54ee]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-            {/* Stage Visual Scene (Instant Poster Load, Zero 12MB Download Block) */}
-            <div className="absolute inset-0 transition-opacity duration-700">
+            {/* Original YouTube Thumbnail Poster */}
+            <div className="absolute inset-0">
               <img
-                key={currentScene.id}
-                src={currentScene.poster}
-                alt={currentScene.title}
+                src={showreelVideo.thumbnail}
+                alt={showreelVideo.title}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-full object-cover object-center filter saturate-[1.05] animate-in fade-in duration-500"
+                className="w-full h-full object-cover object-center filter saturate-[1.05] transition-transform duration-700 group-hover:scale-105"
               />
             </div>
 
             {/* Play Button Trigger (Center) */}
             <button
-              onClick={() =>
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
                 onPlayVideo(
-                  currentScene.fullVideoUrl,
-                  currentScene.title,
-                  currentScene.artEn
-                )
-              }
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-[#0e0d12]/80 hover:bg-[#6b54ee] text-white border border-white/30 hover:border-transparent backdrop-blur-md flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 shadow-2xl active:scale-95"
-              aria-label={`Watch Project: ${currentScene.title}`}
+                  showreelVideo.videoUrl,
+                  showreelVideo.title,
+                  "RFP Digital Productions"
+                );
+              }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#0e0d12]/80 hover:bg-[#6b54ee] text-white border border-white/30 hover:border-transparent backdrop-blur-md flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 shadow-2xl active:scale-95"
+              aria-label={`Watch Video: ${showreelVideo.title}`}
             >
-              <Play className="w-5 h-5 sm:w-7 sm:h-7 fill-current ml-1" />
+              <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-current ml-1" />
             </button>
 
-            {/* Scene Meta Info (Bottom-Left) */}
-            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 pointer-events-none max-w-[70%]">
-              <span className="text-[9px] sm:text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-0.5 sm:mb-1">
-                Featured Work
-              </span>
-              <h3 className="text-base sm:text-2xl font-bold text-white tracking-tight leading-snug line-clamp-1">
-                {currentScene.title}
+            {/* Scene Meta Info: Title "Showreels" */}
+            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 pointer-events-none">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug drop-shadow-md">
+                {showreelVideo.title}
               </h3>
-              <span className="text-[11px] sm:text-sm text-white/70 font-medium">
-                {currentScene.artEn}
-              </span>
-            </div>
-
-            {/* Scene Selector Thumbnails / Indicators (Bottom-Right) */}
-            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center space-x-1.5 sm:space-x-2">
-              {STAGE_SCENES.map((scene, idx) => (
-                <button
-                  key={scene.id}
-                  onClick={() => setActiveSceneIndex(idx)}
-                  className={`p-1 flex items-center justify-center focus:outline-none`}
-                  aria-label={`Slide ${idx + 1}: ${scene.title}`}
-                >
-                  <span
-                    className={`block h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
-                      idx === activeSceneIndex
-                        ? "w-6 sm:w-8 bg-[#a89bfa]"
-                        : "w-2 sm:w-2.5 bg-white/30 hover:bg-white/60"
-                    }`}
-                  />
-                </button>
-              ))}
             </div>
 
             {/* Top-Left Stage Insignia */}
@@ -204,12 +173,18 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
               </div>
             </div>
 
-            {/* Top-Right Title Badge */}
+            {/* Top-Right Direct YouTube Badge */}
             <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 z-20">
-              <span className="inline-flex items-center space-x-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-[9px] sm:text-[10px] font-mono text-white/80">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#7c6af2] animate-pulse" />
-                <span>{STAGE_SCENES[activeSceneIndex].title}</span>
-              </span>
+              <a
+                href={showreelVideo.videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-red-600/90 hover:bg-red-600 backdrop-blur-md text-[10px] font-mono text-white font-semibold transition-all shadow-md active:scale-95"
+              >
+                <Play className="w-2.5 h-2.5 fill-current" />
+                <span>YouTube ↗</span>
+              </a>
             </div>
           </div>
         </div>

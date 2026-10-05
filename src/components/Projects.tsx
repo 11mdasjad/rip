@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import { Play, ArrowUpRight, Sparkles } from "lucide-react";
+import { Play, ArrowUpRight } from "lucide-react";
 import { useData } from "@/context/DataContext";
 import { PROJECTS_DATA, ProjectCard } from "@/data/imagineContent";
 
@@ -205,32 +204,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo
           ))}
       </div>
 
-      {/* Discover Visual Gallery CTA Banner */}
-      <div className="mt-10 sm:mt-14 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#17161d] via-[#1f1d2b] to-[#17161d] border border-white/[0.1] flex flex-col sm:flex-row sm:items-center justify-between gap-6 shadow-2xl relative overflow-hidden group">
-        <div className="absolute top-0 right-1/4 w-80 h-32 bg-[#7c6af2]/15 blur-[60px] pointer-events-none rounded-full" />
-        <div className="relative z-10">
-          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[#7c6af2]/20 text-[#a89bfa] text-[10px] font-mono uppercase tracking-wider mb-2 border border-[#7c6af2]/30">
-            <Sparkles className="w-3 h-3 text-[#E6C665]" />
-            <span>Interactive Archive</span>
-          </div>
-          <h3 className="text-lg sm:text-2xl font-extrabold text-white">
-            Explore the Complete Visual Gallery & Stills Archive
-          </h3>
-          <p className="text-xs sm:text-sm text-white/60 mt-1 max-w-xl font-light">
-            Browse our full repertoire of commercial films, photorealistic AI syntheses, 3D visual motion, and behind-the-lens production documentaries.
-          </p>
-        </div>
 
-        <div className="relative z-10 flex-shrink-0">
-          <Link
-            href="/gallery"
-            className="inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-full bg-white text-[#0e0d12] hover:bg-[#a89bfa] hover:text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-xl group-hover:scale-105 active:scale-95 w-full sm:w-auto"
-          >
-            <span>Open Visual Gallery</span>
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </div>
     </section>
   );
 };

@@ -40,50 +40,6 @@ export const Prozess: React.FC<ProzessProps> = ({ onPlayVideo }) => {
         </div>
       </div>
 
-      {/* Featured Production Realization Case: Acharya Narendra Dev College (ANDC) */}
-      <div className="mb-20 rounded-[28px] overflow-hidden bg-[#17161d] border border-white/[0.1] shadow-2xl grid grid-cols-1 lg:grid-cols-12 items-center">
-        <div className="lg:col-span-7 relative aspect-[16/9] w-full overflow-hidden">
-          <img
-            src="https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg"
-            alt="Acharya Narendra Dev College Documentary"
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#17161d] hidden lg:block" />
-          <div className="absolute top-4 left-4">
-            <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-[#F3E5AB] border border-[#D4AF37]/30">
-              Institutional Showcase
-            </span>
-          </div>
-        </div>
-
-        <div className="lg:col-span-5 p-8 sm:p-10 lg:p-12">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#a89bfa] block mb-2">
-            Delhi University + RFP Digital Productions
-          </span>
-          <h3 className="text-2xl sm:text-3xl font-bold text-[#f4f2f7] mb-4 tracking-tight">
-            Acharya Narendra Dev College: Institutional Excellence &amp; Science Showcase
-          </h3>
-          <p className="text-sm text-[#f4f2f7b8] leading-relaxed mb-6">
-            RFP Digital Productions delivered complete creative direction, campus multi-camera cinematography, state-of-the-art research lab highlights, and executive faculty interviews for one of Delhi University&apos;s premier institutions.
-          </p>
-
-          <button
-            onClick={() =>
-              onPlayVideo(
-                "https://www.youtube.com/embed/7MGQPvm2zl8?autoplay=1",
-                "Acharya Narendra Dev College (ANDC)",
-                "Institutional & Documentary Master"
-              )
-            }
-            className="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-[#f4f2f7] hover:text-[#a89bfa] transition-colors"
-          >
-            <span>Watch Institutional Film</span>
-            <ArrowUpRight className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
 
       {/* 5-Phase Process Steps Roadmap */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-4 relative">

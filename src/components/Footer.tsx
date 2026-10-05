@@ -20,8 +20,8 @@ export const Footer: React.FC = () => {
             </p>
             <div className="text-xs font-mono text-white/50 space-y-1">
               <p className="text-white/80 font-bold tracking-wider">RFP DIGITAL PRODUCTIONS</p>
-              <p>Lajpat Nagar 4, New Delhi - 110024, India</p>
-              <p>Landline: +91-11-49963157 · WhatsApp: +91 99999 63157</p>
+              <p>156, First Floor, Sarai Julena (NFC), New Delhi - 110065, India</p>
+              <p>Mobile: +91 97117 91403 · +91 95990 99320 · Office: +91-11-49963157</p>
               <p>Email: rfpdigitalmedia@gmail.com</p>
             </div>
           </div>
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] mb-4">Explore & Legal</h4>
+            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] mb-4">Company &amp; Stories</h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
                 <Link href="/gallery" className="hover:text-[#a89bfa] transition-colors flex items-center gap-1.5 text-white/90">
@@ -47,18 +47,33 @@ export const Footer: React.FC = () => {
                   <span>Visual Gallery</span>
                 </Link>
               </li>
+              <li>
+                <Link href="/team" className="hover:text-[#a89bfa] transition-colors flex items-center gap-1.5 text-white/90">
+                  <span className="text-[#a89bfa]">✦</span>
+                  <span>Our Creative Team</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/testimonials" className="hover:text-[#a89bfa] transition-colors flex items-center gap-1.5 text-white/90">
+                  <span className="text-[#a89bfa]">★</span>
+                  <span>Client Testimonials</span>
+                </Link>
+              </li>
               <li><Link href="/#projekte" className="hover:text-white transition-colors">Selected Projects</Link></li>
-              <li><Link href="/#zusammenarbeit" className="hover:text-white transition-colors">About & Collaboration</Link></li>
-              <li><Link href="/#kontakt" className="hover:text-white transition-colors">Contact & Inquiry</Link></li>
+              <li><Link href="/#zusammenarbeit" className="hover:text-white transition-colors">About &amp; Collaboration</Link></li>
+              <li><Link href="/#kontakt" className="hover:text-white transition-colors">Contact &amp; Inquiry</Link></li>
               <li><button onClick={() => setLegalModal("impressum")} className="hover:text-white transition-colors text-left">Company Information</button></li>
               <li><button onClick={() => setLegalModal("datenschutz")} className="hover:text-white transition-colors text-left">Privacy Policy</button></li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
           <div className="text-white/40">© {new Date().getFullYear()} RFP Digital Productions. All rights reserved.</div>
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+            <Link href="/team" className="text-white/70 hover:text-white transition-colors">Team</Link>
+            <Link href="/testimonials" className="text-white/70 hover:text-white transition-colors">Testimonials</Link>
             <button onClick={() => setLegalModal("impressum")} className="text-white/60 hover:text-white transition-colors">Company Information</button>
             <button onClick={() => setLegalModal("datenschutz")} className="text-white/60 hover:text-white transition-colors">Privacy Policy</button>
             <Link href="/gallery" className="text-[#a89bfa] hover:text-white transition-colors font-semibold">Gallery Archive →</Link>
@@ -76,9 +91,9 @@ export const Footer: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold text-white mb-4">Company Information</h3>
                 <div className="text-xs sm:text-sm text-white/80 space-y-3 leading-relaxed">
-                  <p><strong>RFP Digital Productions</strong><br />(RFP Digital Media Pvt Ltd)<br />Lajpat Nagar 4, New Delhi - 110024<br />Delhi NCR, India</p>
+                  <p><strong>RFP Digital Productions</strong><br />156, First Floor, Sarai Julena (NFC), New Delhi - 110065<br />Delhi NCR, India</p>
                   <p><strong>Management & Leadership:</strong> Alumni of AJK Mass Communication &amp; Research Center (AJK MCRC), Jamia Millia Islamia, New Delhi</p>
-                  <p><strong>Contact:</strong><br />Landline: +91-11-49963157<br />Mobile / WhatsApp: +91 99999 63157 / +91 98111 63157<br />Email: rfpdigitalmedia@gmail.com / contact@rfpdigital.com<br />Website: https://www.rfpdigital.com</p>
+                  <p><strong>Contact:</strong><br />Office: +91-11-49963157<br />Mobile / WhatsApp: +91 97117 91403 / +91 95990 99320<br />Email: rfpdigitalmedia@gmail.com<br />Website: https://www.rfpdigital.com</p>
                 </div>
               </div>
             ) : (
@@ -87,7 +102,7 @@ export const Footer: React.FC = () => {
                 <div className="text-xs sm:text-sm text-white/80 space-y-3 leading-relaxed">
                   <p>RFP Digital Productions is committed to safeguarding the privacy of our visitors and clients. Any information submitted via inquiries, messages, or consultation requests is used strictly for communications and project proposals.</p>
                   <p>We do not share, sell, or rent your personal contact details to third parties.</p>
-                  <p><strong>Contact:</strong><br />RFP Digital Productions, Lajpat Nagar 4, New Delhi - 110024<br />Email: rfpdigitalmedia@gmail.com</p>
+                  <p><strong>Contact:</strong><br />RFP Digital Productions, 156, First Floor, Sarai Julena (NFC), New Delhi - 110065<br />Email: rfpdigitalmedia@gmail.com</p>
                 </div>
               </div>
             )}

@@ -19,6 +19,7 @@ export interface ProjectCard {
   descEn: string;
   poster: string;
   videoUrl?: string;
+  youtubeUrl?: string;
   hasComparison?: boolean;
   comparisonBefore?: string;
   comparisonAfters?: { label: string; src: string }[];
@@ -29,33 +30,33 @@ export const STAGE_SCENES: StageScene[] = [
   {
     id: "andc-college",
     title: "Acharya Narendra Dev College (ANDC)",
-    artEn: "Institutional & Documentary Film",
-    poster: "https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg",
-    fullVideoUrl: "https://www.youtube.com/embed/7MGQPvm2zl8?autoplay=1",
+    artEn: "Institutional & Campus Documentary",
+    poster: "/medien/galerie/_MG_0109.jpg",
+    fullVideoUrl: "https://www.youtube-nocookie.com/embed/Cgvx6w13ZNg?autoplay=1",
     targetId: "projekt-andc"
   },
   {
     id: "election-campaigns",
     title: "Election Campaign Management",
-    artEn: "LED Vans, Rallies & Voter Outreach",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f422e9e9.jpg",
-    fullVideoUrl: "https://www.youtube.com/embed/KLfO_N4a6V8?autoplay=1",
+    artEn: "Mobile LED Display Vans & Voter Rallies",
+    poster: "/medien/galerie/311-campaign-led.jpg",
+    fullVideoUrl: "https://www.youtube-nocookie.com/embed/3n58zR1Reqs?autoplay=1",
     targetId: "projekt-election"
   },
   {
     id: "corporate-storytelling",
-    title: "Corporate & Brand Storytelling",
-    artEn: "Abbott, AIIMS, Jamia Hamdard",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f4297fd0.JPG",
-    fullVideoUrl: "https://www.youtube.com/embed/jirysVZwPIE?autoplay=1",
+    title: "Corporate Storytelling & Brand Cinema",
+    artEn: "Samsung, AIIMS & Leading Industrial Brands",
+    poster: "/medien/landing/jindal-group-shoot.jpg",
+    fullVideoUrl: "https://www.youtube-nocookie.com/embed/1PeIeMgjyQc?autoplay=1",
     targetId: "projekt-corporate"
   },
   {
     id: "documentary-heritage",
     title: "Documentaries & Social Impact",
-    artEn: "Real Stories, Emotional Resonance",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42a4de6.jpg",
-    fullVideoUrl: "https://www.youtube.com/embed/91kFY2xs7cE?autoplay=1",
+    artEn: "Modern Delhi International School & National Heritage",
+    poster: "/medien/landing/landing-directing-1669.jpg",
+    fullVideoUrl: "https://www.youtube-nocookie.com/embed/91kFY2xs7cE?autoplay=1",
     targetId: "projekt-documentary"
   }
 ];
@@ -84,113 +85,119 @@ export const FAKTEN_DATA = [
 ];
 
 export const CLIENT_LOGOS = [
-  { name: "AIIMS Delhi", src: "https://rfpdigital.com/images/clientlogos/1200px-All_India_Institute_of_Medical_Sciences,_Delhi.svg.png" },
-  { name: "Abbott Healthcare", src: "https://rfpdigital.com/images/clientlogos/ABBOTT-LOGO.jpg" },
-  { name: "Atal Bihari Vajpayee Hindi Vishwavidyalaya", src: "https://rfpdigital.com/images/clientlogos/Atal-Bihari-Vajpayee-Hindi-Vishwavidyalaya.png" },
-  { name: "IIT Roorkee", src: "https://rfpdigital.com/images/clientlogos/IITR.png" },
-  { name: "Jamia Hamdard University", src: "https://rfpdigital.com/images/clientlogos/Jamia-Hamdard-University-New-Delhi.jpg" },
-  { name: "DD Kisan", src: "https://rfpdigital.com/images/clientlogos/DDKisanLogo.png" },
-  { name: "Haryana Police", src: "https://rfpdigital.com/images/clientlogos/haryana-plice-logo-BC5F526ACF-seeklogo.com.png" },
-  { name: "Bharat Construction", src: "https://rfpdigital.com/images/clientlogos/BHARAT-CONSTRUCTION.jpg" },
-  { name: "National Archives of India", src: "https://rfpdigital.com/images/clientlogos/National_Archives_of_India_Emblem.jpg" },
-  { name: "PlayerzPot", src: "https://rfpdigital.com/images/clientlogos/PlayerzPot-name-Rashmika-Mandanna-as-brand-ambassador.jpg" },
-  { name: "Smile India Foundation", src: "https://rfpdigital.com/images/clientlogos/Logo Smile India PNG.png" },
-  { name: "Brave Soul Foundation", src: "https://rfpdigital.com/images/clientlogos/Brave-Soul-Foundation.jpg" },
-  { name: "Jamia Co-operative Bank", src: "https://rfpdigital.com/images/clientlogos/jamia-co-operative-bank-ltd-jamia-nagar-delhi-banks-nduv7p.jpg" },
-  { name: "Modern Delhi Public School", src: "https://rfpdigital.com/images/clientlogos/logo.png" }
+  { name: "IIT Roorkee", src: "/medien/logos/iit-roorkee.png" },
+  { name: "Jamia Hamdard University", src: "/medien/logos/jamia-hamdard.png" },
+  { name: "National Archives of India", src: "/medien/logos/national-archives.jpg" },
+  { name: "Haryana Police", src: "/medien/logos/haryana-police.png" },
+  { name: "DD Kisan", src: "/medien/logos/dd-kisan.png" },
+  { name: "Modern Delhi International School", src: "/medien/logos/modern-delhi-school.png" },
+  { name: "Sports Authority of India", src: "/medien/logos/sports-authority-india.jpg" },
+  { name: "Atal Bihari Vajpayee Hindi Vishwavidyalaya", src: "/medien/logos/atal-bihari-univ.png" },
+  { name: "Bharat Construction", src: "/medien/logos/bharat-construction.jpg" },
+  { name: "Jamia Co-operative Bank", src: "/medien/logos/jamia-coop-bank.jpg" },
+  { name: "Smile India Foundation", src: "/medien/logos/smile-india.png" },
+  { name: "Brave Soul Foundation", src: "/medien/logos/brave-soul-foundation.jpg" },
+  { name: "Samsung", src: "/medien/logos/samsung.png" }
 ];
 
 export const PROJECTS_DATA: ProjectCard[] = [
   {
     id: "projekt-andc",
     slot: "slot-g",
-    title: "Acharya Narendra Dev College (ANDC)",
-    client: "ANDC / University of Delhi",
+    title: "Acharya Narendra Dev College (ANDC) Institutional Film",
+    client: "University of Delhi / ANDC",
     categoryEn: "Institutional & Campus Documentary",
     filterCat: "documentary",
     descEn:
-      "A cinematic campus showcase capturing academic excellence, state-of-the-art research laboratories, and vibrant student community at Acharya Narendra Dev College, Delhi University.",
-    poster: "https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg",
-    videoUrl: "https://www.youtube.com/embed/7MGQPvm2zl8?autoplay=1",
-    tags: ["Institutional Film", "Delhi University", "Campus Documentary", "Full HD"]
+      "A cinematic campus documentary capturing academic breakthroughs, world-class research laboratories, and student innovations at Acharya Narendra Dev College, Delhi University.",
+    poster: "/medien/youtube-thumbs/Cgvx6w13ZNg.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/Cgvx6w13ZNg?autoplay=1",
+    youtubeUrl: "https://youtu.be/Cgvx6w13ZNg",
+    tags: ["Institutional Master", "University of Delhi", "Scientific Labs", "4K Cinema"]
   },
   {
     id: "projekt-election",
     slot: "slot-a",
-    title: "Election Campaign Management & Mobile LED Vans",
+    title: "Election Campaign Management - High-Impact Mobile LED Vans",
     client: "State & Parliamentary Election Committees",
     categoryEn: "Election Campaign Strategy & Media Operations",
     filterCat: "campaign",
     descEn:
-      "Comprehensive election campaign rollout featuring high-visibility mobile LED display vans, ground rally coverage, audio anthems, Nukkad Natak street theatre, and constituency-wide digital media management.",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f422e9e9.jpg",
-    videoUrl: "https://www.youtube.com/embed/KLfO_N4a6V8?autoplay=1",
-    tags: ["Election Campaign", "LED Screen Vans", "Nukkad Natak", "Rally Coverage"]
+      "Constituency-wide campaign operations featuring mobile high-brightness LED display vans, rally multi-camera live switching, audio anthems, and grassroots outreach.",
+    poster: "/medien/youtube-thumbs/3n58zR1Reqs.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/3n58zR1Reqs?autoplay=1",
+    youtubeUrl: "https://youtu.be/3n58zR1Reqs",
+    tags: ["Election Campaign", "LED Screen Vans", "Rally Live Stream", "Ground Outreach"]
   },
   {
-    id: "projekt-corporate",
+    id: "projekt-samsung",
     slot: "slot-b",
-    title: "Corporate Storytelling & Brand Films",
-    client: "Abbott, AIIMS & Leading Enterprises",
+    title: "Samsung Corporate Film & Technology Anthem",
+    client: "Samsung Electronics",
     categoryEn: "Corporate Brand Film",
     filterCat: "film",
     descEn:
-      "Crafting high-impact corporate videos, brand anthems, executive interviews, and facility walk-throughs that convey leadership, innovation, and trust across corporate stakeholders.",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f4297fd0.JPG",
-    videoUrl: "https://www.youtube.com/embed/jirysVZwPIE?autoplay=1",
-    tags: ["Corporate Film", "Healthcare", "Executive Interviews", "Branding"]
+      "High-production corporate brand film crafted for global technology leaders, highlighting research, human engineering, and future-forward innovation.",
+    poster: "/medien/youtube-thumbs/1PeIeMgjyQc.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/1PeIeMgjyQc?autoplay=1",
+    youtubeUrl: "https://youtu.be/1PeIeMgjyQc",
+    tags: ["Corporate Film", "Samsung", "Commercial Cinema", "Technology Anthem"]
   },
   {
-    id: "projekt-documentary",
+    id: "projekt-aiims",
     slot: "slot-c",
-    title: "Documentary Film Productions",
-    client: "National Archives & Universities",
-    categoryEn: "Social & Heritage Documentary",
+    title: "AIIMS Corporate Movie - Medical Leadership & Clinical Care",
+    client: "All India Institute of Medical Sciences (AIIMS)",
+    categoryEn: "Healthcare & Research Documentary",
     filterCat: "documentary",
     descEn:
-      "Compelling documentaries capturing human stories, cultural preservation, and institutional legacies with cinematic realism, archival research, and emotional resonance.",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42a4de6.jpg",
-    videoUrl: "https://www.youtube.com/embed/91kFY2xs7cE?autoplay=1",
-    tags: ["Documentary", "Cultural Heritage", "Archival Film", "Storytelling"]
-  },
-  {
-    id: "projekt-social-media",
-    slot: "slot-d",
-    title: "Social Media Management & Digital Marketing",
-    client: "PlayerzPot, Startups & Commercial Brands",
-    categoryEn: "Social Media Content & Paid Growth",
-    filterCat: "marketing",
-    descEn:
-      "End-to-end creative digital marketing, content calendars, vertical short-form reels, and targeted ad campaigns driving high customer engagement and measurable audience growth.",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42abf5c.jpg",
-    videoUrl: "https://www.youtube.com/embed/1PeIeMgjyQc?autoplay=1",
-    tags: ["Social Media", "Reels & Shorts", "Performance Marketing", "Content Strategy"]
+      "Empathetic, authoritative medical documentary illustrating cutting-edge clinical research, compassionate healthcare teams, and patient care advancements.",
+    poster: "/medien/youtube-thumbs/B8-5NEnLjQ8.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/B8-5NEnLjQ8?autoplay=1",
+    youtubeUrl: "https://youtu.be/B8-5NEnLjQ8",
+    tags: ["AIIMS", "Healthcare Film", "Clinical Excellence", "Doctor Interviews"]
   },
   {
     id: "projekt-school",
-    slot: "slot-e",
-    title: "Modern Delhi Public School Showcase",
-    client: "Modern Delhi Public School, Faridabad",
+    slot: "slot-d",
+    title: "Modern Delhi International School Showcase",
+    client: "Modern Delhi International School, Greater Faridabad",
     categoryEn: "Campus & Academic Film",
     filterCat: "film",
     descEn:
-      "An inspiring institutional walkthrough showcasing premier educational infrastructure, sports academies, artistic performances, and academic achievements under the leadership of Director Principal US Verma.",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42b2209.jpg",
-    videoUrl: "https://www.youtube.com/embed/B8-5NEnLjQ8?autoplay=1",
-    tags: ["Education", "Campus Infrastructure", "Event Coverage", "Faridabad"]
+      "Dynamic campus film showcasing sports arenas, robotics laboratories, performing arts, and student leadership across premier educational infrastructure.",
+    poster: "/medien/youtube-thumbs/91kFY2xs7cE.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/91kFY2xs7cE?autoplay=1",
+    youtubeUrl: "https://youtu.be/91kFY2xs7cE",
+    tags: ["Campus Film", "Education", "Faridabad", "Student Life"]
   },
   {
-    id: "projekt-songs",
+    id: "projekt-iit",
+    slot: "slot-e",
+    title: "IIT Roorkee & IIT Delhi Corporate Films",
+    client: "Indian Institute of Technology (IIT)",
+    categoryEn: "Premier Institutional Cinema",
+    filterCat: "documentary",
+    descEn:
+      "Comprehensive institutional films highlighting academic legacy, world-class engineering research facilities, and national technological contributions.",
+    poster: "/medien/youtube-thumbs/TAv-50-CHjc.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/TAv-50-CHjc?autoplay=1",
+    youtubeUrl: "https://youtu.be/TAv-50-CHjc",
+    tags: ["IIT Roorkee", "IIT Delhi", "Engineering Research", "Institutional Master"]
+  },
+  {
+    id: "projekt-faridabad",
     slot: "slot-f",
-    title: "Prachar Songs & Custom Campaign Music",
-    client: "Political Leaders & Campaign Fronts",
-    categoryEn: "Music Composition & Audio Production",
+    title: "Faridabad Smart City Limited - Urban Transformation",
+    client: "Faridabad Smart City Limited (Govt of Haryana)",
+    categoryEn: "Urban Governance & Civic Infrastructure",
     filterCat: "campaign",
     descEn:
-      "Original campaign song composition, lyric writing, studio vocal recording, and energetic music videos designed to rally voters and build emotional resonance on the campaign trail.",
-    poster: "https://rfpdigital.com/images/gallery/1740382018_67bc1f42bae0a.jpg",
-    videoUrl: "https://www.youtube.com/embed/TAv-50-CHjc?autoplay=1",
-    tags: ["Prachar Songs", "Audio Anthems", "Music Production", "Election Trail"]
+      "Documenting transformative smart urban infrastructure, automated traffic command centers, clean mobility networks, and civic modernization.",
+    poster: "/medien/youtube-thumbs/bSNcL7srjqA.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/bSNcL7srjqA?autoplay=1",
+    youtubeUrl: "https://youtu.be/bSNcL7srjqA",
+    tags: ["Smart City", "Urban Governance", "Infrastructure", "Public Impact"]
   }
 ];
 
@@ -385,33 +392,40 @@ export const REAL_YOUTUBE_VIDEOS = [
 
 export const CLIENT_TESTIMONIALS = [
   {
-    author: "Ajeet Sharma",
-    designation: "MLA, Bhagalpur",
-    quote: "RFP Digital Productions delivered outstanding media and campaign coverage. Their dedication, timely execution, and video storytelling on the ground were exceptional.",
-    videoUrl: "https://rfpdigital.com/images/client-videos/video1.mp4"
+    author: "Shri Ajeet Sharma",
+    designation: "MLA, Bhagalpur · Bihar Legislative Assembly",
+    quote: "RFP Digital Productions managed our complete constituency video broadcast network and mobile LED campaign. Their operational punctuality, message resonance, and technical reliability in field conditions were exemplary.",
+    videoUrl: "/medien/testimonials/ajeet-sharma-mla-testimonial.mp4",
+    youtubeUrl: "https://youtu.be/3n58zR1Reqs",
+    thumbnail: "/medien/youtube-thumbs/3n58zR1Reqs.jpg"
   },
   {
-    author: "Supporters of Nilesh Kumar",
-    designation: "Chairman, Mokama (Bihar)",
-    quote: "The election campaign videos, songs, and mobile LED van displays created by RFP Digital reached every corner of the constituency and built immense enthusiasm among voters.",
-    videoUrl: "https://rfpdigital.com/images/client-videos/video2.mp4"
-  },
-  {
-    author: "US Verma",
-    designation: "Director Principal, Modern Delhi Public School, Faridabad",
+    author: "Dr. U.S. Verma",
+    designation: "Director Principal, Modern Delhi Public School (MDPS)",
     quote: "RFP Digital Productions captured the essence of our educational institution with supreme cinematic quality. Their team is thorough, creative, and remarkably professional.",
-    videoUrl: "https://rfpdigital.com/images/client-videos/video3.mp4"
+    videoUrl: "/medien/testimonials/mdps-testimonial.mp4",
+    youtubeUrl: "https://youtu.be/91kFY2xs7cE",
+    thumbnail: "/medien/youtube-thumbs/91kFY2xs7cE.jpg"
+  },
+  {
+    author: "Constituency Ground Testimonial",
+    designation: "Grassroots Voter & Citizen Feedback · Outreach Campaign",
+    quote: "The on-ground reach, mobile broadcast screens, and authentic constituency representation created by RFP Digital brought our community's development voice directly to the leaders.",
+    videoUrl: "/medien/testimonials/testimonials-video.mp4",
+    youtubeUrl: "https://youtu.be/3n58zR1Reqs",
+    thumbnail: "/medien/testimonials/testimonials-video-16x9.jpg"
   }
 ];
 
 export const MAKING_OF_IMAGES = [
-  "https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg",
-  "https://rfpdigital.com/images/gallery/1740382018_67bc1f422e9e9.jpg",
-  "https://rfpdigital.com/images/gallery/1740382018_67bc1f4297fd0.JPG",
-  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42a4de6.jpg",
-  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42abf5c.jpg",
-  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42b2209.jpg",
-  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42bae0a.jpg",
-  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42c2d85.jpg",
-  "https://rfpdigital.com/images/gallery/1740382018_67bc1f42caf8c.jpg"
+  "/medien/landing/landing-set-1211.jpg",
+  "/medien/landing/landing-camera-1256.jpg",
+  "/medien/landing/landing-film-1375.jpg",
+  "/medien/landing/landing-directing-1669.jpg",
+  "/medien/landing/landing-equipment-1335.jpg",
+  "/medien/landing/landing-drone-1634.jpg",
+  "/medien/landing/jindal-group-shoot.jpg",
+  "/medien/landing/landing-anchor-1698.jpg",
+  "/medien/galerie/_MG_0109.jpg",
+  "/medien/galerie/308-indoor-set.jpg"
 ];

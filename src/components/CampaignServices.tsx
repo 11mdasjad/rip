@@ -42,7 +42,7 @@ export const CampaignServices: React.FC<CampaignServicesProps> = ({ onOpenContac
             <div className="relative aspect-[4/5] rounded-3xl bg-[#182622] overflow-hidden border border-[#E2DDD2] shadow-xl group">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1200&auto=format&fit=crop"
+                src="/medien/landing/landing-rally-280027036.jpg"
                 alt="Campaign strategy and media room session"
                 className="w-full h-full object-cover filter contrast-[1.05] group-hover:scale-105 transition-transform duration-700"
               />

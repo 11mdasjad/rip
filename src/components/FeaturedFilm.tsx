@@ -15,12 +15,12 @@ export const FeaturedFilm: React.FC<FeaturedFilmProps> = ({ onPlayFilm }) => {
     description:
       "A cinematic exploration of light, timber, and spatial restraint. Filmed across twilight transitions using bespoke anamorphic primes to capture organic materials in true form.",
     videoUrl:
-      "https://www.youtube.com/embed/Rz2ZrNClYNs",
+      "https://www.youtube.com/watch?v=QvlClFaXJLc",
     poster:
-      "https://rfpdigital.com/images/gallery/1740382017_67bc1f41bf62c.jpg",
+      "/medien/landing/landing-camera-1256.jpg",
     specs: [
       { icon: Film, label: "4K DCI Anamorphic" },
-      { icon: Clock, label: "18 Min Runtime" },
+      { icon: Clock, label: "Official Showreel" },
       { icon: Layers, label: "DaVinci Wide Gamut" },
     ],
   };
