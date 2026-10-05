@@ -9,7 +9,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
   const showreelVideo = {
-    title: "Showreels",
+    title: "Showreel",
     videoUrl: "https://www.youtube.com/watch?v=QvlClFaXJLc",
     thumbnail: "/medien/youtube-thumbs/QvlClFaXJLc.jpg",
   };
@@ -20,11 +20,11 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[300px] sm:h-[400px] bg-[#7c6af2]/10 blur-[100px] sm:blur-[130px] pointer-events-none rounded-full" />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
-        {/* Left Column: Typography & CTAs */}
-        <div className="lg:col-span-6 flex flex-col justify-center z-10">
+        {/* Left Column: Typography & CTAs (7-span for safe text breathing room) */}
+        <div className="lg:col-span-7 flex flex-col justify-center z-10">
 
           {/* Main Title: Bold & Prominent 2-Line Symmetry */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[38px] xl:text-[46px] 2xl:text-[50px] font-extrabold tracking-tight text-[#f4f2f7] leading-[1.12] mb-5 sm:mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[38px] xl:text-[44px] 2xl:text-[48px] font-extrabold tracking-tight text-[#f4f2f7] leading-[1.14] mb-5 sm:mb-6">
             <span className="block sm:whitespace-nowrap">Video Production &amp;</span>
             <span className="block sm:whitespace-nowrap bg-gradient-to-r from-[#a89bfa] via-[#7c6af2] to-[#c4b5fd] bg-clip-text text-transparent">
               Election Management Co.
@@ -62,8 +62,8 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
           </div>
         </div>
 
-        {/* Right Column: Single Showreels Video Showcase */}
-        <div className="lg:col-span-6 relative">
+        {/* Right Column: Single Showreel Video Showcase */}
+        <div className="lg:col-span-5 relative">
           <div
             className="relative w-full aspect-[16/10] sm:aspect-[16/9.5] rounded-2xl sm:rounded-[32px] overflow-hidden bg-[#17161d] border border-white/[0.12] shadow-2xl group cursor-pointer"
             onClick={() =>
@@ -106,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
               <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-current ml-1" />
             </button>
 
-            {/* Scene Meta Info: Title "Showreels" */}
+            {/* Scene Meta Info: Title "Showreel" */}
             <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 pointer-events-none">
               <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug drop-shadow-md">
                 {showreelVideo.title}

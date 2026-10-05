@@ -36,7 +36,7 @@ export default function Home() {
 
   const handleOpenVideo = (
     url = "https://www.youtube.com/watch?v=QvlClFaXJLc",
-    title = "Showreels",
+    title = "Showreel",
     subtitle = "RFP Digital Productions"
   ) => {
     setVideoModal({
