@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
             Video Production &amp;
             <br />
             <span className="bg-gradient-to-r from-[#a89bfa] via-[#7c6af2] to-[#c4b5fd] bg-clip-text text-transparent">
-              Election Management Co.
+              Election Management Company
             </span>
           </h1>
 
