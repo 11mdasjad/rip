@@ -22,50 +22,7 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Column: Typography & CTAs */}
         <div className="lg:col-span-5 flex flex-col justify-center z-10">
-          {/* RFP Brand Tag */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-[#17161d] border border-[#D4AF37]/30 text-[11px] sm:text-xs font-mono uppercase tracking-[0.2em] text-[#F3E5AB] w-fit mb-4 sm:mb-5 shadow-lg">
-            <img
-              src="/medien/logo/rfp-emblem.png"
-              alt="RFP"
-              className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain filter drop-shadow-[0_1px_4px_rgba(212,175,55,0.6)]"
-              loading="eager"
-            />
-            <span className="font-semibold">RFP DIGITAL PRODUCTIONS</span>
-          </div>
 
-          {/* Eyebrow Quick navigation chips */}
-          <nav
-            className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#f4f2f780] mb-5 sm:mb-6"
-            aria-label="Direct shortcuts to services"
-          >
-            <a
-              href="#service-corporate-films"
-              className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
-            >
-              Corporate Films
-            </a>
-            <span className="text-white/20">·</span>
-            <a
-              href="#service-documentary-films"
-              className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
-            >
-              Documentaries
-            </a>
-            <span className="text-white/20">·</span>
-            <a
-              href="#service-election-campaigns"
-              className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
-            >
-              Election Campaigns
-            </a>
-            <span className="text-white/20">·</span>
-            <a
-              href="#service-social-media-management"
-              className="hover:text-[#a89bfa] transition-colors py-1 px-2.5 rounded-full bg-white/[0.04] border border-white/[0.06]"
-            >
-              Social Media Management
-            </a>
-          </nav>
 
           {/* Main Title */}
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#f4f2f7] leading-[1.1] mb-5 sm:mb-6">
