@@ -10,8 +10,8 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
   const showreelVideo = {
     title: "Showreels",
-    videoUrl: "https://www.youtube.com/watch?v=Rz2ZrNClYNs",
-    thumbnail: "/medien/showreel-thumbnail.jpg",
+    videoUrl: "https://www.youtube.com/watch?v=QvlClFaXJLc",
+    thumbnail: "/medien/youtube-thumbs/QvlClFaXJLc.jpg",
   };
 
   return (

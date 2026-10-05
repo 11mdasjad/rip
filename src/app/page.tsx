@@ -35,7 +35,7 @@ export default function Home() {
   const [contactTopic, setContactTopic] = useState<string>("Corporate Films");
 
   const handleOpenVideo = (
-    url = "https://www.youtube.com/watch?v=Rz2ZrNClYNs",
+    url = "https://www.youtube.com/watch?v=QvlClFaXJLc",
     title = "Showreels",
     subtitle = "RFP Digital Productions"
   ) => {
