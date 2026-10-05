@@ -23,11 +23,11 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
         {/* Left Column: Typography & CTAs */}
         <div className="lg:col-span-6 flex flex-col justify-center z-10">
 
-          {/* Main Title with Perfect 2-Line Symmetry */}
-          <h1 className="text-2xl sm:text-4xl lg:text-[36px] xl:text-[42px] 2xl:text-[46px] font-extrabold tracking-tight text-[#f4f2f7] leading-[1.15] mb-5 sm:mb-6">
+          {/* Main Title: Bold & Prominent 2-Line Symmetry */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[38px] xl:text-[46px] 2xl:text-[50px] font-extrabold tracking-tight text-[#f4f2f7] leading-[1.12] mb-5 sm:mb-6">
             <span className="block sm:whitespace-nowrap">Video Production &amp;</span>
             <span className="block sm:whitespace-nowrap bg-gradient-to-r from-[#a89bfa] via-[#7c6af2] to-[#c4b5fd] bg-clip-text text-transparent">
-              Election Management Company
+              Election Management Co.
             </span>
           </h1>
 
