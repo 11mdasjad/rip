@@ -19,12 +19,12 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
       {/* Background ambient radial glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[300px] sm:h-[400px] bg-[#7c6af2]/10 blur-[100px] sm:blur-[130px] pointer-events-none rounded-full" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
         {/* Left Column: Typography & CTAs */}
-        <div className="lg:col-span-6 flex flex-col justify-center z-10">
+        <div className="lg:col-span-7 flex flex-col justify-center z-10">
 
           {/* Main Title with Perfect 2-Line Symmetry */}
-          <h1 className="text-2xl sm:text-4xl lg:text-[36px] xl:text-[42px] 2xl:text-[46px] font-extrabold tracking-tight text-[#f4f2f7] leading-[1.15] mb-5 sm:mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] xl:text-[38px] 2xl:text-[44px] font-extrabold tracking-tight text-[#f4f2f7] leading-[1.18] mb-5 sm:mb-6">
             <span className="block sm:whitespace-nowrap">Video Production &amp;</span>
             <span className="block sm:whitespace-nowrap bg-gradient-to-r from-[#a89bfa] via-[#7c6af2] to-[#c4b5fd] bg-clip-text text-transparent">
               Election Management Company
@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
         </div>
 
         {/* Right Column: Single Showreels Video Showcase */}
-        <div className="lg:col-span-6 relative">
+        <div className="lg:col-span-5 relative">
           <div
             className="relative w-full aspect-[16/10] sm:aspect-[16/9.5] rounded-2xl sm:rounded-[32px] overflow-hidden bg-[#17161d] border border-white/[0.12] shadow-2xl group cursor-pointer"
             onClick={() =>
