@@ -24,6 +24,16 @@ import {
   ArrowUpRight
 } from "lucide-react";
 
+function InstagramIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </svg>
+  );
+}
+
 export default function TestimonialsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -64,11 +74,12 @@ export default function TestimonialsPage() {
     });
   }, [selectedCategory, searchQuery]);
 
-  // Featured Drive Video Testimonials (3 Videos from Google Drive with YouTube thumbnails)
+  // Featured Video Testimonials (Including Ajeet Sharma, MDPS, and Neha Sharma Reel)
   const featuredVideoTestimonials = useMemo(() => {
     return TESTIMONIALS_DATA.filter((t) =>
       t.id === "testimonial-mla-ajeet-sharma" ||
       t.id === "testimonial-mdps" ||
+      t.id === "testimonial-neha-sharma" ||
       t.id === "testimonial-grassroots"
     );
   }, []);
@@ -235,6 +246,18 @@ export default function TestimonialsPage() {
                             title="Open directly on YouTube"
                           >
                             <span>YouTube ↗</span>
+                          </a>
+                        )}
+                        {(item.instagramUrl || (item.videoUrl && item.videoUrl.includes("instagram.com"))) && (
+                          <a
+                            href={item.instagramUrl || item.videoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-mono text-pink-400 hover:text-pink-300 flex items-center gap-1 bg-pink-500/10 hover:bg-pink-500/20 px-2.5 py-1.5 rounded-lg transition-colors font-semibold"
+                            title="Open directly on Instagram"
+                          >
+                            <InstagramIcon className="w-3 h-3" />
+                            <span>Instagram ↗</span>
                           </a>
                         )}
                       </div>
@@ -530,16 +553,28 @@ export default function TestimonialsPage() {
                       <Play className="w-3.5 h-3.5 fill-current text-[#a89bfa]" />
                       <span>Watch Video</span>
                     </button>
-                    {(selectedTestimonial.youtubeUrl || selectedTestimonial.videoUrl) && (
+                    {selectedTestimonial.youtubeUrl && (
                       <a
-                        href={selectedTestimonial.youtubeUrl || selectedTestimonial.videoUrl}
+                        href={selectedTestimonial.youtubeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-4 py-2.5 rounded-xl bg-red-600/90 hover:bg-red-600 text-white text-xs font-mono uppercase tracking-wider flex items-center gap-1.5 transition-all font-semibold shadow-md"
-                        title="Open directly in YouTube"
+                        title="Open directly on YouTube"
                       >
                         <Play className="w-3 h-3 fill-current" />
                         <span>YouTube ↗</span>
+                      </a>
+                    )}
+                    {(selectedTestimonial.instagramUrl || (selectedTestimonial.videoUrl && selectedTestimonial.videoUrl.includes("instagram.com"))) && (
+                      <a
+                        href={selectedTestimonial.instagramUrl || selectedTestimonial.videoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90 text-white text-xs font-mono uppercase tracking-wider flex items-center gap-1.5 transition-all font-semibold shadow-md shadow-pink-600/20"
+                        title="Open directly on Instagram"
+                      >
+                        <InstagramIcon className="w-3.5 h-3.5" />
+                        <span>Instagram ↗</span>
                       </a>
                     )}
                   </div>

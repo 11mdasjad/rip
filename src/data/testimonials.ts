@@ -66,34 +66,35 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     ]
   },
   {
-    id: "testimonial-grassroots",
-    clientName: "Constituency Ground Testimonial",
-    role: "Grassroots Voter & Citizen Feedback",
-    organization: "On-Ground Outreach Campaign",
+    id: "testimonial-neha-sharma",
+    clientName: "Neha Sharma",
+    role: "Actor & Youth Campaign Ambassador",
+    organization: "Bhagalpur Assembly & Youth Outreach",
     verified: true,
-    projectCategory: "Field Documentaries",
+    projectCategory: "Election Campaign & Outreach",
     year: "2024",
     rating: 5,
-    clientAvatar: "/medien/testimonials/testimonials-video-16x9.jpg",
-    videoThumbnail: "/medien/testimonials/testimonials-video-16x9.jpg",
-    quote: "The on-ground reach, mobile broadcast screens, and authentic constituency representation created by RFP Digital brought our community's development voice directly to the leaders.",
-    fullReview: "Field interviews and authentic citizen testimonials conducted by RFP Digital across grassroots communities. Capturing spontaneous public sentiment and feedback with cinema-grade audio and visual clarity in outdoor village and urban environments.",
-    videoUrl: "/medien/testimonials/testimonials-video.mp4",
-    youtubeUrl: "https://youtu.be/3n58zR1Reqs",
+    clientAvatar: "/medien/testimonials/neha-sharma-endorsement.jpg",
+    videoThumbnail: "/medien/testimonials/neha-sharma-endorsement.jpg",
+    quote: "The on-ground energy, massive rally broadcasts, and visual storytelling by RFP Digital truly connected the youth and every citizen across the constituency.",
+    fullReview: "Comprehensive campaign outreach and ground coverage executed by RFP Digital Productions. Highlighting youth mobilization, public roadshows, and authentic leadership interactions that electrified the assembly constituency campaign.",
+    videoUrl: "https://www.instagram.com/reel/DaxoqAoR_1Z/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+    instagramUrl: "https://www.instagram.com/reel/DaxoqAoR_1Z/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     challengesSolved: [
-      "Crisp on-location sound recording in noisy open-air rural environments",
-      "Real-time citizen engagement and natural conversational interviewing",
-      "Quick field-to-edit deployment for community projection vans"
+      "Managing massive crowd roadshow footage turnaround for immediate social release",
+      "Dynamic multi-camera coverage of celebrity campaign trail & youth dialogues",
+      "Synchronizing real-time viral reels with mobile LED van constituency loops"
     ],
     keyDeliverables: [
-      "Grassroots Citizen Testimonial Reels",
-      "Constituency Feedback Capsules for Campaign HQ",
-      "Bilingual Social Media Micro-Stories"
+      "Official Campaign Trail Highlight Reel (Instagram 4K)",
+      "Youth Mobilization Short-Form Reels Series",
+      "Rally LED Screen Live Video Feeds",
+      "Celebrity Roadshow Archival Reel"
     ],
     stats: [
-      { label: "Villages Covered", value: "120+" },
-      { label: "Citizen Reach", value: "95,000+" },
-      { label: "Format", value: "Full HD Master" }
+      { label: "Reel Reach", value: "500,000+" },
+      { label: "Youth Engagement", value: "98% Positive" },
+      { label: "Format", value: "Cinema Reel (4K)" }
     ]
   },
   {

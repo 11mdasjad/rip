@@ -59,6 +59,7 @@ export interface TestimonialItem {
   fullReview?: string;
   videoUrl?: string;
   youtubeUrl?: string;
+  instagramUrl?: string;
   videoThumbnail?: string;
   challengesSolved?: string[];
   keyDeliverables?: string[];
