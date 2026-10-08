@@ -25,20 +25,20 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo
 
   return (
     <section id="projekte" className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      {/* Section Header */}
-      <div className="flex flex-col mb-10 sm:mb-12 lg:mb-14 gap-6">
-        <div>
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-2">
+      {/* Section Header - Centered */}
+      <div className="flex flex-col items-center text-center mb-10 sm:mb-12 lg:mb-16 gap-6">
+        <div className="max-w-4xl mx-auto">
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-2.5">
             Selected Portfolio
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7] max-w-4xl leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7] leading-tight">
             Crafted Over Thousands of TV ads, Corporate Films &amp; Documentaries
           </h2>
         </div>
 
-        {/* Filter Pills - Pristine single-row pill bar */}
-        <div className="flex items-center overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
-          <div className="inline-flex items-center gap-1 sm:gap-1.5 p-1.5 rounded-full bg-[#17161d] border border-white/[0.08] shadow-lg shrink-0">
+        {/* Filter Pills - Centered pristine single-row pill bar */}
+        <div className="w-full flex items-center justify-center overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+          <div className="inline-flex items-center gap-1 sm:gap-1.5 p-1.5 rounded-full bg-[#17161d] border border-white/[0.08] shadow-lg shrink-0 mx-auto">
             {[
               { id: "all", labelEn: "All Work" },
               { id: "film", labelEn: "Corporate Films" },
