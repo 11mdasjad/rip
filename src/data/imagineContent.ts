@@ -38,9 +38,9 @@ export const STAGE_SCENES: StageScene[] = [
   {
     id: "election-campaigns",
     title: "Election Campaign Management",
-    artEn: "Mobile LED Display Vans & Voter Rallies",
+    artEn: "Dr. Antul Teotia & Mobile LED Vans",
     poster: "/medien/galerie/311-campaign-led.jpg",
-    fullVideoUrl: "https://www.youtube-nocookie.com/embed/3n58zR1Reqs?autoplay=1",
+    fullVideoUrl: "https://www.youtube-nocookie.com/embed/jirysVZwPIE?autoplay=1",
     targetId: "projekt-election"
   },
   {
@@ -118,16 +118,16 @@ export const PROJECTS_DATA: ProjectCard[] = [
   {
     id: "projekt-election",
     slot: "slot-a",
-    title: "Election Campaign Management - High-Impact Mobile LED Vans",
-    client: "State & Parliamentary Election Committees",
+    title: "Dr. Antul Teotia Zila Pramukh Bulandshahr - Election Campaign",
+    client: "Dr. Antul Teotia / Zila Panchayat Bulandshahr",
     categoryEn: "Election Campaign Strategy & Media Operations",
     filterCat: "campaign",
     descEn:
-      "Constituency-wide campaign operations featuring mobile high-brightness LED display vans, rally multi-camera live switching, audio anthems, and grassroots outreach.",
-    poster: "/medien/youtube-thumbs/3n58zR1Reqs.jpg",
-    videoUrl: "https://www.youtube-nocookie.com/embed/3n58zR1Reqs?autoplay=1",
-    youtubeUrl: "https://youtu.be/3n58zR1Reqs",
-    tags: ["Election Campaign", "LED Screen Vans", "Rally Live Stream", "Ground Outreach"]
+      "Constituency-wide campaign operations featuring mobile high-brightness LED display vans, documentary storytelling, rally multi-camera live switching, and grassroots outreach.",
+    poster: "/medien/youtube-thumbs/jirysVZwPIE.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/jirysVZwPIE?autoplay=1",
+    youtubeUrl: "https://youtu.be/jirysVZwPIE",
+    tags: ["Election Campaign", "Dr. Antul Teotia", "Bulandshahr", "Mobile LED Vans"]
   },
   {
     id: "projekt-samsung",
