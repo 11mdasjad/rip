@@ -91,9 +91,8 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
             </h2>
 
             <p className="text-base text-[#f4f2f7b8] leading-relaxed mb-8 max-w-lg">
-              Whether it is a corporate film, an institutional documentary, an election campaign, or social media management:{" "}
-              <b className="text-white font-semibold">RFP Digital Productions</b> is managed by seasoned media professionals and alumni from{" "}
-              <b className="text-[#a89bfa] font-semibold">AJK MCRC, Jamia Millia Islamia, New Delhi</b> with over 17+ years of media excellence.
+              Whether it is a corporate film, an institutional documentary, an election campaign, or social media management,{" "}
+              <b className="text-white font-semibold">RFP Digital Productions</b> offers end-to-end video production services, from concept development and scripting to production, post-production, graphics, and digital distribution.
             </p>
 
             {/* Production House Info Box */}
