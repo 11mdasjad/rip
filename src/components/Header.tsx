@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
-import { SERVICES_DATA } from "@/data/imagineContent";
+import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 
 interface HeaderProps {
   onOpenContact?: () => void;
@@ -13,9 +12,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,16 +20,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setServicesOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const isHome = pathname === "/";
@@ -97,70 +84,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
             <span>Gallery</span>
           </Link>
 
-          <div className="relative" ref={dropdownRef}>
-            <div className="flex items-center">
-              <Link
-                href="/services"
-                className={`px-4 py-2.5 text-[15px] xl:text-[16px] rounded-xl transition-all font-semibold ${
-                  isServices
-                    ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
-                    : "text-white/85 hover:text-white hover:bg-white/[0.08]"
-                }`}
-              >
-                Services
-              </Link>
-              <button
-                type="button"
-                onClick={() => setServicesOpen(!servicesOpen)}
-                onMouseEnter={() => setServicesOpen(true)}
-                className="p-2 -ml-2 text-white/60 hover:text-white rounded-lg hover:bg-white/[0.08] transition-all focus:outline-none"
-                aria-expanded={servicesOpen}
-                aria-label="Toggle services menu"
-              >
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    servicesOpen ? "rotate-180 text-[#a89bfa]" : "text-white/60"
-                  }`}
-                />
-              </button>
-            </div>
-
-            {servicesOpen && (
-              <div
-                onMouseLeave={() => setServicesOpen(false)}
-                className="absolute top-full left-0 mt-2 w-80 bg-[#17161d] border border-white/[0.15] rounded-2xl p-3 shadow-2xl backdrop-blur-xl z-50 animate-in fade-in slide-in-from-top-2 duration-200"
-              >
-                <Link
-                  href="/services"
-                  onClick={() => setServicesOpen(false)}
-                  className="flex items-center justify-between px-3.5 py-2.5 mb-2 text-xs font-mono font-bold text-[#a89bfa] bg-[#6b54ee]/15 hover:bg-[#6b54ee]/25 rounded-xl border border-[#a89bfa]/30 transition-all group"
-                >
-                  <span className="flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>All Services Hub</span>
-                  </span>
-                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
-                </Link>
-
-                <div className="text-[11px] font-mono tracking-widest text-[#a89bfa] uppercase px-3 py-1 border-b border-white/[0.08] mb-1 font-bold">
-                  Core Disciplines
-                </div>
-                {SERVICES_DATA.map((service) => (
-                  <Link
-                    key={service.id}
-                    href={`/services/${service.id}`}
-                    onClick={() => setServicesOpen(false)}
-                    className="group flex items-center justify-between px-3.5 py-2 text-sm text-white/85 hover:text-white hover:bg-white/[0.08] rounded-xl transition-all font-medium"
-                  >
-                    <span>{service.titleEn}</span>
-                    <span className="text-xs font-mono text-white/40 group-hover:text-[#a89bfa] font-semibold">
-                      {service.num}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+          <Link
+            href="/services"
+            className={`px-4 py-2.5 text-[15px] xl:text-[16px] rounded-xl transition-all font-semibold ${
+              isServices
+                ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
+                : "text-white/85 hover:text-white hover:bg-white/[0.08]"
+            }`}
+          >
+            Services
+          </Link>
 
           <Link
             href="/team"
@@ -290,34 +223,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-base font-semibold text-white/90 hover:text-white py-2 px-3 rounded-xl hover:bg-white/[0.04] flex items-center justify-between transition-all"
               >
-                <span>All Services</span>
+                <span>Services</span>
                 <span className="text-xs text-[#a89bfa]">✦</span>
               </Link>
-
-              <div className="py-2 px-3 rounded-xl bg-white/[0.02] border border-white/[0.06]">
-                <div className="text-[11px] uppercase tracking-widest text-[#a89bfa] font-mono mb-2 flex items-center justify-between">
-                  <span>Core Disciplines</span>
-                  <Link
-                    href="/services"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-[10px] text-[#E6C665] hover:underline"
-                  >
-                    View All →
-                  </Link>
-                </div>
-                <div className="grid grid-cols-1 gap-1.5 pl-2 border-l border-white/[0.1]">
-                  {SERVICES_DATA.map((service) => (
-                    <Link
-                      key={service.id}
-                      href={`/services/${service.id}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-xs text-white/70 hover:text-white py-1.5 transition-colors block"
-                    >
-                      {service.titleEn}
-                    </Link>
-                  ))}
-                </div>
-              </div>
 
               <Link
                 href={isHome ? "#zusammenarbeit" : "/#zusammenarbeit"}
