@@ -40,7 +40,7 @@ export const KiWorkflows: React.FC = () => {
             Election Management &amp; Outreach
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7] mb-6">
-            Turnkey Campaign Execution.
+            Turn key Campaign Execution.
           </h2>
           <p className="text-base sm:text-lg text-[#f4f2f7b8] leading-relaxed mb-8">
             RFP Digital Productions runs end-to-end election campaign media operations. From mobile LED vans and catchy prachar songs to street theatre and constituency-wide digital voter outreach, we bring candidates directly to the people.
