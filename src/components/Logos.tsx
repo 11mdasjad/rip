@@ -39,12 +39,12 @@ export const Logos: React.FC<LogosProps> = ({
             <div
               key={`${logo.name}-${idx}`}
               title={logo.name}
-              className="shrink-0 w-40 sm:w-48 h-18 sm:h-22 flex items-center justify-center p-3.5 sm:p-4 rounded-2xl bg-white shadow-md hover:shadow-xl hover:shadow-white/10 hover:scale-105 transition-all duration-300 border border-white/20 select-none group cursor-pointer"
+              className="shrink-0 w-44 sm:w-52 h-20 sm:h-24 flex items-center justify-center p-3.5 sm:p-4 rounded-2xl bg-white shadow-md hover:shadow-xl hover:shadow-white/10 hover:scale-105 transition-all duration-300 border border-white/20 select-none group cursor-pointer"
             >
               <img
                 src={logo.src}
                 alt={logo.name}
-                className="max-h-10 sm:max-h-12 max-w-[85%] w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="max-h-12 sm:max-h-14 max-w-[88%] w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
               />
             </div>

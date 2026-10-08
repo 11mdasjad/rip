@@ -95,19 +95,25 @@ export const FAKTEN_DATA = [
 ];
 
 export const CLIENT_LOGOS = [
+  { name: "Unilever", src: "/medien/logos/unilever.png" },
+  { name: "Haryana Police", src: "/medien/logos/haryana-police.png" },
+  { name: "Sports Authority of India (SAI)", src: "/medien/logos/sports-authority-india.png" },
+  { name: "Pradhanmantri Fasal Bima Yojana", src: "/medien/logos/pmfby.png" },
+  { name: "GRC India (Save Globe)", src: "/medien/logos/grc-india.png" },
+  { name: "Parmarth - Empowering Process", src: "/medien/logos/parmarth.png" },
+  { name: "Smile India Trust", src: "/medien/logos/smile-india.png" },
+  { name: "Leaderz Walk", src: "/medien/logos/leaderz-walk.png" },
+  { name: "Pathfinder Academy", src: "/medien/logos/pathfinder-academy.png" },
   { name: "IIT Roorkee", src: "/medien/logos/iit-roorkee.png" },
   { name: "Jamia Hamdard University", src: "/medien/logos/jamia-hamdard.png" },
   { name: "National Archives of India", src: "/medien/logos/national-archives.jpg" },
-  { name: "Haryana Police", src: "/medien/logos/haryana-police.png" },
   { name: "DD Kisan", src: "/medien/logos/dd-kisan.png" },
+  { name: "Samsung", src: "/medien/logos/samsung.png" },
   { name: "Modern Delhi International School", src: "/medien/logos/modern-delhi-school.png" },
-  { name: "Sports Authority of India", src: "/medien/logos/sports-authority-india.jpg" },
   { name: "Atal Bihari Vajpayee Hindi Vishwavidyalaya", src: "/medien/logos/atal-bihari-univ.png" },
   { name: "Bharat Construction", src: "/medien/logos/bharat-construction.jpg" },
   { name: "Jamia Co-operative Bank", src: "/medien/logos/jamia-coop-bank.jpg" },
-  { name: "Smile India Foundation", src: "/medien/logos/smile-india.png" },
-  { name: "Brave Soul Foundation", src: "/medien/logos/brave-soul-foundation.jpg" },
-  { name: "Samsung", src: "/medien/logos/samsung.png" }
+  { name: "Brave Soul Foundation", src: "/medien/logos/brave-soul-foundation.jpg" }
 ];
 
 export const PROJECTS_DATA: ProjectCard[] = [
