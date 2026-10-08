@@ -15,8 +15,9 @@ export const Footer: React.FC = () => {
             <Link href="/" className="inline-flex items-center space-x-3.5 mb-5 group">
               <img src="/medien/logo/rfp-logo.svg" alt="RFP Digital Productions" className="h-16 sm:h-20 w-auto object-contain filter drop-shadow-[0_2px_14px_rgba(212,175,55,0.4)] transition-transform duration-300 group-hover:scale-105" />
             </Link>
-            <p className="text-sm text-[#f4f2f7b8] mb-5 max-w-sm">
-              RFP Digital Productions – Video production &amp; election management company. Managed by media professionals and alumni from AJK MCRC, Jamia Millia Islamia, New Delhi. Over 17+ years of media excellence.
+            <p className="text-sm text-[#f4f2f7b8] font-medium mb-5 max-w-sm leading-relaxed">
+              RFP Digital Productions - Video Production &amp; <br className="hidden sm:inline" />
+              Election Management Co.
             </p>
 
             {/* Social Media Links - Official RFP Channels */}
