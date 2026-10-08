@@ -20,7 +20,7 @@ export interface VideoItem {
 
 export interface ProjectCard {
   id: string;
-  slot: "slot-g" | "slot-a" | "slot-b" | "slot-c" | "slot-d" | "slot-e" | "slot-f";
+  slot: "slot-g" | "slot-a" | "slot-b" | "slot-c" | "slot-d" | "slot-e" | "slot-f" | "slot-h" | string;
   title: string;
   client: string;
   categoryEn: string;
@@ -226,6 +226,20 @@ export const PROJECTS_DATA: ProjectCard[] = [
     videoUrl: "https://www.youtube-nocookie.com/embed/bSNcL7srjqA?autoplay=1",
     youtubeUrl: "https://youtu.be/bSNcL7srjqA",
     tags: ["Smart City", "Urban Governance", "Infrastructure", "Public Impact"]
+  },
+  {
+    id: "projekt-pathfinder",
+    slot: "slot-h",
+    title: "Pathfinder Academy Corporate Film",
+    client: "Pathfinder Academy, Greater Noida",
+    categoryEn: "Corporate & Campus Film",
+    filterCat: "film",
+    descEn:
+      "High-production corporate film showcasing premier academic infrastructure, faculty excellence, and student leadership at Pathfinder Academy, Greater Noida.",
+    poster: "/medien/youtube-thumbs/7o09OEkupfA.jpg",
+    videoUrl: "https://www.youtube-nocookie.com/embed/7o09OEkupfA?autoplay=1",
+    youtubeUrl: "https://youtu.be/7o09OEkupfA",
+    tags: ["Pathfinder Academy", "Corporate Film", "Greater Noida", "Campus Cinema"]
   }
 ];
 
