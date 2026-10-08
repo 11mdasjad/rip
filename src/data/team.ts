@@ -61,11 +61,11 @@ export const TEAM_DATA: TeamMemberItem[] = [
   },
   {
     id: "team-3",
-    name: "Arjun Nambiar",
+    name: "Aman Raj Sinha",
     role: "Chief Cinematographer & Director of Photography",
     department: "Direction",
     bio: "Anamorphic specialist with an obsession for textured shadow and balanced spatial framing. Trained in premier Indian cinema institutes with extensive documentary expedition and corporate film background.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+    image: "/medien/team/aman-raj-sinha.jpg",
     credentials: "Film & Television Institute of India (FTII)",
     experience: "12+ Years Director of Photography",
     specialties: [
@@ -86,7 +86,7 @@ export const TEAM_DATA: TeamMemberItem[] = [
       "EasyRig Vario 5 Gimbal Rig"
     ],
     philosophy: "Lighting is emotion. If a light feels placed, it is wrong. It must feel as though the world was born with that illumination.",
-    email: "arjun@rfpdigital.com"
+    email: "aman@rfpdigital.com"
   },
   {
     id: "team-4",
