@@ -114,7 +114,7 @@ export const PROJECTS_DATA: ProjectCard[] = [
   {
     id: "projekt-andc",
     slot: "slot-g",
-    title: "Acharya Narendra Dev College (ANDC) Institutional Film",
+    title: "Acharya Narendra Dev College (ANDC) Institutional Corporate Film",
     client: "University of Delhi / ANDC",
     categoryEn: "Institutional & Campus Documentary",
     filterCat: "documentary",

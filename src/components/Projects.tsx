@@ -26,37 +26,39 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo
   return (
     <section id="projekte" className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 lg:mb-16 gap-4 sm:gap-6">
+      <div className="flex flex-col mb-10 sm:mb-12 lg:mb-14 gap-6">
         <div>
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] block mb-2">
             Selected Portfolio
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7] max-w-4xl leading-tight">
             Crafted Over Thousands of TV ads, Corporate Films &amp; Documentaries
           </h2>
         </div>
 
-        {/* Filter Pills */}
-        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 p-1.5 rounded-full bg-[#17161d] border border-white/[0.08] self-start md:self-auto overflow-x-auto">
-          {[
-            { id: "all", labelEn: "All Work" },
-            { id: "film", labelEn: "Corporate Films" },
-            { id: "campaign", labelEn: "Election Campaigns" },
-            { id: "documentary", labelEn: "Documentaries" },
-            { id: "marketing", labelEn: "Social & Marketing" },
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveFilter(tab.id as any)}
-              className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-medium tracking-wide transition-all whitespace-nowrap ${
-                activeFilter === tab.id
-                  ? "bg-[#6b54ee] text-white shadow-md shadow-[#6b54ee]/30 font-semibold"
-                  : "text-[#f4f2f780] hover:text-white hover:bg-white/[0.04]"
-              }`}
-            >
-              {tab.labelEn}
-            </button>
-          ))}
+        {/* Filter Pills - Pristine single-row pill bar */}
+        <div className="flex items-center overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+          <div className="inline-flex items-center gap-1 sm:gap-1.5 p-1.5 rounded-full bg-[#17161d] border border-white/[0.08] shadow-lg shrink-0">
+            {[
+              { id: "all", labelEn: "All Work" },
+              { id: "film", labelEn: "Corporate Films" },
+              { id: "campaign", labelEn: "Election Campaigns" },
+              { id: "documentary", labelEn: "Documentaries" },
+              { id: "marketing", labelEn: "Social & Marketing" },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveFilter(tab.id as any)}
+                className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide transition-all whitespace-nowrap shrink-0 ${
+                  activeFilter === tab.id
+                    ? "bg-[#6b54ee] text-white shadow-md shadow-[#6b54ee]/30 font-semibold"
+                    : "text-[#f4f2f7]/70 hover:text-white hover:bg-white/[0.05]"
+                }`}
+              >
+                {tab.labelEn}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
