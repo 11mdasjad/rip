@@ -15,6 +15,14 @@ export interface ServiceItem {
   deliverables: string[];
   image: string;
   aspect?: string;
+  videoUrl?: string;
+  youtubeUrl?: string;
+  videoThumbnail?: string;
+  fullOverview?: string;
+  features?: string[];
+  techStack?: string[];
+  stats?: { label: string; value: string }[];
+  workflow?: { step: string; title: string; desc: string }[];
 }
 
 export interface ProjectItem {

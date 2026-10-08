@@ -329,6 +329,19 @@ export const SERVICES_DATA = [
       "Multi-Camera Live Event Streaming",
       "Same-Day Edit Highlights & Retouching"
     ]
+  },
+  {
+    num: "07",
+    id: "website-development",
+    titleEn: "Website Development",
+    descEn:
+      "High-performance, cinematic, mobile-first web applications, election campaign portals, and corporate platforms built with Next.js, modern UI/UX, and maximum conversion.",
+    deliverablesEn: [
+      "Custom Web Applications (Next.js & React)",
+      "Political Campaign & Candidate Portals",
+      "Corporate Showcases & Headless CMS",
+      "100/100 Core Web Vitals & SEO Architecture"
+    ]
   }
 ];
 

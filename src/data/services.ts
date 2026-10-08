@@ -6,14 +6,44 @@ export const SERVICES_DATA: ServiceItem[] = [
     number: "01",
     title: "Corporate Films",
     tagline: "Distilling enterprise vision into compelling cinematic narrative.",
-    description: "Professional corporate storytelling, brand films, product launches and company profile videos. We blend high-end cinematography with strategic messaging to elevate brand presence across global stakeholders.",
+    description:
+      "Professional corporate storytelling, brand films, product launches, facility walkthroughs and executive leadership videos. We blend cinema-grade visuals with sharp corporate messaging.",
+    fullOverview:
+      "At RFP Digital Productions, corporate films are treated with the aesthetic gravity of high-end cinema. From global conglomerates to pioneering institutions, we craft visual stories that communicate scale, innovation, and trust. Our teams handle everything from scripting, storyboard development, multi-city filming, drone cinematography, and cleanroom shooting to precision color science and immersive audio design.",
     deliverables: [
       "Brand Anthems & Heritage Films",
       "Executive Keynotes & Leadership Stills",
-      "Investor & ESG Storytelling",
-      "High-Fidelity Product Cinema"
+      "Factory, Lab & Facility Walkthroughs",
+      "Investor Pitch & Annual AGM Films"
     ],
-    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop",
+    features: [
+      "Cinematic 4K/6K Raw capture on Sony Cinema FX line & Arri optics",
+      "Dedicated creative director & scriptwriter on every production",
+      "Multi-city shoot coordination across industrial & cleanroom zones",
+      "Licensed master soundtrack composition & voiceover narration in 12+ languages"
+    ],
+    techStack: [
+      "Sony FX6 / FX3 Cinema Rigs",
+      "Zeiss & Master Prime Glass",
+      "DaVinci Resolve Studio Color Suite",
+      "Sennheiser MKH & Wireless Mic Units",
+      "DCI 4K HDR Mastering"
+    ],
+    stats: [
+      { label: "Films Delivered", value: "350+" },
+      { label: "Corporate Clients", value: "80+" },
+      { label: "Resolution", value: "DCI 4K" }
+    ],
+    workflow: [
+      { step: "01", title: "Strategic Brief", desc: "Understanding corporate values, investor milestones, and viewer psychology." },
+      { step: "02", title: "Script & Treatment", desc: "Screenplay drafts, storyboard layouts, and visual mood direction." },
+      { step: "03", title: "Principal Photography", desc: "Cinema lighting, multicam setups, and high-fidelity dialogue capture." },
+      { step: "04", title: "Post & Delivery", desc: "Master color grading, sound design, and multi-format broadcast delivery." }
+    ],
+    image: "/medien/landing/jindal-group-shoot.jpg",
+    videoThumbnail: "/medien/landing/jindal-group-shoot.jpg",
+    videoUrl: "https://www.youtube.com/embed/1PeIeMgjyQc?autoplay=1",
+    youtubeUrl: "https://youtu.be/1PeIeMgjyQc",
     aspect: "16/9"
   },
   {
@@ -21,74 +51,269 @@ export const SERVICES_DATA: ServiceItem[] = [
     number: "02",
     title: "Documentary Films",
     tagline: "Honoring authenticity through patient, resonant observational craft.",
-    description: "Compelling documentaries that capture real stories with cinematic visuals and emotional impact. From grassroots journeys to institutional transformations, we uncover the human pulse within complex themes.",
+    description:
+      "Compelling documentaries capturing human stories, institutional milestones, socio-economic research, and cultural heritage with unflinching authenticity.",
+    fullOverview:
+      "Real stories have an organic power that cannot be staged. Our documentary division specializes in patient observation, empathetic interview techniques, and sensitive cultural archiving. Whether preserving academic institutions, documenting national research initiatives, or following grassroots change, we bring cinematic dignity to real-life journeys.",
     deliverables: [
-      "Institutional Long-Form Documentaries",
-      "Social Impact & Archival Profiles",
-      "Field Research & Observational Filming",
-      "Bilingual Multi-Track Master Soundscapes"
+      "Institutional Milestone & Golden Jubilee Documentaries",
+      "Social Impact & NGO Field Stories",
+      "National Archives & Cultural Heritage Preservation",
+      "Biographical Chronicles & Retrospectives"
     ],
-    image: "https://images.unsplash.com/photo-1518135714426-c18f5ffb6f4d?q=80&w=1200&auto=format&fit=crop",
+    features: [
+      "Deep anthropological and historical archival research",
+      "Unobtrusive, intimate field camera rigs for genuine human moments",
+      "Bilingual and vernacular translation, subtitling, and dubbing",
+      "Long-term archival storage with metadata tagging in broadcast master formats"
+    ],
+    techStack: [
+      "Lightweight Run-and-Gun Cinema Rigs",
+      "Ambisonic 3D Field Audio Recorders",
+      "Low-Light High-Dynamic Range Sensors",
+      "Archival Film Restoration Workflows"
+    ],
+    stats: [
+      { label: "Documentaries Completed", value: "220+" },
+      { label: "States Covered", value: "18+ States" },
+      { label: "Format", value: "Master Broadcast 4K" }
+    ],
+    workflow: [
+      { step: "01", title: "Archival Research", desc: "Primary source review, stakeholder interviews, and thematic mapping." },
+      { step: "02", title: "Field Immersion", desc: "Observational on-ground filming across urban and rural ecosystems." },
+      { step: "03", title: "Narrative Assembly", desc: "Weaving oral histories, emotional arcs, and authentic field soundscapes." },
+      { step: "04", title: "Screening Master", desc: "Archival grade color mastering and festival/institution delivery." }
+    ],
+    image: "/medien/landing/landing-directing-1669.jpg",
+    videoThumbnail: "/medien/landing/landing-directing-1669.jpg",
+    videoUrl: "https://www.youtube.com/embed/91kFY2xs7cE?autoplay=1",
+    youtubeUrl: "https://youtu.be/91kFY2xs7cE",
     aspect: "16/9"
   },
   {
     id: "social-media-management",
     number: "03",
     title: "Social Media Management",
-    tagline: "Architecting cultural relevance across digital conversation spaces.",
-    description: "Creative content planning, posting, branding and audience engagement across digital platforms. We transform film assets into native platform episodic arcs that capture, educate, and convert.",
+    tagline: "Architecting cultural relevance and algorithmic momentum across digital spaces.",
+    description:
+      "Creative content planning, high-cadence viral reels, political campaign shorts, brand narratives, and audience nurturing across Instagram, YouTube, and Meta channels.",
+    fullOverview:
+      "In modern media, attention is won in the first 2 seconds. RFP Digital's social media arm merges high-production cinema assets with rapid-fire digital native formatting. We build episodic short-form content engines, handle community engagement, and monitor real-time sentiment to ensure your message dominates voter and consumer timelines.",
     deliverables: [
-      "Platform Narrative Strategy",
-      "Short-Form Video Engines (Reels/Shorts)",
-      "Dynamic Typographic Motion Systems",
-      "Active Community & Momentum Nurturing"
+      "High-Cadence Reels & YouTube Shorts Production",
+      "Platform Narrative Strategy & Content Calendars",
+      "Motion Graphics, Typographic Hooks & Thumbnails",
+      "Social Listening & Rapid Response Comment Management"
     ],
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop",
+    features: [
+      "Same-day edit and turnaround for breaking rallies and events",
+      "Data-backed algorithmic hook testing and thumbnail optimization",
+      "Celebrity and stakeholder influencer collaboration coverage",
+      "Cross-channel syndication (Instagram, YouTube, Facebook, X, LinkedIn)"
+    ],
+    techStack: [
+      "Apple Silicon Final Cut & Premiere Pro Suite",
+      "After Effects Motion Graphic Templates",
+      "Sprout Social & Meta Business Suite",
+      "Real-Time Social Listening & Sentiment Tracking"
+    ],
+    stats: [
+      { label: "Monthly Impressions", value: "15M+" },
+      { label: "Shorts & Reels Made", value: "4,500+" },
+      { label: "Engagement Rate", value: "4.8x Avg" }
+    ],
+    workflow: [
+      { step: "01", title: "Audience Profiling", desc: "Identifying core demographic triggers and platform consumption patterns." },
+      { step: "02", title: "Content Engine", desc: "Daily shooting, editing, and motion hook optimization." },
+      { step: "03", title: "Strategic Scheduling", desc: "Peak-traffic deployment with metadata and algorithmic tagging." },
+      { step: "04", title: "Momentum Analytics", desc: "Daily metrics review to refine subsequent content batches." }
+    ],
+    image: "/medien/testimonials/neha-sharma-endorsement.jpg",
+    videoThumbnail: "/medien/testimonials/neha-sharma-endorsement.jpg",
+    videoUrl: "https://www.instagram.com/reel/DaxoqAoR_1Z/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
+    youtubeUrl: "https://www.instagram.com/reel/DaxoqAoR_1Z/",
     aspect: "16/9"
   },
   {
     id: "digital-marketing",
     number: "04",
     title: "Digital Marketing",
-    tagline: "Deploying data-anchored media distribution to maximize cultural touchpoints.",
-    description: "Performance marketing, paid advertising, SEO and lead generation focused on measurable growth. Ensuring that high-production creative reaches the exact audience segments primed to take action.",
+    tagline: "Deploying data-anchored media distribution to maximize reach and conversion.",
+    description:
+      "Performance marketing, Google & Meta Ads, targeted lead generation funnels, search engine optimization, and voter outreach designed for measurable ROI.",
+    fullOverview:
+      "Great media deserves great distribution. Our digital marketing team ensures your high-production films and campaigns don't just exist—they reach precisely who they need to influence. With granular demographic targeting, geo-fenced constituency outreach, and robust conversion funnels, we turn passive viewers into active supporters and loyal clients.",
     deliverables: [
-      "Precision Performance Ad Suites",
-      "Multi-Channel Attribution Modeling",
-      "Search Engine Authority & Discovery",
-      "Conversion Rate Optimization"
+      "Precision Meta & Google Paid Ad Campaigns",
+      "Geo-Fenced Constituency & Voter Pin-Code Targeting",
+      "Technical SEO & Content Discoverability",
+      "Conversion Funnels & WhatsApp Broadcast Automation"
     ],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+    features: [
+      "Micro-targeted campaigns by assembly constituency, age, and interest",
+      "Continuous A/B creative testing with multiple headlines and thumbnails",
+      "Transparent live analytics dashboards with daily spending breakdowns",
+      "Integration with CRM, lead forms, and instant call back systems"
+    ],
+    techStack: [
+      "Google Ads & Meta Ads Manager",
+      "Google Analytics 4 & Tag Manager",
+      "SEMrush & Ahrefs SEO Engines",
+      "WhatsApp Business API Gateways"
+    ],
+    stats: [
+      { label: "Ad Spends Managed", value: "₹2Cr+" },
+      { label: "Cost Per Lead", value: "-38% Avg" },
+      { label: "Voter Reach", value: "5M+ Verified" }
+    ],
+    workflow: [
+      { step: "01", title: "Funnel Blueprint", desc: "Mapping user journeys from discovery to conversion." },
+      { step: "02", title: "Creative Deployment", desc: "Setting up multi-angle ad sets with tailored visual creatives." },
+      { step: "03", title: "Algorithmic Bidding", desc: "Real-time bid adjustments for lowest CPA and highest quality traffic." },
+      { step: "04", title: "Attribution & Scale", desc: "Doubling down on winning segments with weekly executive reports." }
+    ],
+    image: "/medien/galerie/321-editing-suite.jpg",
+    videoThumbnail: "/medien/youtube-thumbs/Cgvx6w13ZNg.jpg",
+    videoUrl: "https://www.youtube.com/embed/Cgvx6w13ZNg?autoplay=1",
+    youtubeUrl: "https://youtu.be/Cgvx6w13ZNg",
     aspect: "16/9"
   },
   {
     id: "election-campaign-services",
     number: "05",
     title: "Election Campaign Services",
-    tagline: "Disciplined ground-to-cloud campaign architecture built on integrity and clarity.",
-    description: "Campaign strategy, media management, digital outreach and election branding, subject to applicable laws and platform policies. We build resonant visual identity, public speech messaging, and rapid-response war rooms.",
+    tagline: "Turn key Election Campaign Execution & Ground-to-Cloud Political Architecture.",
+    description:
+      "Complete assembly & parliamentary election management: mobile high-brightness LED display vans, original prachar songs, street plays (Nukkad Natak), rally multi-cam live feeds, and rapid-response war rooms.",
+    fullOverview:
+      "RFP Digital Productions is a pioneer in turnkey election campaign execution. We bring deep grassroots ground capability combined with modern digital firepower. From mobilizing a fleet of GPS-tracked mobile LED display vans across hundreds of villages to staging captivating Nukkad Nataks, recording rousing prachar anthems, and running 24/7 social media command centers, we transform political campaigns into winning populist movements.",
     deliverables: [
-      "Constituency & Narrative Landscape Mapping",
-      "Grassroots & Digital Field Media Kits",
-      "Rapid Response Video Units",
-      "Compliant Digital Outreach Frameworks"
+      "Mobile High-Brightness LED Display Vans (Solar/Gen Hybrid)",
+      "Original Prachar Songs, Jingles & Campaign Anthems",
+      "Nukkad Natak (Street Theatre) Troupe Deployment",
+      "Rally Multi-Cam Live Feeds & LED Wall Switching",
+      "Manifesto Design, Pamphlets, Banners & Ground Collateral",
+      "24/7 Election Media War Room & WhatsApp Broadcasting"
     ],
-    image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1200&auto=format&fit=crop",
+    features: [
+      "Turnkey on-ground execution with complete driver, crew, and technical support",
+      "GPS-monitored van fleet with daily route verification and geo-tagging",
+      "Daily rally highlights delivered within 2 hours for same-evening screenings",
+      "Compliant with Election Commission of India (ECI) guidelines and protocols"
+    ],
+    techStack: [
+      "Outdoor P3.91 High-Brightness LED Walls",
+      "Blackmagic Design ATEM Live Production Switchers",
+      "Wireless Satellite & Dual-SIM Live Bonding Transmitters",
+      "GPS Fleet Tracking & Real-Time Telemetry"
+    ],
+    stats: [
+      { label: "Constituencies Served", value: "45+" },
+      { label: "LED Vans Deployed", value: "80+ Fleet" },
+      { label: "Voters Reached", value: "10M+" }
+    ],
+    workflow: [
+      { step: "01", title: "Constituency Mapping", desc: "Analyzing voting booths, rural panchayats, and key demographic hotspots." },
+      { step: "02", title: "Anthem & Narrative", desc: "Writing, composing, and recording custom prachar songs that resonate locally." },
+      { step: "03", title: "Ground Fleet Rollout", desc: "Deploying LED vans and street theatre troupes with scheduled daily routes." },
+      { step: "04", title: "Live War Room", desc: "Real-time counter-narrative creation and daily constituency broadcast loops." }
+    ],
+    image: "/medien/galerie/311-campaign-led.jpg",
+    videoThumbnail: "/medien/youtube-thumbs/jirysVZwPIE.jpg",
+    videoUrl: "https://www.youtube.com/embed/jirysVZwPIE?autoplay=1",
+    youtubeUrl: "https://youtu.be/jirysVZwPIE",
     aspect: "16/9"
   },
   {
-    id: "digital-production-content",
+    id: "photography-events",
     number: "06",
-    title: "Digital Production & Content",
-    tagline: "End-to-end creative post, VFX, color science, and multi-format delivery.",
-    description: "Creative production, visual content and communication assets designed for digital audiences. From full studio set design to DAVINCI master color suites and immersive sound design.",
+    title: "Photography & Event Coverage",
+    tagline: "Preserving decisive moments with artistic high-resolution cinema craft.",
+    description:
+      "Comprehensive multi-camera live event coverage, corporate summits, high-profile political rallies, industrial expos, executive portraits, and candid photography.",
+    fullOverview:
+      "When landmark moments happen, second takes do not exist. Our photography and event coverage team brings broadcast-standard technical precision and artistic sensitivity to corporate convocations, political gatherings, academic inaugurations, and cultural expos. We provide multi-angle live switching, immediate same-day press photos, and archival photo books that stand the test of time.",
     deliverables: [
-      "4K/6K Raw Studio & Location Shoots",
-      "Master DaVinci Color Science",
-      "Spatial & Immersive Audio Mixing",
-      "Bespoke 2D/3D Graphic Packages"
+      "Ultra-High-Resolution Event & Summit Photography",
+      "Multi-Camera Live Video Streaming to YouTube & Socials",
+      "Executive Headshots & Leadership Portfolios",
+      "Same-Day Edit Press Highlights & Retouched Stills"
     ],
-    image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1200&auto=format&fit=crop",
+    features: [
+      "Fast on-site photo selection and delivery for instant press and social releases",
+      "Multi-camera live broadcast setups with redundant internet bonding",
+      "Silent shutter operation for intimate conferences and keynote speeches",
+      "Full digital raw backup and cloud gallery delivery within 24 hours"
+    ],
+    techStack: [
+      "Sony Alpha 1 & A7R V Full-Frame Bodies",
+      "G Master 24-70mm & 70-200mm f/2.8 Lenses",
+      "Profoto & Godox Mobile Studio Lighting Rigs",
+      "Teradek Wireless Video Transmission Systems"
+    ],
+    stats: [
+      { label: "Events Covered", value: "1,200+" },
+      { label: "Press Turnaround", value: "< 60 Mins" },
+      { label: "Stream Reliability", value: "99.9%" }
+    ],
+    workflow: [
+      { step: "01", title: "Rundown & Recce", desc: "Site reconnaissance, lighting inspection, and itinerary synchronization." },
+      { step: "02", title: "Multicam Rigging", desc: "Setting up primary, roaming, and stage camera positions with wireless feeds." },
+      { step: "03", title: "Live Capture", desc: "Continuous live switching, pristine audio capture, and live stream feed." },
+      { step: "04", title: "Instant PR Delivery", desc: "Curated, color-corrected photo sets transmitted to media teams on the spot." }
+    ],
+    image: "/medien/galerie/194-cinematography.jpg",
+    videoThumbnail: "/medien/youtube-thumbs/3n58zR1Reqs.jpg",
+    videoUrl: "https://www.youtube.com/embed/3n58zR1Reqs?autoplay=1",
+    youtubeUrl: "https://youtu.be/3n58zR1Reqs",
+    aspect: "16/9"
+  },
+  {
+    id: "website-development",
+    number: "07",
+    title: "Website Development & Digital Platforms",
+    tagline: "High-speed, cinematic, mobile-first web platforms and campaign portals built for conversion and scale.",
+    description:
+      "Custom web applications, political campaign portals, corporate brand websites, headless CMS, and interactive digital experiences. Engineered with Next.js, modern UI/UX, ultra-fast load times, and rock-solid security.",
+    fullOverview:
+      "A modern media campaign is incomplete without an exceptional web headquarters. RFP Digital crafts custom digital platforms that match the visual prestige of our cinema productions. From interactive political campaign portals featuring live rally broadcasts, volunteer onboarding, and manifesto downloads, to high-conversion corporate web platforms—we deliver 100/100 Core Web Vitals, dynamic animations, and enterprise-grade reliability.",
+    deliverables: [
+      "Custom Web Applications & Responsive Portals (Next.js & React)",
+      "Political Campaign & Candidate Websites (High-traffic & voter connect)",
+      "Corporate Brand Showcases & Interactive Portfolio Engines",
+      "Headless CMS, E-Commerce & Custom Admin Dashboards",
+      "100/100 Core Web Vitals, Speed Optimization & Technical SEO",
+      "Secure Cloud Hosting, SSL & DDoS Protection (Vercel & Cloudflare)"
+    ],
+    features: [
+      "Ultra-fast page loads (< 1.2s) with server-side rendering and edge caching",
+      "Mobile-first responsive architecture tailored for rural and urban smartphone users",
+      "Integrated multimedia video players, live stream embeds, and instant WhatsApp chat",
+      "Scalable infrastructure capable of absorbing massive traffic spikes during election rallies"
+    ],
+    techStack: [
+      "Next.js 15 (App Router)",
+      "React 19 & TypeScript",
+      "Tailwind CSS & Framer Motion",
+      "Vercel Edge Network & Cloudflare",
+      "PostgreSQL, Supabase & Headless CMS",
+      "Google Analytics 4 & SEO Architecture"
+    ],
+    stats: [
+      { label: "Websites Built", value: "90+" },
+      { label: "Page Load Speed", value: "< 1.2s" },
+      { label: "Uptime SLA", value: "99.99%" }
+    ],
+    workflow: [
+      { step: "01", title: "Information Architecture", desc: "User journeys, conversion wireframes, and tech stack specification." },
+      { step: "02", title: "UI/UX & Interactive Design", desc: "Bespoke Figma designs with dark mode, typography, and motion prototypes." },
+      { step: "03", title: "Full-Stack Engineering", desc: "Type-safe Next.js development, API integration, and database schema setup." },
+      { step: "04", title: "Performance & Cloud Launch", desc: "Lighthouse 100/100 audit, SSL deployment, domain routing, and analytics." }
+    ],
+    image: "/medien/landing/landing-monitor-1664.jpg",
+    videoThumbnail: "/medien/youtube-thumbs/Cgvx6w13ZNg.jpg",
+    videoUrl: "https://www.youtube.com/embed/Cgvx6w13ZNg?autoplay=1",
+    youtubeUrl: "https://youtu.be/Cgvx6w13ZNg",
     aspect: "16/9"
   }
 ];
