@@ -148,11 +148,11 @@ export const TEAM_DATA: TeamMemberItem[] = [
   },
   {
     id: "team-6",
-    name: "Ishita Banerjee",
+    name: "Priya Gupta",
     role: "Head of Digital Strategy & Campaign Distribution",
     department: "Digital",
     bio: "Architect of multi-platform narrative distribution engines, voter demographic analytics, and audience engagement architectures for both enterprise and election campaigns.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop",
+    image: "/medien/team/priya-gupta.jpg",
     credentials: "IIM Bangalore (Strategic Marketing) & Jamia Alum",
     experience: "9+ Years Digital Strategy & Campaign Analytics",
     specialties: [
@@ -173,6 +173,6 @@ export const TEAM_DATA: TeamMemberItem[] = [
       "A/B Creative Optimization Suites"
     ],
     philosophy: "Stories don't change minds in isolation; they change minds when placed in front of the right human at the exact right moment.",
-    email: "ishita@rfpdigital.com"
+    email: "priya@rfpdigital.com"
   }
 ];
