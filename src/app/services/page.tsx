@@ -122,7 +122,7 @@ export default function ServicesPage() {
               </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif text-white tracking-tight leading-[1.15]">
-                Turnkey Media Production, Campaigns &amp;{" "}
+                Turn-key Media Production, Election Campaigns &amp;{" "}
                 <span className="italic bg-gradient-to-r from-[#a89bfa] via-[#e5c665] to-white bg-clip-text text-transparent">
                   Web Development
                 </span>
