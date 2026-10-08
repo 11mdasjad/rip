@@ -3,11 +3,11 @@ import { TeamMemberItem } from "@/types";
 export const TEAM_DATA: TeamMemberItem[] = [
   {
     id: "team-1",
-    name: "Kabir Malhotra",
+    name: "Maqsood Khan",
     role: "Founding Creative Director & Principal Filmmaker",
     department: "Leadership",
     bio: "Over 17+ years shaping narrative documentaries, public campaigns, and high-concept brand cinema across India, Europe, and Southeast Asia. Passionate about naturalistic lighting, unhurried visual storytelling, and human-centric framing.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+    image: "/medien/team/maqsood-khan.png",
     credentials: "AJK MCRC, Jamia Millia Islamia, New Delhi",
     experience: "17+ Years in Broadcast & Cinema Direction",
     specialties: [
@@ -28,7 +28,7 @@ export const TEAM_DATA: TeamMemberItem[] = [
       "DJI Ronin 2 Heavy Rig"
     ],
     philosophy: "Cinema is not about embellishing reality; it is about paying attention until reality reveals its own poetry.",
-    email: "kabir@rfpdigital.com"
+    email: "maqsood@rfpdigital.com"
   },
   {
     id: "team-2",

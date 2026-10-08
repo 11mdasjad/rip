@@ -183,7 +183,7 @@ export default function TeamPage() {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover filter contrast-[1.05] brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#17161d] via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
@@ -270,7 +270,7 @@ export default function TeamPage() {
                   <img
                     src={selectedMember.image}
                     alt={selectedMember.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-black/80 backdrop-blur-md text-[#a89bfa] border border-white/20">
