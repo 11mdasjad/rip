@@ -59,7 +59,7 @@ export default function AdminPage() {
         {/* Top Badge */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#17161d] border border-white/[0.1] shadow-2xl shadow-[#7c6af2]/10 mb-5">
-            <img src="/medien/logo/rfp-emblem.png" alt="RFP" className="h-9 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.35)]" />
+            <img src="/medien/logo/rfp-emblem.svg" alt="RFP" className="h-9 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.35)]" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-2">
             Studio Control Center

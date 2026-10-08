@@ -71,7 +71,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
         {/* Golden RFP Emblem Badge (Top Right) */}
         <div className="absolute top-8 right-8 sm:top-12 sm:right-12 flex items-center space-x-2">
           <img
-            src="/medien/logo/rfp-emblem.png"
+            src="/medien/logo/rfp-emblem.svg"
             alt="RFP Emblem"
             loading="lazy"
             decoding="async"
@@ -100,7 +100,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
             <div className="flex items-center space-x-5 p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08] mb-8 max-w-md">
               <div className="w-16 h-16 rounded-full bg-[#1c1a24] border border-[#D4AF37]/30 flex items-center justify-center p-2 shadow-md flex-shrink-0">
                 <img
-                  src="/medien/logo/rfp-emblem.png"
+                  src="/medien/logo/rfp-emblem.svg"
                   alt="RFP Digital Productions"
                   loading="lazy"
                   decoding="async"

@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 pb-12 border-b border-white/[0.08]">
           <div className="md:col-span-5">
             <Link href="/" className="inline-flex items-center space-x-3.5 mb-5 group">
-              <img src="/medien/logo/rfp-logo-full.png" alt="RFP Digital Productions" className="h-14 sm:h-16 w-auto object-contain filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.35)] transition-transform duration-300 group-hover:scale-105" />
+              <img src="/medien/logo/rfp-logo.svg" alt="RFP Digital Productions" className="h-16 sm:h-20 w-auto object-contain filter drop-shadow-[0_2px_14px_rgba(212,175,55,0.4)] transition-transform duration-300 group-hover:scale-105" />
             </Link>
             <p className="text-sm text-[#f4f2f7b8] mb-6 max-w-sm">
               RFP Digital Productions – Video production &amp; election management company. Managed by media professionals and alumni from AJK MCRC, Jamia Millia Islamia, New Delhi. Over 17+ years of media excellence.

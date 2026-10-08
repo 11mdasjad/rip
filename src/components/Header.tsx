@@ -56,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           aria-label="RFP Digital Productions – Home"
         >
           <img
-            src="/medien/logo/rfp-emblem.png"
+            src="/medien/logo/rfp-emblem.svg"
             alt="RFP Crest"
             className="h-11 sm:h-13 md:h-14 w-auto object-contain filter drop-shadow-[0_2px_14px_rgba(212,175,55,0.45)] transition-transform duration-300 group-hover:scale-105"
           />

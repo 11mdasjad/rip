@@ -121,7 +121,7 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
             <div className="absolute top-3.5 left-3.5 sm:top-5 sm:left-5 z-20 flex items-center space-x-2">
               <div className="inline-flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-black/65 backdrop-blur-md border border-[#D4AF37]/40 text-[10px] sm:text-[11px] font-mono text-white shadow-xl">
                 <img
-                  src="/medien/logo/rfp-emblem.png"
+                  src="/medien/logo/rfp-emblem.svg"
                   alt="RFP"
                   className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain filter drop-shadow-[0_1px_4px_rgba(212,175,55,0.6)]"
                   loading="eager"
