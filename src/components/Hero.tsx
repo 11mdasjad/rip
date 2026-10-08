@@ -33,8 +33,8 @@ export const Hero: React.FC<HeroProps> = ({ onPlayVideo }) => {
           </h1>
 
           {/* Lead Paragraph */}
-          <p className="text-sm sm:text-base lg:text-[17px] xl:text-lg text-[#f4f2f7]/80 leading-relaxed mb-7 sm:mb-9 max-w-xl font-normal">
-            Hire RFP Digital Productions for your Digital Media needs. Managed by seasoned media professionals and alumni from AJK Mass Communication &amp; Research Center (AJK MCRC), Jamia Millia Islamia, New Delhi, bringing over 17+ years of media excellence.
+          <p className="text-sm sm:text-base lg:text-[16px] xl:text-[17px] text-[#f4f2f7]/80 leading-relaxed mb-7 sm:mb-9 max-w-2xl font-normal">
+            Hire RFP Digital Productions for your Digital Media needs. RFP Digital Productions is a comprehensive Video Production, Media, and Election Management company providing creative, communication, and campaign solutions for political organizations, candidates, public representatives, businesses, institutions, and brands, bringing over 17+ years of media excellence.
           </p>
 
           {/* Action CTAs */}
