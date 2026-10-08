@@ -227,7 +227,7 @@ export const PROJECTS_DATA: ProjectCard[] = [
     title: "Faridabad Smart City Limited - Urban Transformation",
     client: "Faridabad Smart City Limited (Govt of Haryana)",
     categoryEn: "Urban Governance & Civic Infrastructure",
-    filterCat: "campaign",
+    filterCat: "documentary",
     descEn:
       "Documenting transformative smart urban infrastructure, automated traffic command centers, clean mobility networks, and civic modernization.",
     poster: "/medien/youtube-thumbs/bSNcL7srjqA.jpg",
