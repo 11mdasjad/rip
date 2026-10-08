@@ -90,11 +90,11 @@ export const TEAM_DATA: TeamMemberItem[] = [
   },
   {
     id: "team-4",
-    name: "Tanvi Saxena",
+    name: "Dheeraj Mehta",
     role: "Senior Colorist & Post-Production Supervisor",
     department: "Post-production",
     bio: "Oversees DaVinci color grading, ACES color pipelines, and HDR mastering. Dedicated to crafting evocative, organic film-look palettes without artificial over-saturation.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop",
+    image: "/medien/team/dheeraj-mehta.jpg",
     credentials: "DaVinci Resolve Certified Master Colorist",
     experience: "10+ Years Post-Production & Color Science",
     specialties: [
@@ -115,7 +115,7 @@ export const TEAM_DATA: TeamMemberItem[] = [
       "Apple Silicon Final Cut & Adobe Pro Suite"
     ],
     philosophy: "Color grading is not about filters; it is about directing the human pupil to feel the exact weight and mood of the frame.",
-    email: "tanvi@rfpdigital.com"
+    email: "dheeraj@rfpdigital.com"
   },
   {
     id: "team-5",
