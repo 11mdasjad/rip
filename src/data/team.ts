@@ -119,11 +119,11 @@ export const TEAM_DATA: TeamMemberItem[] = [
   },
   {
     id: "team-5",
-    name: "Rohan Varma",
+    name: "Hassan Zaki",
     role: "Supervising Sound Designer & Chief Audio Recordist",
     department: "Post-production",
     bio: "Specializes in immersive spatial audio mixing, field environmental capture, and pristine dialogue cleanup that grounds cinematic pictures in visceral reality.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
+    image: "/medien/team/hassan-zaki.jpg",
     credentials: "AJK MCRC Sound Engineering Graduate",
     experience: "11+ Years Location & Post Audio",
     specialties: [
@@ -144,7 +144,7 @@ export const TEAM_DATA: TeamMemberItem[] = [
       "Genelec SAM Smart Active Monitors"
     ],
     philosophy: "Audio is seventy percent of the cinematic illusion. When sound is authentic, the viewer ceases to doubt what they see.",
-    email: "rohan@rfpdigital.com"
+    email: "hassan@rfpdigital.com"
   },
   {
     id: "team-6",
