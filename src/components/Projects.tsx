@@ -32,7 +32,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject, onPlayVideo
             Selected Portfolio
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7]">
-            Crafted Over Thousands of Videos:
+            Crafted Over Thousands of TV ads, Corporate Films &amp; Documentaries
           </h2>
         </div>
 
