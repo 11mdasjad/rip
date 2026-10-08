@@ -108,11 +108,8 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
               </div>
               <div>
                 <h3 className="text-base font-bold text-white">RFP Digital Productions</h3>
-                <span className="text-xs text-[#a89bfa] block mb-1 leading-snug">
+                <span className="text-xs text-[#a89bfa] block leading-snug">
                   Video Production &amp; Election Management Company
-                </span>
-                <span className="text-[11px] font-mono text-[#D4AF37]/90 font-medium">
-                  156, First Floor, Sarai Julena (NFC), New Delhi - 110065
                 </span>
               </div>
             </div>
