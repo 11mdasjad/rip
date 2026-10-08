@@ -28,12 +28,9 @@ export const Fakten: React.FC = () => {
               <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#f4f2f7] mb-2 font-mono">
                 {item.num}
               </div>
-              <div className="text-sm font-semibold text-[#f4f2f7] mb-2">
+              <div className="text-sm sm:text-base font-medium text-[#f4f2f7]/90">
                 {item.labelEn}
               </div>
-              <p className="text-xs sm:text-sm text-[#f4f2f780] leading-relaxed">
-                {item.descEn}
-              </p>
             </div>
           ))}
         </div>
