@@ -19,15 +19,15 @@ export const Footer: React.FC = () => {
               RFP Digital Productions – Video production &amp; election management company. Managed by media professionals and alumni from AJK MCRC, Jamia Millia Islamia, New Delhi. Over 17+ years of media excellence.
             </p>
 
-            {/* Social Media Links - Original Brand Logos */}
+            {/* Social Media Links - Official RFP Channels */}
             <div className="flex items-center space-x-3 mb-6" aria-label="Social Media Channels">
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/rfpdigital/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                title="Follow us on Instagram"
+                title="Follow RFP on Instagram"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-[0_0_15px_rgba(225,48,108,0.55)] p-0.5 overflow-hidden group"
                 style={{
                   background:
@@ -43,11 +43,11 @@ export const Footer: React.FC = () => {
 
               {/* Facebook */}
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/rfpdigital"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                title="Connect on Facebook"
+                title="Connect with RFP on Facebook"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#1877F2] flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-[0_0_15px_rgba(24,119,242,0.55)] text-white"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -57,11 +57,11 @@ export const Footer: React.FC = () => {
 
               {/* YouTube */}
               <a
-                href="https://www.youtube.com/"
+                href="https://www.youtube.com/@rfpdigitalproductions"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                title="Watch on YouTube"
+                title="Watch RFP on YouTube"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FF0000] flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-[0_0_15px_rgba(255,0,0,0.55)] text-white"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -69,17 +69,17 @@ export const Footer: React.FC = () => {
                 </svg>
               </a>
 
-              {/* Twitter */}
+              {/* LinkedIn */}
               <a
-                href="https://twitter.com/"
+                href="https://www.linkedin.com/company/14546896/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
-                title="Follow on Twitter"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#1DA1F2] flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-[0_0_15px_rgba(29,161,242,0.55)] text-white"
+                aria-label="LinkedIn"
+                title="Connect with RFP on LinkedIn"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#0A66C2] flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-[0_0_15px_rgba(10,102,194,0.55)] text-white"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z" />
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z" />
                 </svg>
               </a>
             </div>
