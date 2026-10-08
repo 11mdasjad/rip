@@ -208,24 +208,33 @@ const ProjectCardItem: React.FC<{
         {/* Interactive Video Switcher Pills at bottom of preview */}
         {project.videos && project.videos.length > 1 && (
           <div className="absolute bottom-2.5 left-2.5 right-2.5 z-20 flex items-center gap-1.5 p-1 rounded-xl bg-black/85 backdrop-blur-md border border-white/15">
-            {project.videos.map((vid, idx) => (
-              <button
-                key={vid.id}
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveVideoIdx(idx);
-                }}
-                className={`flex-1 flex items-center justify-center space-x-1.5 py-1.5 px-2 rounded-lg text-[10px] sm:text-[11px] font-medium transition-all ${
-                  activeVideoIdx === idx
-                    ? "bg-[#6b54ee] text-white shadow font-semibold"
-                    : "text-white/70 hover:text-white hover:bg-white/10"
-                }`}
-              >
-                <Play className="w-2.5 h-2.5 fill-current shrink-0" />
-                <span className="truncate">{idx === 0 ? "Dr. Antul Teotia" : "Umesh Agarwal MLA"}</span>
-              </button>
-            ))}
+            {project.videos.map((vid, idx) => {
+              const label = vid.title.includes("Antul Teotia")
+                ? "Dr. Antul"
+                : vid.title.includes("Umesh Agarwal")
+                ? "Umesh Agarwal"
+                : vid.title.includes("Meera Brass")
+                ? "Meera Brass"
+                : `Video ${idx + 1}`;
+              return (
+                <button
+                  key={vid.id}
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActiveVideoIdx(idx);
+                  }}
+                  className={`flex-1 flex items-center justify-center space-x-1 py-1 px-1.5 rounded-lg text-[10px] sm:text-[11px] font-medium transition-all ${
+                    activeVideoIdx === idx
+                      ? "bg-[#6b54ee] text-white shadow font-semibold"
+                      : "text-white/70 hover:text-white hover:bg-white/10"
+                  }`}
+                >
+                  <Play className="w-2.5 h-2.5 fill-current shrink-0" />
+                  <span className="truncate">{label}</span>
+                </button>
+              );
+            })}
           </div>
         )}
       </div>

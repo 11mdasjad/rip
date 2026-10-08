@@ -153,9 +153,17 @@ export const PROJECTS_DATA: ProjectCard[] = [
         poster: "/medien/youtube-thumbs/3JWmjrRbYDM.jpg",
         videoUrl: "https://www.youtube-nocookie.com/embed/3JWmjrRbYDM?autoplay=1",
         youtubeUrl: "https://www.youtube.com/watch?v=3JWmjrRbYDM"
+      },
+      {
+        id: "meera-brass",
+        title: "Corporate Film for Meera Brass Products",
+        subtitle: "Industrial Manufacturing & Brand Production",
+        poster: "/medien/youtube-thumbs/7BHyfYAxREc.jpg",
+        videoUrl: "https://www.youtube-nocookie.com/embed/7BHyfYAxREc?autoplay=1",
+        youtubeUrl: "https://youtu.be/7BHyfYAxREc"
       }
     ],
-    tags: ["Election Campaign", "Dr. Antul Teotia", "Umesh Agarwal MLA", "Mobile LED Vans"]
+    tags: ["Election Campaign", "Dr. Antul Teotia", "Umesh Agarwal MLA", "Meera Brass", "Mobile LED Vans"]
   },
   {
     id: "projekt-samsung",
