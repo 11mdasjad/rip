@@ -32,11 +32,11 @@ export const TEAM_DATA: TeamMemberItem[] = [
   },
   {
     id: "team-2",
-    name: "Meera Krishnan",
+    name: "Mohammad Arif",
     role: "Head of Production & Executive Line Producer",
     department: "Production",
     bio: "Pioneered multi-unit field production architectures in complex geographical landscapes, overseeing logistics, compliance, and large crew coordination across high-stakes multi-city shoots.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
+    image: "/medien/team/mohammad-arif.jpg",
     credentials: "SRFTI Kolkata & Mass Communication Delhi",
     experience: "14+ Years Field Production & Budget Management",
     specialties: [
@@ -57,7 +57,7 @@ export const TEAM_DATA: TeamMemberItem[] = [
       "Wireless Comms & Clear-Com"
     ],
     philosophy: "The smoothest film sets are built on unseen preparation, razor-sharp anticipation, and deep respect for every technician.",
-    email: "meera.k@rfpdigital.com"
+    email: "arif@rfpdigital.com"
   },
   {
     id: "team-3",
