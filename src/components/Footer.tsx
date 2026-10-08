@@ -10,18 +10,23 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0a090d] border-t border-white/[0.08] pt-16 pb-12 text-[#f4f2f780]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 pb-12 border-b border-white/[0.08]">
-          <div className="md:col-span-5">
-            <Link href="/" className="inline-flex items-center space-x-3.5 mb-5 group">
-              <img src="/medien/logo/rfp-logo.svg" alt="RFP Digital Productions" className="h-16 sm:h-20 w-auto object-contain filter drop-shadow-[0_2px_14px_rgba(212,175,55,0.4)] transition-transform duration-300 group-hover:scale-105" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 xl:gap-16 pb-12 border-b border-white/[0.08] items-start">
+          {/* Column 1: Brand & Identity */}
+          <div className="flex flex-col space-y-4">
+            <Link href="/" className="inline-block group">
+              <img
+                src="/medien/logo/rfp-logo.svg"
+                alt="RFP Digital Productions"
+                className="h-16 sm:h-18 w-auto object-contain filter drop-shadow-[0_2px_14px_rgba(212,175,55,0.4)] transition-transform duration-300 group-hover:scale-105"
+              />
             </Link>
-            <p className="text-sm text-[#f4f2f7b8] font-medium mb-5 max-w-sm leading-relaxed">
-              RFP Digital Productions - Video Production &amp; <br className="hidden sm:inline" />
-              Election Management Co.
+
+            <p className="text-sm text-[#f4f2f7b8] font-medium leading-relaxed max-w-sm">
+              RFP Digital Productions - Video Production &amp; Election Management Co.
             </p>
 
             {/* Social Media Links - Official RFP Channels */}
-            <div className="flex items-center space-x-3 mb-6" aria-label="Social Media Channels">
+            <div className="flex items-center space-x-3 pt-1" aria-label="Social Media Channels">
               {/* Instagram */}
               <a
                 href="https://www.instagram.com/rfpdigital/"
@@ -84,15 +89,16 @@ export const Footer: React.FC = () => {
                 </svg>
               </a>
             </div>
-            <div className="text-xs font-mono text-white/50 space-y-1">
-              <p className="text-white/80 font-bold tracking-wider">RFP DIGITAL PRODUCTIONS</p>
-              <p>156, First Floor, Sarai Julena (NFC), New Delhi - 110065, India</p>
-              <p>Mobile: +91 97117 91403 · +91 95990 99320 · Office: +91-11-49963157</p>
-              <p>Email: rfpdigitalmedia@gmail.com</p>
-            </div>
+
+            {/* Address */}
+            <p className="text-xs font-mono text-white/50 leading-relaxed pt-1">
+              156, First Floor, Sarai Julena (NFC),<br />
+              New Delhi - 110065, India
+            </p>
           </div>
 
-          <div className="md:col-span-4">
+          {/* Column 2: Core Services */}
+          <div>
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] mb-4">Core Services</h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li><Link href="/#service-corporate-films" className="hover:text-white transition-colors">Corporate Films</Link></li>
@@ -104,7 +110,8 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          {/* Column 3: Company & Stories */}
+          <div>
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#a89bfa] mb-4">Company &amp; Stories</h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               <li>
