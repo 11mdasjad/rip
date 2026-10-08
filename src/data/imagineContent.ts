@@ -9,6 +9,15 @@ export interface StageScene {
   targetId: string;
 }
 
+export interface VideoItem {
+  id: string;
+  title: string;
+  subtitle?: string;
+  poster: string;
+  videoUrl: string;
+  youtubeUrl: string;
+}
+
 export interface ProjectCard {
   id: string;
   slot: "slot-g" | "slot-a" | "slot-b" | "slot-c" | "slot-d" | "slot-e" | "slot-f";
@@ -20,6 +29,7 @@ export interface ProjectCard {
   poster: string;
   videoUrl?: string;
   youtubeUrl?: string;
+  videos?: VideoItem[];
   hasComparison?: boolean;
   comparisonBefore?: string;
   comparisonAfters?: { label: string; src: string }[];
@@ -69,7 +79,7 @@ export const FAKTEN_DATA = [
   },
   {
     num: "1,000+",
-    labelEn: "Filming & Photo Sessions",
+    labelEn: "TV ads, Corporate Films & Documentaries",
     descEn: "High-definition corporate films, documentaries, and ad campaigns."
   },
   {
@@ -118,8 +128,8 @@ export const PROJECTS_DATA: ProjectCard[] = [
   {
     id: "projekt-election",
     slot: "slot-a",
-    title: "Dr. Antul Teotia Zila Pramukh Bulandshahr - Election Campaign",
-    client: "Dr. Antul Teotia / Zila Panchayat Bulandshahr",
+    title: "Election Campaign Documentaries & Mobile LED Vans",
+    client: "Dr. Antul Teotia & Umesh Agarwal MLA",
     categoryEn: "Election Campaign Strategy & Media Operations",
     filterCat: "campaign",
     descEn:
@@ -127,7 +137,25 @@ export const PROJECTS_DATA: ProjectCard[] = [
     poster: "/medien/youtube-thumbs/jirysVZwPIE.jpg",
     videoUrl: "https://www.youtube-nocookie.com/embed/jirysVZwPIE?autoplay=1",
     youtubeUrl: "https://youtu.be/jirysVZwPIE",
-    tags: ["Election Campaign", "Dr. Antul Teotia", "Bulandshahr", "Mobile LED Vans"]
+    videos: [
+      {
+        id: "antul-teotia",
+        title: "Dr. Antul Teotia Zila Pramukh Bulandshahr",
+        subtitle: "The People's Voice | Zila Panchayat Adhyaksh Campaign",
+        poster: "/medien/youtube-thumbs/jirysVZwPIE.jpg",
+        videoUrl: "https://www.youtube-nocookie.com/embed/jirysVZwPIE?autoplay=1",
+        youtubeUrl: "https://youtu.be/jirysVZwPIE"
+      },
+      {
+        id: "umesh-agarwal",
+        title: "Umesh Agarwal MLA (#BJP Gurugram)",
+        subtitle: "Gurugram's Transformation | Vikas Yatra Documentary",
+        poster: "/medien/youtube-thumbs/3JWmjrRbYDM.jpg",
+        videoUrl: "https://www.youtube-nocookie.com/embed/3JWmjrRbYDM?autoplay=1",
+        youtubeUrl: "https://www.youtube.com/watch?v=3JWmjrRbYDM"
+      }
+    ],
+    tags: ["Election Campaign", "Dr. Antul Teotia", "Umesh Agarwal MLA", "Mobile LED Vans"]
   },
   {
     id: "projekt-samsung",
