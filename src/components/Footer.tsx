@@ -106,13 +106,13 @@ export const Footer: React.FC = () => {
               </Link>
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm">
-              <li><Link href="/services#service-corporate-films" className="hover:text-white transition-colors">Corporate Films</Link></li>
-              <li><Link href="/services#service-documentary-films" className="hover:text-white transition-colors">Documentary Films</Link></li>
-              <li><Link href="/services#service-social-media-management" className="hover:text-white transition-colors">Social Media Management</Link></li>
-              <li><Link href="/services#service-digital-marketing" className="hover:text-white transition-colors">Digital Marketing</Link></li>
-              <li><Link href="/services#service-election-campaign-services" className="hover:text-white transition-colors">Election Campaign Services</Link></li>
-              <li><Link href="/services#service-photography-events" className="hover:text-white transition-colors">Photography &amp; Event Coverage</Link></li>
-              <li><Link href="/services#service-website-development" className="text-[#a89bfa] hover:text-white transition-colors font-medium flex items-center gap-1.5"><span>Website Development</span><span className="text-[10px] text-[#E6C665]">✦</span></Link></li>
+              <li><Link href="/services/corporate-films" className="hover:text-white transition-colors">Corporate Films</Link></li>
+              <li><Link href="/services/documentary-films" className="hover:text-white transition-colors">Documentary Films</Link></li>
+              <li><Link href="/services/social-media-management" className="hover:text-white transition-colors">Social Media Management</Link></li>
+              <li><Link href="/services/digital-marketing" className="hover:text-white transition-colors">Digital Marketing</Link></li>
+              <li><Link href="/services/election-campaign-services" className="hover:text-white transition-colors">Election Campaign Services</Link></li>
+              <li><Link href="/services/photography-events" className="hover:text-white transition-colors">Photography &amp; Event Coverage</Link></li>
+              <li><Link href="/services/website-development" className="text-[#a89bfa] hover:text-white transition-colors font-medium flex items-center gap-1.5"><span>Website Development</span><span className="text-[10px] text-[#E6C665]">✦</span></Link></li>
             </ul>
           </div>
 

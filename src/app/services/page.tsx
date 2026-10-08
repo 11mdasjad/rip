@@ -188,11 +188,11 @@ export default function ServicesPage() {
         <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div
+              <Link
                 key={service.id}
                 id={`service-${service.id}`}
-                onClick={() => setSelectedService(service)}
-                className="group relative bg-[#17161d] border border-white/[0.08] hover:border-[#a89bfa]/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#6b54ee]/15 flex flex-col justify-between cursor-pointer"
+                href={`/services/${service.id}`}
+                className="group relative bg-[#17161d] border border-white/[0.08] hover:border-[#a89bfa]/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#6b54ee]/15 flex flex-col justify-between"
               >
                 <div>
                   {/* Thumbnail Banner with Play Overlay */}
@@ -216,6 +216,7 @@ export default function ServicesPage() {
                     {service.videoUrl && (
                       <button
                         onClick={(e) => {
+                          e.preventDefault();
                           e.stopPropagation();
                           setActiveVideo({
                             isOpen: true,
@@ -295,13 +296,14 @@ export default function ServicesPage() {
                 {/* Card Action Footer */}
                 <div className="px-6 py-4 bg-white/[0.02] border-t border-white/[0.06] flex items-center justify-between">
                   <span className="text-xs font-mono text-[#a89bfa] group-hover:text-white flex items-center gap-1 transition-colors font-semibold">
-                    <span>Explore Full Specs &amp; Video</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
+                    <span>View Dedicated Page &amp; Video</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </span>
 
                   {service.videoUrl && (
                     <button
                       onClick={(e) => {
+                        e.preventDefault();
                         e.stopPropagation();
                         setActiveVideo({
                           isOpen: true,
@@ -317,7 +319,7 @@ export default function ServicesPage() {
                     </button>
                   )}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

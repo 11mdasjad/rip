@@ -148,7 +148,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                 {SERVICES_DATA.map((service) => (
                   <Link
                     key={service.id}
-                    href={`/services#service-${service.id}`}
+                    href={`/services/${service.id}`}
                     onClick={() => setServicesOpen(false)}
                     className="group flex items-center justify-between px-3.5 py-2 text-sm text-white/85 hover:text-white hover:bg-white/[0.08] rounded-xl transition-all font-medium"
                   >
@@ -309,7 +309,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                   {SERVICES_DATA.map((service) => (
                     <Link
                       key={service.id}
-                      href={`/services#service-${service.id}`}
+                      href={`/services/${service.id}`}
                       onClick={() => setMobileMenuOpen(false)}
                       className="text-xs text-white/70 hover:text-white py-1.5 transition-colors block"
                     >
