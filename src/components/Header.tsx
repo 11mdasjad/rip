@@ -65,11 +65,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
         </Link>
 
         {/* Desktop Navigation - Exact Requested Row Order: About, Project, Gallery, Services, Team, Testimonial, FAQ, Contact */}
-        <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 2xl:space-x-1.5 shrink-0" aria-label="Main Navigation">
+        <nav className="hidden lg:flex items-center space-x-1 xl:space-x-1.5 2xl:space-x-2 shrink-0" aria-label="Main Navigation">
           {/* 1. About */}
           <Link
             href={isHome ? "#zusammenarbeit" : "/#zusammenarbeit"}
-            className="px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
+            className="px-2.5 xl:px-3.5 2xl:px-4 py-2 text-[13.5px] xl:text-[15px] 2xl:text-[16px] text-white/90 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
           >
             About
           </Link>
@@ -77,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 2. Project */}
           <Link
             href={isHome ? "#projekte" : "/#projekte"}
-            className="px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
+            className="px-2.5 xl:px-3.5 2xl:px-4 py-2 text-[13.5px] xl:text-[15px] 2xl:text-[16px] text-white/90 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
           >
             Project
           </Link>
@@ -85,23 +85,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 3. Gallery */}
           <Link
             href="/gallery"
-            className={`px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] rounded-xl transition-all font-semibold flex items-center gap-1 whitespace-nowrap ${
+            className={`px-2.5 xl:px-3.5 2xl:px-4 py-2 text-[13.5px] xl:text-[15px] 2xl:text-[16px] rounded-xl transition-all font-semibold flex items-center gap-1.5 whitespace-nowrap ${
               isGallery
                 ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
-                : "text-white/85 hover:text-white hover:bg-white/[0.08]"
+                : "text-white/90 hover:text-white hover:bg-white/[0.08]"
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5 text-[#a89bfa]" />
+            <Sparkles className="w-4 h-4 text-[#a89bfa]" />
             <span>Gallery</span>
           </Link>
 
           {/* 4. Services */}
           <Link
             href="/services"
-            className={`px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] rounded-xl transition-all font-semibold whitespace-nowrap ${
+            className={`px-2.5 xl:px-3.5 2xl:px-4 py-2 text-[13.5px] xl:text-[15px] 2xl:text-[16px] rounded-xl transition-all font-semibold whitespace-nowrap ${
               isServices
                 ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
-                : "text-white/85 hover:text-white hover:bg-white/[0.08]"
+                : "text-white/90 hover:text-white hover:bg-white/[0.08]"
             }`}
           >
             Services
@@ -110,10 +110,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 5. Team */}
           <Link
             href="/team"
-            className={`px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] rounded-xl transition-all font-semibold whitespace-nowrap ${
+            className={`px-2.5 xl:px-3.5 2xl:px-4 py-2 text-[13.5px] xl:text-[15px] 2xl:text-[16px] rounded-xl transition-all font-semibold whitespace-nowrap ${
               isTeam
                 ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
-                : "text-white/85 hover:text-white hover:bg-white/[0.08]"
+                : "text-white/90 hover:text-white hover:bg-white/[0.08]"
             }`}
           >
             Team
@@ -122,10 +122,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 6. Testimonial */}
           <Link
             href="/testimonials"
-            className={`px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] rounded-xl transition-all font-semibold whitespace-nowrap ${
+            className={`px-2.5 xl:px-3.5 2xl:px-4 py-2 text-[13.5px] xl:text-[15px] 2xl:text-[16px] rounded-xl transition-all font-semibold whitespace-nowrap ${
               isTestimonials
                 ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
-                : "text-white/85 hover:text-white hover:bg-white/[0.08]"
+                : "text-white/90 hover:text-white hover:bg-white/[0.08]"
             }`}
           >
             Testimonial
@@ -134,7 +134,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 7. FAQ */}
           <Link
             href={isHome ? "#faq" : "/#faq"}
-            className="px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
+            className="px-2.5 xl:px-3.5 2xl:px-4 py-2 text-[13.5px] xl:text-[15px] 2xl:text-[16px] text-white/90 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
           >
             FAQ
           </Link>
@@ -142,7 +142,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 8. Contact */}
           <Link
             href={isHome ? "#kontakt" : "/#kontakt"}
-            className="px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
+            className="px-2.5 xl:px-3.5 2xl:px-4 py-2 text-[13.5px] xl:text-[15px] 2xl:text-[16px] text-white/90 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
           >
             Contact
           </Link>
@@ -150,10 +150,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 9. Election Campaign - Golden Highlighted Heading Link next to Contact */}
           <Link
             href="/ec"
-            className={`px-2.5 xl:px-3 py-1.5 text-[12px] xl:text-[13px] 2xl:text-[13.5px] whitespace-nowrap rounded-xl transition-all font-bold tracking-normal flex items-center gap-1.5 shrink-0 ${
+            className={`px-3.5 xl:px-4.5 2xl:px-5 py-2 text-[13px] xl:text-[14.5px] 2xl:text-[15.5px] whitespace-nowrap rounded-full transition-all font-bold tracking-normal flex items-center gap-1.5 shrink-0 ${
               isEc
                 ? "text-[#F3E5AB] bg-[#D4AF37]/25 border border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.45)]"
-                : "text-[#E6C665] hover:text-[#FFF8DC] bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/40 hover:border-[#D4AF37]/80 shadow-sm"
+                : "text-[#E6C665] hover:text-[#FFF8DC] bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/45 hover:border-[#D4AF37]/80 shadow-sm"
             }`}
           >
             <span>Election Campaign</span>
