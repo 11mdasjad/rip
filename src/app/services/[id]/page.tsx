@@ -297,9 +297,9 @@ export default function ServiceDetailPage({
                   </Link>
 
                   <a
-                    href={`https://wa.me/919999963157?text=Hello%20RFP%20Digital,%20I%20would%20like%20to%20discuss%20${encodeURIComponent(
+                    href={`https://wa.me/919711791403?text=Hello%20RFP%20Digital%20Productions,%20I%20would%20like%20to%20discuss%20${encodeURIComponent(
                       service.title
-                    )}`}
+                    )}%20services.%20Please%20share%20details.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full text-center px-6 py-3 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 text-xs font-mono uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2"

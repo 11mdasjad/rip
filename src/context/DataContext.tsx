@@ -15,7 +15,7 @@ const STORAGE_KEYS = {
 const DEFAULT_SETTINGS: SiteSettings = {
   brandName: "RFP Digital Productions",
   brandTagline: "Video Production & Election Management Company",
-  email: "rfpdigitalmedia@gmail.com",
+  email: "info@rfpdigital.com",
   phone: "+91-11-49963157",
   address: "Lajpat Nagar 4",
   city: "New Delhi - 110024, Delhi NCR",

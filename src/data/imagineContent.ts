@@ -398,7 +398,7 @@ export const FAQ_DATA = [
   },
   {
     qEn: "How do we get a quote or discuss a project?",
-    aEn: "You can reach out directly via WhatsApp, call us at +91-11-49963157 or +91 99999 63157, email rfpdigitalmedia@gmail.com, or submit the inquiry form on this site. Our team typically responds within the same day."
+    aEn: "You can reach out directly via WhatsApp, call us at +91 97117 91403 or +91-11-49963157, email info@rfpdigital.com, or submit the inquiry form on this site. Our team typically responds within the same day."
   }
 ];
 

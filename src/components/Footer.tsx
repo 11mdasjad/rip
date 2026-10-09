@@ -59,9 +59,14 @@ export const Footer: React.FC = () => {
               </div>
             </Link>
 
-            <p className="text-sm text-[#f4f2f7b8] font-medium leading-relaxed max-w-sm">
-              RFP Digital Productions - Video Production &amp; Election Management Co.
-            </p>
+            <div className="space-y-1">
+              <p className="text-sm sm:text-base font-semibold text-white tracking-wide">
+                RFP Digital Productions
+              </p>
+              <p className="text-xs sm:text-[13px] text-[#f4f2f7b8] font-normal leading-relaxed">
+                Video Production &amp; Election Management Company
+              </p>
+            </div>
 
             {/* Social Media Links */}
             <div className="space-y-2">
@@ -133,7 +138,7 @@ export const Footer: React.FC = () => {
 
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/919999963157"
+                  href="https://wa.me/919711791403?text=Hello%20RFP%20Digital%20Productions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
@@ -153,8 +158,8 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#a89bfa] shrink-0" />
-                <a href="mailto:rfpdigitalmedia@gmail.com" className="hover:text-white transition-colors">
-                  rfpdigitalmedia@gmail.com
+                <a href="mailto:info@rfpdigital.com" className="hover:text-white transition-colors">
+                  info@rfpdigital.com
                 </a>
               </div>
             </div>
@@ -228,7 +233,7 @@ export const Footer: React.FC = () => {
                   <span className="font-mono text-xs px-1.5 py-0.5 rounded bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#E6C665]">
                     EC
                   </span>
-                  <span className="group-hover:translate-x-1 transition-transform">Election Hub</span>
+                  <span className="group-hover:translate-x-1 transition-transform">Election Campaign</span>
                 </Link>
               </li>
               <li>
@@ -286,7 +291,7 @@ export const Footer: React.FC = () => {
 
               <div className="space-y-2 pt-1">
                 <a
-                  href="https://wa.me/919999963157?text=Hello%20RFP%20Digital,%20I%20would%20like%20to%20discuss%20a%20project."
+                  href="https://wa.me/919711791403?text=Hello%20RFP%20Digital%20Productions%2C%20I%20would%20like%20to%20discuss%20a%20project%20%2F%20campaign%20consultation.%20Please%20connect%20with%20me."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-2.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20b858] text-black font-semibold text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md active:scale-98"
@@ -297,11 +302,11 @@ export const Footer: React.FC = () => {
                 </a>
 
                 <a
-                  href="tel:+919999963157"
+                  href="tel:+919711791403"
                   className="w-full py-2.5 px-4 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-white font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all border border-white/10 active:scale-98"
                 >
                   <Phone className="w-3.5 h-3.5 text-[#E6C665]" />
-                  <span>+91 99999 63157</span>
+                  <span>+91 97117 91403</span>
                 </a>
               </div>
 
@@ -378,7 +383,7 @@ export const Footer: React.FC = () => {
                     <strong className="text-white">Contact &amp; Telephony:</strong><br />
                     Mobile / WhatsApp: +91 99999 63157 / +91 97117 91403<br />
                     Office Landline: +91-11-49963157<br />
-                    Email: rfpdigitalmedia@gmail.com<br />
+                    Email: info@rfpdigital.com / rfpdigitalmedia@gmail.com<br />
                     Website: https://www.rfpdigital.com
                   </p>
                 </div>
@@ -396,7 +401,7 @@ export const Footer: React.FC = () => {
                   <p>
                     <strong className="text-white">Inquiries:</strong><br />
                     RFP Digital Productions, 156, First Floor, Sarai Julena (NFC), New Delhi - 110025<br />
-                    Email: rfpdigitalmedia@gmail.com
+                    Email: info@rfpdigital.com
                   </p>
                 </div>
               </div>

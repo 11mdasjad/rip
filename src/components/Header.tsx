@@ -147,16 +147,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
             Contact
           </Link>
 
-          {/* 9. EC - Golden Highlighted Heading Link next to Contact */}
+          {/* 9. Election Campaign - Golden Highlighted Heading Link next to Contact */}
           <Link
             href="/ec"
-            className={`px-3 xl:px-3.5 py-1.5 text-[14px] xl:text-[15px] rounded-xl transition-all font-bold font-mono tracking-wider flex items-center gap-1.5 ${
+            className={`px-3 xl:px-3.5 py-1.5 text-[13px] xl:text-[14px] whitespace-nowrap rounded-xl transition-all font-bold tracking-wide flex items-center gap-1.5 ${
               isEc
                 ? "text-[#F3E5AB] bg-[#D4AF37]/25 border border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.45)]"
                 : "text-[#E6C665] hover:text-[#FFF8DC] bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/40 hover:border-[#D4AF37]/80 shadow-sm"
             }`}
           >
-            <span>EC</span>
+            <span>Election Campaign</span>
           </Link>
         </nav>
 
@@ -280,7 +280,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                 Contact
               </Link>
 
-              {/* EC */}
+              {/* Election Campaign */}
               <Link
                 href="/ec"
                 onClick={() => setMobileMenuOpen(false)}
@@ -291,8 +291,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <span className="font-mono tracking-wider">EC</span>
-                  <span className="text-xs font-sans text-white/70">Election Campaign Hub</span>
+                  <span className="font-semibold tracking-wide">Election Campaign</span>
+                  <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#F3E5AB] border border-[#D4AF37]/30">Hub</span>
                 </div>
                 <span className="text-xs text-[#E6C665]">✦</span>
               </Link>

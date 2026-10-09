@@ -313,7 +313,7 @@ export default function ServicesPage() {
                 <span>Request Project Proposal</span>
               </Link>
               <a
-                href="https://wa.me/919999963157?text=Hello%20RFP%20Digital,%20I%20am%20interested%20in%20discussing%20a%20service"
+                href="https://wa.me/919711791403?text=Hello%20RFP%20Digital%20Productions%2C%20I%20am%20interested%20in%20discussing%20your%20services.%20Please%20connect%20with%20me."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto text-center px-6 py-3.5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 text-xs font-mono uppercase tracking-wider font-semibold transition-all flex items-center justify-center gap-2"
@@ -509,9 +509,9 @@ export default function ServicesPage() {
                 </Link>
 
                 <a
-                  href={`https://wa.me/919999963157?text=Hello%20RFP%20Digital,%20I%20would%20like%20to%20discuss%20${encodeURIComponent(
+                  href={`https://wa.me/919711791403?text=Hello%20RFP%20Digital%20Productions,%20I%20would%20like%20to%20discuss%20${encodeURIComponent(
                     selectedService.title
-                  )}`}
+                  )}%20services.%20Please%20share%20details.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2.5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 text-[#25D366] border border-[#25D366]/40 text-xs font-mono uppercase tracking-wider font-semibold transition-all flex items-center gap-1.5"

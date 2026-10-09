@@ -117,7 +117,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
                   Digital Productions
                 </span>
                 <span className="text-xs text-[#a89bfa] block mt-1">
-                  Video Production &amp; Election Management Co.
+                  Video Production &amp; Election Management Company
                 </span>
               </div>
             </div>
@@ -125,11 +125,11 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
             {/* Quick Contact Buttons */}
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href="mailto:rfpdigitalmedia@gmail.com"
+                href="mailto:info@rfpdigital.com"
                 className="inline-flex items-center space-x-2 px-5 py-3 rounded-full bg-white hover:bg-white/90 text-[#0e0d12] text-xs font-semibold tracking-wide transition-all shadow-md active:scale-95"
               >
                 <Mail className="w-3.5 h-3.5" />
-                <span>rfpdigitalmedia@gmail.com</span>
+                <span>info@rfpdigital.com</span>
                 <ArrowUpRight className="w-3.5 h-3.5 ml-1" />
               </a>
 
@@ -150,7 +150,7 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
               </a>
 
               <a
-                href="https://wa.me/919711791403"
+                href="https://wa.me/919711791403?text=Hello%20RFP%20Digital%20Productions%2C%20I%20would%20like%20to%20discuss%20a%20project%20%2F%20campaign%20consultation.%20Please%20connect%20with%20me."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-5 py-3 rounded-full border border-[#25D366]/40 hover:border-[#25D366] bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] text-xs font-medium tracking-wide transition-all"
