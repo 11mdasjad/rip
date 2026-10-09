@@ -40,8 +40,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       { step: "03", title: "Principal Photography", desc: "Cinema lighting, multicam setups, and high-fidelity dialogue capture." },
       { step: "04", title: "Post & Delivery", desc: "Master color grading, sound design, and multi-format broadcast delivery." }
     ],
-    image: "/medien/landing/jindal-group-shoot.jpg",
-    videoThumbnail: "/medien/landing/jindal-group-shoot.jpg",
+    image: "/medien/landing/corporate-film-production-banner.jpg",
+    videoThumbnail: "/medien/landing/corporate-film-production-banner.jpg",
     videoUrl: "https://www.youtube.com/embed/1PeIeMgjyQc?autoplay=1",
     youtubeUrl: "https://youtu.be/1PeIeMgjyQc",
     aspect: "16/9"
@@ -84,8 +84,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       { step: "03", title: "Narrative Assembly", desc: "Weaving oral histories, emotional arcs, and authentic field soundscapes." },
       { step: "04", title: "Screening Master", desc: "Archival grade color mastering and festival/institution delivery." }
     ],
-    image: "/medien/landing/landing-directing-1669.jpg",
-    videoThumbnail: "/medien/landing/landing-directing-1669.jpg",
+    image: "/medien/landing/documentary-film-production-banner.jpg",
+    videoThumbnail: "/medien/landing/documentary-film-production-banner.jpg",
     videoUrl: "https://www.youtube.com/embed/91kFY2xs7cE?autoplay=1",
     youtubeUrl: "https://youtu.be/91kFY2xs7cE",
     aspect: "16/9"
@@ -128,8 +128,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       { step: "03", title: "Strategic Scheduling", desc: "Peak-traffic deployment with metadata and algorithmic tagging." },
       { step: "04", title: "Momentum Analytics", desc: "Daily metrics review to refine subsequent content batches." }
     ],
-    image: "/medien/testimonials/neha-sharma-endorsement.jpg",
-    videoThumbnail: "/medien/testimonials/neha-sharma-endorsement.jpg",
+    image: "/medien/landing/social-media-management-banner.jpg",
+    videoThumbnail: "/medien/landing/social-media-management-banner.jpg",
     videoUrl: "https://www.instagram.com/reel/DaxoqAoR_1Z/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     youtubeUrl: "https://www.instagram.com/reel/DaxoqAoR_1Z/",
     aspect: "16/9"
@@ -172,8 +172,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       { step: "03", title: "Algorithmic Bidding", desc: "Real-time bid adjustments for lowest CPA and highest quality traffic." },
       { step: "04", title: "Attribution & Scale", desc: "Doubling down on winning segments with weekly executive reports." }
     ],
-    image: "/medien/galerie/321-editing-suite.jpg",
-    videoThumbnail: "/medien/youtube-thumbs/Cgvx6w13ZNg.jpg",
+    image: "/medien/landing/digital-marketing-growth-banner.jpg",
+    videoThumbnail: "/medien/landing/digital-marketing-growth-banner.jpg",
     videoUrl: "https://www.youtube.com/embed/Cgvx6w13ZNg?autoplay=1",
     youtubeUrl: "https://youtu.be/Cgvx6w13ZNg",
     aspect: "16/9"
@@ -218,8 +218,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       { step: "03", title: "Ground Fleet Rollout", desc: "Deploying LED vans and street theatre troupes with scheduled daily routes." },
       { step: "04", title: "Live War Room", desc: "Real-time counter-narrative creation and daily constituency broadcast loops." }
     ],
-    image: "/medien/galerie/311-campaign-led.jpg",
-    videoThumbnail: "/medien/youtube-thumbs/jirysVZwPIE.jpg",
+    image: "/medien/landing/neutral-election-campaign-banner.jpg",
+    videoThumbnail: "/medien/landing/neutral-election-campaign-banner.jpg",
     videoUrl: "https://www.youtube.com/embed/jirysVZwPIE?autoplay=1",
     youtubeUrl: "https://youtu.be/jirysVZwPIE",
     aspect: "16/9"
@@ -262,8 +262,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       { step: "03", title: "Live Capture", desc: "Continuous live switching, pristine audio capture, and live stream feed." },
       { step: "04", title: "Instant PR Delivery", desc: "Curated, color-corrected photo sets transmitted to media teams on the spot." }
     ],
-    image: "/medien/galerie/194-cinematography.jpg",
-    videoThumbnail: "/medien/youtube-thumbs/3n58zR1Reqs.jpg",
+    image: "/medien/landing/photography-events-coverage-banner.jpg",
+    videoThumbnail: "/medien/landing/photography-events-coverage-banner.jpg",
     videoUrl: "https://www.youtube.com/embed/3n58zR1Reqs?autoplay=1",
     youtubeUrl: "https://youtu.be/3n58zR1Reqs",
     aspect: "16/9"

@@ -4,7 +4,6 @@ import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { VideoModal } from "@/components/modals/VideoModal";
 import { SERVICES_DATA } from "@/data/services";
 import { ServiceItem } from "@/types";
 import {
@@ -15,7 +14,6 @@ import {
   Megaphone,
   Camera,
   Globe,
-  Play,
   CheckCircle2,
   ArrowRight,
   ArrowLeft,
@@ -56,17 +54,6 @@ function getServiceIcon(id: string) {
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
-  const [activeVideo, setActiveVideo] = useState<{
-    isOpen: boolean;
-    url?: string;
-    title?: string;
-    subtitle?: string;
-  }>({
-    isOpen: false,
-    url: "",
-    title: "",
-    subtitle: "",
-  });
 
   // Filter services by search query
   const filteredServices = useMemo(() => {
@@ -129,7 +116,7 @@ export default function ServicesPage() {
               </h1>
 
               <p className="text-base sm:text-lg text-white/70 font-sans leading-relaxed">
-                From high-stakes assembly election broadcasts and cinema-grade corporate documentaries to ultra-fast Next.js web applications — click any capability below to explore its full workflow, technical gear, and video showcase.
+                From high-stakes assembly election broadcasts and cinema-grade corporate documentaries to ultra-fast Next.js web applications — click any capability below to explore its full workflow, technical gear, and dedicated deliverables.
               </p>
             </div>
 
@@ -141,7 +128,7 @@ export default function ServicesPage() {
               </div>
               <div className="space-y-1">
                 <span className="text-2xl sm:text-3xl font-serif font-bold text-[#E6C665]">1,000+</span>
-                <p className="text-xs font-mono text-white/50 uppercase tracking-wider">Films &amp; Videos</p>
+                <p className="text-xs font-mono text-white/50 uppercase tracking-wider">Films &amp; Projects</p>
               </div>
               <div className="space-y-1">
                 <span className="text-2xl sm:text-3xl font-serif font-bold text-[#a89bfa]">45+</span>
@@ -212,26 +199,6 @@ export default function ServicesPage() {
                       </span>
                     </div>
 
-                    {/* Quick Play Trigger */}
-                    {service.videoUrl && (
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          setActiveVideo({
-                            isOpen: true,
-                            url: service.videoUrl,
-                            title: service.title,
-                            subtitle: service.tagline,
-                          });
-                        }}
-                        className="absolute inset-0 m-auto w-12 h-12 rounded-full bg-[#6b54ee]/90 hover:bg-[#6b54ee] text-white flex items-center justify-center shadow-xl transition-transform group-hover:scale-110 active:scale-95"
-                        aria-label={`Play showcase video for ${service.title}`}
-                      >
-                        <Play className="w-5 h-5 fill-current ml-0.5" />
-                      </button>
-                    )}
-
                     <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white/90">
                       <div className="p-1.5 rounded-lg bg-black/70 backdrop-blur-md border border-white/10">
                         {getServiceIcon(service.id)}
@@ -296,28 +263,9 @@ export default function ServicesPage() {
                 {/* Card Action Footer */}
                 <div className="px-6 py-4 bg-white/[0.02] border-t border-white/[0.06] flex items-center justify-between">
                   <span className="text-xs font-mono text-[#a89bfa] group-hover:text-white flex items-center gap-1 transition-colors font-semibold">
-                    <span>View Dedicated Page &amp; Video</span>
+                    <span>Explore Service &amp; Scope</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </span>
-
-                  {service.videoUrl && (
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        setActiveVideo({
-                          isOpen: true,
-                          url: service.videoUrl,
-                          title: service.title,
-                          subtitle: service.tagline,
-                        });
-                      }}
-                      className="px-2.5 py-1 rounded-lg bg-white/[0.06] hover:bg-white/[0.12] text-[11px] font-mono text-white/90 flex items-center gap-1 transition-colors"
-                    >
-                      <Play className="w-3 h-3 fill-current text-[#a89bfa]" />
-                      <span>Play</span>
-                    </button>
-                  )}
                 </div>
               </Link>
             ))}
@@ -416,45 +364,30 @@ export default function ServicesPage() {
 
             {/* Modal Scrollable Body */}
             <div className="p-6 sm:p-8 space-y-8 max-h-[75vh] overflow-y-auto">
-              {/* Showcase Video Stage */}
-              {selectedService.videoUrl && (
-                <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-black border border-white/10 shadow-2xl group">
-                  <img
-                    src={selectedService.videoThumbnail || selectedService.image}
-                    alt={selectedService.title}
-                    className="w-full h-full object-cover filter contrast-[1.05]"
-                  />
-                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors" />
+              {/* Showcase Visual Spotlight */}
+              <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-black border border-white/10 shadow-2xl group">
+                <img
+                  src={selectedService.image}
+                  alt={selectedService.title}
+                  className="w-full h-full object-cover filter contrast-[1.05] group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-                  <button
-                    onClick={() => {
-                      const v = selectedService;
-                      setActiveVideo({
-                        isOpen: true,
-                        url: v.videoUrl,
-                        title: v.title,
-                        subtitle: v.tagline,
-                      });
-                    }}
-                    className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-[#6b54ee] hover:bg-[#5842db] text-white flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95"
-                    aria-label={`Play showcase video for ${selectedService.title}`}
-                  >
-                    <Play className="w-7 h-7 fill-current ml-0.5" />
-                  </button>
-
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-black/80 backdrop-blur-md text-[#a89bfa] border border-white/20">
-                      Showcase Reel
-                    </span>
-                  </div>
-
-                  <div className="absolute bottom-4 right-4">
-                    <span className="text-[11px] font-mono text-white/80 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10">
-                      Click to Play in Full Cinema Player
-                    </span>
-                  </div>
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-black/80 backdrop-blur-md text-[#E6C665] border border-white/20">
+                    Production Portfolio
+                  </span>
                 </div>
-              )}
+
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                  <span className="text-xs font-serif italic text-white/90">
+                    &ldquo;{selectedService.tagline}&rdquo;
+                  </span>
+                  <span className="text-[11px] font-mono text-white/80 bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10">
+                    Verified Craft
+                  </span>
+                </div>
+              </div>
 
               {/* Comprehensive Overview */}
               <div className="space-y-3">
@@ -598,15 +531,6 @@ export default function ServicesPage() {
           </div>
         </div>
       )}
-
-      {/* Global Video Modal */}
-      <VideoModal
-        isOpen={activeVideo.isOpen}
-        onClose={() => setActiveVideo((prev) => ({ ...prev, isOpen: false }))}
-        videoUrl={activeVideo.url}
-        title={activeVideo.title}
-        subtitle={activeVideo.subtitle}
-      />
 
       {/* Global Footer */}
       <Footer />

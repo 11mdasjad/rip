@@ -5,14 +5,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { VideoModal, extractYouTubeId, extractInstagramId } from "@/components/modals/VideoModal";
 import { SERVICES_DATA } from "@/data/services";
 import { ServiceItem } from "@/types";
 import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
-  Play,
   CheckCircle2,
   Sparkles,
   Layers,
@@ -52,16 +50,6 @@ function getServiceIcon(id: string) {
   }
 }
 
-function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-    </svg>
-  );
-}
-
 export default function ServiceDetailPage({
   params,
 }: {
@@ -74,9 +62,6 @@ export default function ServiceDetailPage({
     return SERVICES_DATA.find((s) => s.id === resolvedParams.id);
   }, [resolvedParams.id]);
 
-  const [activeVideoModal, setActiveVideoModal] = useState(false);
-  const [isPlayingInline, setIsPlayingInline] = useState(false);
-
   if (!service) {
     notFound();
   }
@@ -85,10 +70,6 @@ export default function ServiceDetailPage({
   const otherServices = useMemo(() => {
     return SERVICES_DATA.filter((s) => s.id !== service.id);
   }, [service.id]);
-
-  // Video embed helpers
-  const ytId = service.videoUrl ? extractYouTubeId(service.videoUrl) : null;
-  const igId = service.videoUrl ? extractInstagramId(service.videoUrl) : null;
 
   return (
     <div className="min-h-screen bg-[#0e0d12] text-[#f4f2f7] font-sans antialiased selection:bg-[#6b54ee] selection:text-white">
@@ -159,141 +140,66 @@ export default function ServiceDetailPage({
           </div>
         </section>
 
-        {/* Featured Cinema Video Showcase Section */}
-        {service.videoUrl && (
-          <section className="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-white/[0.08]">
-            <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 gap-4">
-              <div>
-                <div className="text-xs font-mono text-[#a89bfa] uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
-                  <Play className="w-3.5 h-3.5 fill-current text-[#a89bfa]" />
-                  <span>On-Location Showcase Reel</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-serif text-white font-medium">
-                  Watch Production Proof &amp; Live Video
-                </h2>
+        {/* Production Showcase & Visual Craft Spotlight */}
+        <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-white/[0.08]">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <div className="text-xs font-mono text-[#a89bfa] uppercase tracking-widest mb-1.5 flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5 text-[#E6C665]" />
+                <span>RFP Production Showcase</span>
               </div>
-
-              {/* Action Video Buttons */}
-              <div className="flex flex-wrap items-center gap-3">
-                <button
-                  onClick={() => setActiveVideoModal(true)}
-                  className="px-4 py-2 rounded-xl bg-[#6b54ee] hover:bg-[#5842db] text-white text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all font-semibold shadow-lg shadow-[#6b54ee]/20"
-                >
-                  <Play className="w-3.5 h-3.5 fill-current" />
-                  <span>Fullscreen Cinema</span>
-                </button>
-
-                {service.youtubeUrl && !service.youtubeUrl.includes("instagram.com") && (
-                  <a
-                    href={service.youtubeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl bg-red-600/90 hover:bg-red-600 text-white text-xs font-mono uppercase tracking-wider flex items-center gap-1.5 transition-all font-semibold"
-                  >
-                    <Play className="w-3 h-3 fill-current" />
-                    <span>Open YouTube ↗</span>
-                  </a>
-                )}
-
-                {service.youtubeUrl && service.youtubeUrl.includes("instagram.com") && (
-                  <a
-                    href={service.youtubeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90 text-white text-xs font-mono uppercase tracking-wider flex items-center gap-1.5 transition-all font-semibold shadow-md shadow-pink-600/20"
-                  >
-                    <InstagramIcon className="w-3.5 h-3.5" />
-                    <span>Open Reel ↗</span>
-                  </a>
-                )}
-              </div>
+              <h2 className="text-2xl sm:text-3xl font-serif text-white font-medium">
+                Visual Craft &amp; Field Execution
+              </h2>
             </div>
 
-            {/* Video Stage Frame */}
-            <div className="relative w-full rounded-3xl overflow-hidden bg-black border border-white/[0.12] shadow-2xl">
-              {isPlayingInline ? (
-                <div className={`relative w-full bg-black flex items-center justify-center ${igId ? "h-[640px] max-h-[80vh] p-4" : "aspect-video"}`}>
-                  {ytId ? (
-                    <iframe
-                      src={`https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1`}
-                      title={service.title}
-                      className="w-full h-full border-0 rounded-2xl"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
-                  ) : igId ? (
-                    <iframe
-                      src={`https://www.instagram.com/reel/${igId}/embed/`}
-                      title={service.title}
-                      className="w-full h-full max-w-[480px] border-0 rounded-2xl bg-black"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <iframe
-                      src={service.videoUrl}
-                      title={service.title}
-                      className="w-full h-full border-0 rounded-2xl"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
-                  )}
-                </div>
-              ) : (
-                <div
-                  className={`relative ${
-                    service.id === "website-development"
-                      ? "aspect-[1024/682]"
-                      : "aspect-video"
-                  } w-full bg-black/90 overflow-hidden group cursor-pointer`}
-                  onClick={() => setIsPlayingInline(true)}
-                >
-                  <img
-                    src={service.videoThumbnail || service.image}
-                    alt={service.title}
-                    className={`w-full h-full ${
-                      service.id === "website-development"
-                        ? "object-contain bg-[#06080e]"
-                        : "object-cover"
-                    } filter contrast-[1.03] brightness-95 group-hover:scale-[1.01] transition-transform duration-700 ease-out`}
-                  />
-                  <div
-                    className={`absolute inset-0 ${
-                      service.id === "website-development"
-                        ? "bg-black/15 group-hover:bg-black/35"
-                        : "bg-gradient-to-t from-black/80 via-black/30 to-black/30 group-hover:bg-black/20"
-                    } transition-colors`}
-                  />
-
-                  {/* Big Play Button */}
-                  <div className="absolute inset-0 m-auto w-20 h-20 rounded-full bg-[#6b54ee]/90 hover:bg-[#5842db] text-white flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 active:scale-95 backdrop-blur-sm border border-white/20">
-                    <Play className="w-8 h-8 fill-current ml-1" />
-                  </div>
-
-                  <div
-                    className={`absolute bottom-6 left-6 right-6 flex items-center justify-between ${
-                      service.id === "website-development"
-                        ? "opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/75 p-3 rounded-2xl backdrop-blur-md border border-white/10"
-                        : ""
-                    }`}
-                  >
-                    <div>
-                      <span className="text-xs font-mono uppercase tracking-widest text-[#a89bfa] block">
-                        Watch Official Showcase
-                      </span>
-                      <h4 className="text-xl font-serif text-white font-medium">
-                        {service.title}
-                      </h4>
-                    </div>
-                    <span className="hidden sm:inline-flex px-3.5 py-1.5 rounded-xl bg-black/70 backdrop-blur-md text-xs font-mono text-white/80 border border-white/10">
-                      Click to Play Inline
-                    </span>
-                  </div>
-                </div>
-              )}
+            <div className="flex items-center gap-3">
+              <div className="px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-white/70 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#E6C665] animate-pulse" />
+                <span>Active Discipline • #{service.number}</span>
+              </div>
             </div>
-          </section>
-        )}
+          </div>
+
+          {/* Production Showcase Frame */}
+          <div className="relative w-full rounded-3xl overflow-hidden bg-[#17161d] border border-white/[0.12] shadow-2xl">
+            <div
+              className={`relative ${
+                service.id === "website-development"
+                  ? "aspect-[16/10]"
+                  : "aspect-video sm:aspect-[21/9]"
+              } w-full bg-black/90 overflow-hidden group`}
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className={`w-full h-full ${
+                  service.id === "website-development"
+                    ? "object-contain bg-[#06080e]"
+                    : "object-cover"
+                } filter contrast-[1.03] brightness-95 group-hover:scale-[1.02] transition-transform duration-700 ease-out`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+
+              <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div className="max-w-xl">
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#E6C665] block mb-1">
+                    Field Execution • {service.title}
+                  </span>
+                  <p className="text-sm sm:text-base text-white/90 font-serif italic">
+                    &ldquo;{service.tagline}&rdquo;
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="px-3.5 py-1.5 rounded-xl bg-black/70 backdrop-blur-md text-xs font-mono text-white/80 border border-white/10">
+                    Verified Production
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Deep-Dive Overview & Deliverables Section */}
         <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-white/[0.08]">
@@ -497,17 +403,6 @@ export default function ServiceDetailPage({
           </div>
         </section>
       </main>
-
-      {/* Global Video Modal */}
-      {service.videoUrl && (
-        <VideoModal
-          isOpen={activeVideoModal}
-          onClose={() => setActiveVideoModal(false)}
-          videoUrl={service.videoUrl}
-          title={service.title}
-          subtitle={service.tagline}
-        />
-      )}
 
       {/* Global Footer */}
       <Footer />

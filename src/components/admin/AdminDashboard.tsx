@@ -307,7 +307,7 @@ export const AdminDashboard: React.FC = () => {
         <div className={`flex items-center border-b border-white/[0.06] h-16 px-4 ${sidebarCollapsed ? "justify-center" : "justify-between"}`}>
           {!sidebarCollapsed && (
             <div className="flex items-center space-x-2.5">
-              <img src="/medien/logo/rfp-emblem.svg" alt="RFP" className="h-7 w-auto" />
+              <img src="/medien/logo/rfp-emblem.png" alt="RFP" className="h-7 w-auto object-contain filter drop-shadow-[0_1px_4px_rgba(212,175,55,0.4)]" />
               <div className="flex flex-col">
                 <span className="text-xs font-extrabold tracking-wider text-white font-mono flex items-center gap-1">
                   RFP CMS
@@ -320,7 +320,7 @@ export const AdminDashboard: React.FC = () => {
             </div>
           )}
           {sidebarCollapsed && (
-            <img src="/medien/logo/rfp-emblem.svg" alt="RFP" className="h-7 w-auto" />
+            <img src="/medien/logo/rfp-emblem.png" alt="RFP" className="h-7 w-auto object-contain filter drop-shadow-[0_1px_4px_rgba(212,175,55,0.4)]" />
           )}
           <button
             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
@@ -456,7 +456,7 @@ export const AdminDashboard: React.FC = () => {
           <aside className="absolute left-0 top-0 h-full w-[280px] bg-[#0e0d12] border-r border-white/[0.08] flex flex-col animate-in slide-in-from-left duration-200 shadow-2xl">
             <div className="flex items-center justify-between h-16 px-4 border-b border-white/[0.06]">
               <div className="flex items-center space-x-2.5">
-                <img src="/medien/logo/rfp-emblem.svg" alt="RFP" className="h-7 w-auto" />
+                <img src="/medien/logo/rfp-emblem.png" alt="RFP" className="h-7 w-auto object-contain filter drop-shadow-[0_1px_4px_rgba(212,175,55,0.4)]" />
                 <span className="text-xs font-extrabold tracking-wider text-white font-mono">RFP CMS</span>
               </div>
               <button onClick={() => setMobileNavOpen(false)} className="p-2 rounded-lg text-white/60 hover:text-white">

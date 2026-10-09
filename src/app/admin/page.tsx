@@ -56,12 +56,26 @@ export default function AdminPage() {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50 pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-md">
-        {/* Top Badge */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#17161d] border border-white/[0.1] shadow-2xl shadow-[#7c6af2]/10 mb-5">
-            <img src="/medien/logo/rfp-emblem.svg" alt="RFP" className="h-9 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.35)]" />
+          <div className="inline-flex items-center justify-center mb-4">
+            <img
+              src="/medien/logo/rfp-emblem.png"
+              alt="RFP Emblem"
+              className="h-20 w-auto object-contain filter drop-shadow-[0_2px_20px_rgba(212,175,55,0.6)]"
+            />
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-2">
+          <div className="flex items-center justify-center gap-2 leading-none mb-1">
+            <span className="font-extrabold text-2xl sm:text-3xl tracking-[0.16em] text-white font-mono">
+              RFP
+            </span>
+            <span className="text-[10px] font-sans font-bold px-2.5 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#F3E5AB] border border-[#D4AF37]/45 tracking-wider uppercase shadow-sm">
+              MEDIA &amp; FILMS
+            </span>
+          </div>
+          <span className="text-xs tracking-[0.28em] text-[#D4AF37] font-mono uppercase font-bold block mb-4">
+            Digital Productions
+          </span>
+          <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white mb-2">
             Studio Control Center
           </h1>
           <p className="text-sm text-white/50 font-light">

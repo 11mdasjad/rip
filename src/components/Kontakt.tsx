@@ -71,11 +71,11 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
         {/* Golden RFP Emblem Badge (Top Right) */}
         <div className="absolute top-8 right-8 sm:top-12 sm:right-12 flex items-center space-x-2">
           <img
-            src="/medien/logo/rfp-emblem.svg"
+            src="/medien/logo/rfp-emblem.png"
             alt="RFP Emblem"
             loading="lazy"
             decoding="async"
-            className="h-12 sm:h-16 w-auto object-contain filter drop-shadow-[0_2px_15px_rgba(212,175,55,0.4)] opacity-75 hover:opacity-100 hover:scale-110 transition-all duration-300"
+            className="h-12 sm:h-16 w-auto object-contain filter drop-shadow-[0_2px_15px_rgba(212,175,55,0.4)] opacity-85 hover:opacity-100 hover:scale-110 transition-all duration-300"
           />
         </div>
 
@@ -96,20 +96,28 @@ export const Kontakt: React.FC<KontaktProps> = ({ prefilledTopic }) => {
             </p>
 
             {/* Production House Info Box */}
-            <div className="flex items-center space-x-5 p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08] mb-8 max-w-md">
-              <div className="w-16 h-16 rounded-full bg-[#1c1a24] border border-[#D4AF37]/30 flex items-center justify-center p-2 shadow-md flex-shrink-0">
-                <img
-                  src="/medien/logo/rfp-emblem.svg"
-                  alt="RFP Digital Productions"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-10 h-10 object-contain filter drop-shadow-[0_2px_8px_rgba(212,175,55,0.4)]"
-                />
-              </div>
-              <div>
-                <h3 className="text-base font-bold text-white">RFP Digital Productions</h3>
-                <span className="text-xs text-[#a89bfa] block leading-snug">
-                  Video Production &amp; Election Management Company
+            <div className="flex items-center space-x-4 p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08] mb-8 max-w-md">
+              <img
+                src="/medien/logo/rfp-emblem.png"
+                alt="RFP Emblem"
+                loading="lazy"
+                decoding="async"
+                className="h-14 w-auto object-contain filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.5)] flex-shrink-0"
+              />
+              <div className="flex flex-col justify-center">
+                <div className="flex items-center gap-2 leading-none">
+                  <span className="font-extrabold text-xl tracking-[0.16em] text-white font-mono">
+                    RFP
+                  </span>
+                  <span className="text-[10px] font-sans font-bold px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#F3E5AB] border border-[#D4AF37]/45 tracking-wider uppercase">
+                    MEDIA &amp; FILMS
+                  </span>
+                </div>
+                <span className="text-[10px] sm:text-[11px] tracking-[0.28em] text-[#D4AF37] font-mono uppercase font-bold mt-1.5">
+                  Digital Productions
+                </span>
+                <span className="text-xs text-[#a89bfa] block mt-1">
+                  Video Production &amp; Election Management Co.
                 </span>
               </div>
             </div>

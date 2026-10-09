@@ -20,12 +20,7 @@ export const RfpLogo: React.FC<RfpLogoProps> = ({
   width,
   height,
 }) => {
-  const src =
-    variant === "emblem"
-      ? "/medien/logo/rfp-emblem.svg"
-      : variant === "framed"
-      ? "/medien/logo/rfp-logo-framed.svg"
-      : "/medien/logo/rfp-logo.svg";
+  const src = "/medien/logo/rfp-emblem.png";
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
