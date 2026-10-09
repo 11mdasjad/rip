@@ -291,35 +291,7 @@ export const Zusammenarbeit: React.FC = () => {
           </div>
         </div>
 
-        {/* 5. Direct Action Banner */}
-        <div className="mt-16 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#171523] via-[#14121c] to-[#1a1728] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center sm:text-left">
-            <h4 className="text-xl sm:text-2xl font-serif text-white font-medium">
-              Ready to elevate your communication or campaign?
-            </h4>
-            <p className="text-xs sm:text-sm text-white/70 font-sans">
-              Connect directly with our creative directors and campaign operations leads.
-            </p>
-          </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
-            <a
-              href="https://wa.me/919711791403?text=Hello%20RFP%20Digital%20Productions%2C%20I%20would%20like%20to%20discuss%20a%20project%20/%20campaign%20consultation.%20Please%20connect%20with%20me."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-[#D4AF37] hover:bg-[#c49f27] text-black font-mono text-xs uppercase tracking-wider font-bold transition-all shadow-lg active:scale-95"
-            >
-              WhatsApp Consultation
-            </a>
-
-            <a
-              href="#kontakt"
-              className="px-6 py-3 rounded-full bg-white/[0.08] hover:bg-white/[0.15] text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all border border-white/10 active:scale-95"
-            >
-              Start Inquiry
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
