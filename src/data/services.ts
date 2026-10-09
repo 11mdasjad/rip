@@ -310,8 +310,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       { step: "03", title: "Full-Stack Engineering", desc: "Type-safe Next.js development, API integration, and database schema setup." },
       { step: "04", title: "Performance & Cloud Launch", desc: "Lighthouse 100/100 audit, SSL deployment, domain routing, and analytics." }
     ],
-    image: "/medien/landing/landing-monitor-1664.jpg",
-    videoThumbnail: "/medien/youtube-thumbs/Cgvx6w13ZNg.jpg",
+    image: "/medien/landing/rfp-website-development-platforms.jpg",
+    videoThumbnail: "/medien/landing/rfp-website-development-platforms.jpg",
     videoUrl: "https://www.youtube.com/embed/Cgvx6w13ZNg?autoplay=1",
     youtubeUrl: "https://youtu.be/Cgvx6w13ZNg",
     aspect: "16/9"

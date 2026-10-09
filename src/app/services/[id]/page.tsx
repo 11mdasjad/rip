@@ -240,20 +240,43 @@ export default function ServiceDetailPage({
                   )}
                 </div>
               ) : (
-                <div className="relative aspect-video w-full bg-black/90 overflow-hidden group cursor-pointer" onClick={() => setIsPlayingInline(true)}>
+                <div
+                  className={`relative ${
+                    service.id === "website-development"
+                      ? "aspect-[1024/682]"
+                      : "aspect-video"
+                  } w-full bg-black/90 overflow-hidden group cursor-pointer`}
+                  onClick={() => setIsPlayingInline(true)}
+                >
                   <img
                     src={service.videoThumbnail || service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover filter contrast-[1.05] brightness-90 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className={`w-full h-full ${
+                      service.id === "website-development"
+                        ? "object-contain bg-[#06080e]"
+                        : "object-cover"
+                    } filter contrast-[1.03] brightness-95 group-hover:scale-[1.01] transition-transform duration-700 ease-out`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/30 group-hover:bg-black/20 transition-colors" />
+                  <div
+                    className={`absolute inset-0 ${
+                      service.id === "website-development"
+                        ? "bg-black/15 group-hover:bg-black/35"
+                        : "bg-gradient-to-t from-black/80 via-black/30 to-black/30 group-hover:bg-black/20"
+                    } transition-colors`}
+                  />
 
                   {/* Big Play Button */}
-                  <div className="absolute inset-0 m-auto w-20 h-20 rounded-full bg-[#6b54ee] hover:bg-[#5842db] text-white flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 active:scale-95">
+                  <div className="absolute inset-0 m-auto w-20 h-20 rounded-full bg-[#6b54ee]/90 hover:bg-[#5842db] text-white flex items-center justify-center shadow-2xl transition-all duration-300 group-hover:scale-110 active:scale-95 backdrop-blur-sm border border-white/20">
                     <Play className="w-8 h-8 fill-current ml-1" />
                   </div>
 
-                  <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                  <div
+                    className={`absolute bottom-6 left-6 right-6 flex items-center justify-between ${
+                      service.id === "website-development"
+                        ? "opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/75 p-3 rounded-2xl backdrop-blur-md border border-white/10"
+                        : ""
+                    }`}
+                  >
                     <div>
                       <span className="text-xs font-mono uppercase tracking-widest text-[#a89bfa] block">
                         Watch Official Showcase
