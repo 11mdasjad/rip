@@ -67,43 +67,44 @@ export const Zusammenarbeit: React.FC = () => {
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#D4AF37]/08 blur-[160px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* 1. Header & Brand Identity */}
-        <div className="max-w-3xl mb-14 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/35 text-[#E6C665] text-xs font-mono uppercase tracking-widest mb-4">
+        {/* 1. Header & Brand Identity - Centered & Expansive */}
+        <div className="text-center max-w-5xl mx-auto mb-16 lg:mb-24">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/35 text-[#E6C665] text-xs font-mono uppercase tracking-widest mb-5">
             <Sparkles className="w-3.5 h-3.5 text-[#E6C665]" />
             <span>About RFP Digital Productions</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold tracking-tight text-white mb-6 leading-[1.14]">
             Full-Service Video Production, Media &amp;{" "}
-            <span className="bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#E6C665] bg-clip-text text-transparent">
-              Turnkey Election Management
+            <span className="bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#E6C665] bg-clip-text text-transparent block sm:inline">
+              Election Campaign Management
             </span>
           </h2>
 
-          <div className="space-y-4 text-base sm:text-lg text-white/80 leading-relaxed font-sans">
+          <div className="space-y-4 text-base sm:text-lg lg:text-[19px] text-white/85 leading-relaxed font-sans max-w-4xl mx-auto">
             <p>
               <strong className="text-white font-semibold">RFP Digital Productions</strong> is a comprehensive Video Production, Media, and Election Management company providing creative, communication, and campaign solutions for political organizations, candidates, public representatives, businesses, institutions, and brands.
             </p>
-            <p className="text-sm sm:text-base text-white/70">
+            <p className="text-sm sm:text-base text-white/70 max-w-3xl mx-auto">
               With a strong understanding of visual storytelling, mass communication, digital media, and on-ground campaign operations, RFP Digital Productions helps clients communicate their message effectively across traditional, digital, and field-level platforms.
             </p>
           </div>
 
-          {/* Motto Pill Banner */}
-          <div className="mt-8 p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-[#D4AF37]/25 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          {/* Motto Pill Banner - Centered & Balanced */}
+          <div className="mt-10 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-[#D4AF37]/30 max-w-4xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left shadow-lg">
             <div>
-              <span className="text-[11px] font-mono uppercase tracking-widest text-[#E6C665] font-semibold block mb-0.5">
+              <span className="text-[11px] font-mono uppercase tracking-widest text-[#E6C665] font-semibold block mb-1">
                 Our Operating Philosophy
               </span>
-              <p className="text-sm sm:text-base text-white font-medium italic font-serif">
+              <p className="text-base sm:text-lg text-white font-medium italic font-serif">
                 &ldquo;From ideas to execution — we create, communicate, and manage.&rdquo;
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono text-white/60">
-              <span className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/10">Video Production</span>
-              <span className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/10">Digital Media</span>
-              <span className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/10">Election Management</span>
+            <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 text-xs font-mono text-white/70">
+              <span className="px-3 py-1.5 rounded-xl bg-white/[0.05] border border-white/10">Video Production</span>
+              <span className="px-3 py-1.5 rounded-xl bg-white/[0.05] border border-white/10">Digital Media</span>
+              <span className="px-3 py-1.5 rounded-xl bg-white/[0.05] border border-white/10">Election Management</span>
+              <span className="px-3 py-1.5 rounded-xl bg-white/[0.05] border border-white/10">Campaign Communication</span>
             </div>
           </div>
         </div>
