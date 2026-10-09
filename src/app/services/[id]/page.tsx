@@ -35,10 +35,10 @@ function getServiceIcon(id: string) {
       return <Film className="w-6 h-6 text-[#a89bfa]" />;
     case "documentary-films":
       return <Video className="w-6 h-6 text-[#a89bfa]" />;
+    case "social-media-digital-marketing":
     case "social-media-management":
-      return <Share2 className="w-6 h-6 text-[#a89bfa]" />;
     case "digital-marketing":
-      return <TrendingUp className="w-6 h-6 text-[#a89bfa]" />;
+      return <Share2 className="w-6 h-6 text-[#a89bfa]" />;
     case "election-campaign-services":
       return <Megaphone className="w-6 h-6 text-[#a89bfa]" />;
     case "photography-events":
@@ -57,9 +57,13 @@ export default function ServiceDetailPage({
 }) {
   const resolvedParams = use(params);
 
-  // Find service
+  // Find service (with alias support for merged services)
   const service = useMemo(() => {
-    return SERVICES_DATA.find((s) => s.id === resolvedParams.id);
+    const targetId =
+      resolvedParams.id === "social-media-management" || resolvedParams.id === "digital-marketing"
+        ? "social-media-digital-marketing"
+        : resolvedParams.id;
+    return SERVICES_DATA.find((s) => s.id === targetId);
   }, [resolvedParams.id]);
 
   if (!service) {

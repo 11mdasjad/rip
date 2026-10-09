@@ -286,32 +286,19 @@ export const SERVICES_DATA = [
   },
   {
     num: "03",
-    id: "social-media-management",
-    titleEn: "Social Media Management",
+    id: "social-media-digital-marketing",
+    titleEn: "Social Media & Digital Marketing",
     descEn:
-      "Enhance your online presence with tailored strategies and creative content. Creative content planning, posting, branding and audience engagement across every platform.",
+      "Full-funnel digital presence merging high-cadence reels, creative content strategy, and viral branding with targeted Meta & Google Ads, SEO, and lead conversion.",
     deliverablesEn: [
-      "Content Calendar & Strategy",
-      "High-Engagement Reels, Shorts & Videos",
-      "Brand Identity & Visual Guidelines",
-      "Community Engagement & Response Management"
+      "Content Calendar & High-Engagement Reels",
+      "Meta Ads & Google Ads Management",
+      "Brand Identity & Visual Narrative Guidelines",
+      "SEO, Targeted Lead Funnels & Community Growth"
     ]
   },
   {
     num: "04",
-    id: "digital-marketing",
-    titleEn: "Digital Marketing",
-    descEn:
-      "Performance marketing, paid advertising, SEO and lead generation focused on measurable growth. Reach your exact target audience with data-driven creative campaigns.",
-    deliverablesEn: [
-      "Meta Ads & Google Ads Management",
-      "Targeted Lead Generation Campaigns",
-      "Search Engine Optimization (SEO)",
-      "Analytics Reporting & Conversion Funnels"
-    ]
-  },
-  {
-    num: "05",
     id: "election-campaigns",
     titleEn: "Election Campaign Services",
     descEn:
@@ -324,7 +311,7 @@ export const SERVICES_DATA = [
     ]
   },
   {
-    num: "06",
+    num: "05",
     id: "photography-events",
     titleEn: "Photography & Event Coverage",
     descEn:
@@ -337,7 +324,7 @@ export const SERVICES_DATA = [
     ]
   },
   {
-    num: "07",
+    num: "06",
     id: "website-development",
     titleEn: "Website Development",
     descEn:

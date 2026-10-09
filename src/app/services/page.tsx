@@ -36,10 +36,10 @@ function getServiceIcon(id: string) {
       return <Film className="w-5 h-5 text-[#a89bfa]" />;
     case "documentary-films":
       return <Video className="w-5 h-5 text-[#a89bfa]" />;
+    case "social-media-digital-marketing":
     case "social-media-management":
-      return <Share2 className="w-5 h-5 text-[#a89bfa]" />;
     case "digital-marketing":
-      return <TrendingUp className="w-5 h-5 text-[#a89bfa]" />;
+      return <Share2 className="w-5 h-5 text-[#a89bfa]" />;
     case "election-campaign-services":
       return <Megaphone className="w-5 h-5 text-[#a89bfa]" />;
     case "photography-events":

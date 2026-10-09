@@ -189,13 +189,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/services/social-media-management" className="hover:text-white transition-colors block py-0.5 group">
-                  <span className="group-hover:translate-x-1 transition-transform inline-block">Social Media Management</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/digital-marketing" className="hover:text-white transition-colors block py-0.5 group">
-                  <span className="group-hover:translate-x-1 transition-transform inline-block">Digital Marketing</span>
+                <Link href="/services/social-media-digital-marketing" className="hover:text-white transition-colors block py-0.5 group">
+                  <span className="group-hover:translate-x-1 transition-transform inline-block">Social Media &amp; Digital Marketing</span>
                 </Link>
               </li>
               <li>

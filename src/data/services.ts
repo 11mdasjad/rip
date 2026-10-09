@@ -91,42 +91,44 @@ export const SERVICES_DATA: ServiceItem[] = [
     aspect: "16/9"
   },
   {
-    id: "social-media-management",
+    id: "social-media-digital-marketing",
     number: "03",
-    title: "Social Media Management",
-    tagline: "Architecting cultural relevance and algorithmic momentum across digital spaces.",
+    title: "Social Media & Digital Marketing",
+    tagline: "Unifying high-cadence viral content with data-anchored performance marketing.",
     description:
-      "Creative content planning, high-cadence viral reels, political campaign shorts, brand narratives, and audience nurturing across Instagram, YouTube, and Meta channels.",
+      "Full-funnel social media engines and performance marketing. From high-cadence reels, creative content calendars, and brand positioning to targeted Meta & Google Ads, SEO, and conversion funnels.",
     fullOverview:
-      "In modern media, attention is won in the first 2 seconds. RFP Digital's social media arm merges high-production cinema assets with rapid-fire digital native formatting. We build episodic short-form content engines, handle community engagement, and monitor real-time sentiment to ensure your message dominates voter and consumer timelines.",
+      "In the modern digital ecosystem, creative content and precision distribution must work as one synchronized machine. RFP Digital merges high-production cinema assets with rapid-fire social formatting and algorithmic ad placement. We build episodic short-form content engines, manage viral community engagement, and deploy granular demographic and geo-targeted ads across Meta and Google to convert passive scrollers into passionate supporters and loyal clients.",
     deliverables: [
       "High-Cadence Reels & YouTube Shorts Production",
+      "Precision Meta & Google Paid Ad Campaigns",
       "Platform Narrative Strategy & Content Calendars",
-      "Motion Graphics, Typographic Hooks & Thumbnails",
-      "Social Listening & Rapid Response Comment Management"
+      "Geo-Fenced Demographic & Voter Pin-Code Targeting",
+      "Technical SEO & Content Discoverability",
+      "Community Engagement & WhatsApp Automation"
     ],
     features: [
-      "Same-day edit and turnaround for breaking rallies and events",
-      "Data-backed algorithmic hook testing and thumbnail optimization",
-      "Celebrity and stakeholder influencer collaboration coverage",
-      "Cross-channel syndication (Instagram, YouTube, Facebook, X, LinkedIn)"
+      "Unified creative content production and paid ad management under one roof",
+      "Same-day edit turnaround for breaking events, roadshows, and rallies",
+      "Continuous multivariate creative A/B testing with live spending dashboards",
+      "Cross-channel syndication across Instagram, YouTube, Facebook, X, and LinkedIn"
     ],
     techStack: [
       "Apple Silicon Final Cut & Premiere Pro Suite",
       "After Effects Motion Graphic Templates",
-      "Sprout Social & Meta Business Suite",
-      "Real-Time Social Listening & Sentiment Tracking"
+      "Google Ads & Meta Ads Manager Suite",
+      "Google Analytics 4 & Real-Time Dashboards"
     ],
     stats: [
-      { label: "Monthly Impressions", value: "15M+" },
-      { label: "Shorts & Reels Made", value: "4,500+" },
-      { label: "Engagement Rate", value: "4.8x Avg" }
+      { label: "Monthly Impressions", value: "25M+" },
+      { label: "Shorts & Reels Made", value: "5,000+" },
+      { label: "Ad Spends Managed", value: "₹2Cr+" }
     ],
     workflow: [
-      { step: "01", title: "Audience Profiling", desc: "Identifying core demographic triggers and platform consumption patterns." },
-      { step: "02", title: "Content Engine", desc: "Daily shooting, editing, and motion hook optimization." },
-      { step: "03", title: "Strategic Scheduling", desc: "Peak-traffic deployment with metadata and algorithmic tagging." },
-      { step: "04", title: "Momentum Analytics", desc: "Daily metrics review to refine subsequent content batches." }
+      { step: "01", title: "Audience & Market Profiling", desc: "Mapping demographic triggers, search trends, and platform consumption patterns." },
+      { step: "02", title: "Creative Production Engine", desc: "Daily shooting, editing, motion typography, and thumbnail hook creation." },
+      { step: "03", title: "Targeted Distribution & Ads", desc: "Peak-traffic deployment paired with micro-targeted paid campaigns." },
+      { step: "04", title: "Real-Time Optimization", desc: "Continuous conversion tracking and daily creative iteration for peak ROI." }
     ],
     image: "/medien/landing/social-media-management-banner.jpg",
     videoThumbnail: "/medien/landing/social-media-management-banner.jpg",
@@ -135,52 +137,8 @@ export const SERVICES_DATA: ServiceItem[] = [
     aspect: "16/9"
   },
   {
-    id: "digital-marketing",
-    number: "04",
-    title: "Digital Marketing",
-    tagline: "Deploying data-anchored media distribution to maximize reach and conversion.",
-    description:
-      "Performance marketing, Google & Meta Ads, targeted lead generation funnels, search engine optimization, and voter outreach designed for measurable ROI.",
-    fullOverview:
-      "Great media deserves great distribution. Our digital marketing team ensures your high-production films and campaigns don't just exist—they reach precisely who they need to influence. With granular demographic targeting, geo-fenced constituency outreach, and robust conversion funnels, we turn passive viewers into active supporters and loyal clients.",
-    deliverables: [
-      "Precision Meta & Google Paid Ad Campaigns",
-      "Geo-Fenced Constituency & Voter Pin-Code Targeting",
-      "Technical SEO & Content Discoverability",
-      "Conversion Funnels & WhatsApp Broadcast Automation"
-    ],
-    features: [
-      "Micro-targeted campaigns by assembly constituency, age, and interest",
-      "Continuous A/B creative testing with multiple headlines and thumbnails",
-      "Transparent live analytics dashboards with daily spending breakdowns",
-      "Integration with CRM, lead forms, and instant call back systems"
-    ],
-    techStack: [
-      "Google Ads & Meta Ads Manager",
-      "Google Analytics 4 & Tag Manager",
-      "SEMrush & Ahrefs SEO Engines",
-      "WhatsApp Business API Gateways"
-    ],
-    stats: [
-      { label: "Ad Spends Managed", value: "₹2Cr+" },
-      { label: "Cost Per Lead", value: "-38% Avg" },
-      { label: "Voter Reach", value: "5M+ Verified" }
-    ],
-    workflow: [
-      { step: "01", title: "Funnel Blueprint", desc: "Mapping user journeys from discovery to conversion." },
-      { step: "02", title: "Creative Deployment", desc: "Setting up multi-angle ad sets with tailored visual creatives." },
-      { step: "03", title: "Algorithmic Bidding", desc: "Real-time bid adjustments for lowest CPA and highest quality traffic." },
-      { step: "04", title: "Attribution & Scale", desc: "Doubling down on winning segments with weekly executive reports." }
-    ],
-    image: "/medien/landing/digital-marketing-growth-banner.jpg",
-    videoThumbnail: "/medien/landing/digital-marketing-growth-banner.jpg",
-    videoUrl: "https://www.youtube.com/embed/Cgvx6w13ZNg?autoplay=1",
-    youtubeUrl: "https://youtu.be/Cgvx6w13ZNg",
-    aspect: "16/9"
-  },
-  {
     id: "election-campaign-services",
-    number: "05",
+    number: "04",
     title: "Election Campaign Services",
     tagline: "Turn key Election Campaign Execution & Ground-to-Cloud Political Architecture.",
     description:
@@ -226,7 +184,7 @@ export const SERVICES_DATA: ServiceItem[] = [
   },
   {
     id: "photography-events",
-    number: "06",
+    number: "05",
     title: "Photography & Event Coverage",
     tagline: "Preserving decisive moments with artistic high-resolution cinema craft.",
     description:
@@ -270,7 +228,7 @@ export const SERVICES_DATA: ServiceItem[] = [
   },
   {
     id: "website-development",
-    number: "07",
+    number: "06",
     title: "Website Development & Digital Platforms",
     tagline: "High-speed, cinematic, mobile-first web platforms and campaign portals built for conversion and scale.",
     description:
