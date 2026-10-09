@@ -37,39 +37,39 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           : "bg-[#0a090e]/75 backdrop-blur-md border-b border-white/[0.06] py-5 sm:py-6"
       }`}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between">
+      <div className="max-w-[1600px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 flex items-center justify-between gap-2.5 xl:gap-5">
         {/* Enlarged Official Brand Logo */}
         <Link
           href="/"
-          className="relative flex items-center space-x-3.5 transition-transform hover:opacity-95 active:scale-98 group shrink-0"
+          className="relative flex items-center space-x-2.5 sm:space-x-3 transition-transform hover:opacity-95 active:scale-98 group shrink-0"
           aria-label="RFP Digital Productions – Home"
         >
           <img
             src="/medien/logo/rfp-emblem.png"
             alt="RFP Emblem"
-            className="h-14 sm:h-16 md:h-17 w-auto object-contain filter drop-shadow-[0_2px_18px_rgba(212,175,55,0.55)] transition-transform duration-300 group-hover:scale-105"
+            className="h-11 sm:h-12 md:h-13 xl:h-14 w-auto object-contain filter drop-shadow-[0_2px_18px_rgba(212,175,55,0.55)] transition-transform duration-300 group-hover:scale-105"
           />
           <div className="flex flex-col justify-center">
-            <div className="flex items-center gap-2 leading-none">
-              <span className="font-extrabold text-xl sm:text-2xl md:text-[26px] tracking-[0.16em] text-white font-mono">
+            <div className="flex items-center gap-1.5 sm:gap-2 leading-none">
+              <span className="font-extrabold text-lg sm:text-xl md:text-2xl tracking-[0.16em] text-white font-mono">
                 RFP
               </span>
-              <span className="text-[10px] sm:text-[11px] font-sans font-bold px-2.5 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#F3E5AB] border border-[#D4AF37]/45 tracking-wider uppercase shadow-sm">
+              <span className="text-[9px] sm:text-[10px] md:text-[11px] font-sans font-bold px-2 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#F3E5AB] border border-[#D4AF37]/45 tracking-wider uppercase shadow-sm whitespace-nowrap">
                 MEDIA &amp; FILMS
               </span>
             </div>
-            <span className="text-[10px] sm:text-[11px] md:text-[12px] tracking-[0.28em] text-[#D4AF37] font-mono uppercase font-bold mt-1.5">
+            <span className="text-[9.5px] sm:text-[10.5px] md:text-[11.5px] tracking-[0.25em] text-[#D4AF37] font-mono uppercase font-bold mt-1">
               Digital Productions
             </span>
           </div>
         </Link>
 
         {/* Desktop Navigation - Exact Requested Row Order: About, Project, Gallery, Services, Team, Testimonial, FAQ, Contact */}
-        <nav className="hidden lg:flex items-center space-x-1 xl:space-x-1.5" aria-label="Main Navigation">
+        <nav className="hidden lg:flex items-center space-x-0.5 xl:space-x-1 2xl:space-x-1.5 shrink-0" aria-label="Main Navigation">
           {/* 1. About */}
           <Link
             href={isHome ? "#zusammenarbeit" : "/#zusammenarbeit"}
-            className="px-3 xl:px-3.5 py-2 text-[14px] xl:text-[15px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold"
+            className="px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
           >
             About
           </Link>
@@ -77,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 2. Project */}
           <Link
             href={isHome ? "#projekte" : "/#projekte"}
-            className="px-3 xl:px-3.5 py-2 text-[14px] xl:text-[15px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold"
+            className="px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
           >
             Project
           </Link>
@@ -85,7 +85,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 3. Gallery */}
           <Link
             href="/gallery"
-            className={`px-3 xl:px-3.5 py-2 text-[14px] xl:text-[15px] rounded-xl transition-all font-semibold flex items-center gap-1.5 ${
+            className={`px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] rounded-xl transition-all font-semibold flex items-center gap-1 whitespace-nowrap ${
               isGallery
                 ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
                 : "text-white/85 hover:text-white hover:bg-white/[0.08]"
@@ -98,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 4. Services */}
           <Link
             href="/services"
-            className={`px-3 xl:px-3.5 py-2 text-[14px] xl:text-[15px] rounded-xl transition-all font-semibold ${
+            className={`px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] rounded-xl transition-all font-semibold whitespace-nowrap ${
               isServices
                 ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
                 : "text-white/85 hover:text-white hover:bg-white/[0.08]"
@@ -110,7 +110,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 5. Team */}
           <Link
             href="/team"
-            className={`px-3 xl:px-3.5 py-2 text-[14px] xl:text-[15px] rounded-xl transition-all font-semibold ${
+            className={`px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] rounded-xl transition-all font-semibold whitespace-nowrap ${
               isTeam
                 ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
                 : "text-white/85 hover:text-white hover:bg-white/[0.08]"
@@ -122,7 +122,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 6. Testimonial */}
           <Link
             href="/testimonials"
-            className={`px-3 xl:px-3.5 py-2 text-[14px] xl:text-[15px] rounded-xl transition-all font-semibold ${
+            className={`px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] rounded-xl transition-all font-semibold whitespace-nowrap ${
               isTestimonials
                 ? "text-white bg-white/[0.12] border border-[#a89bfa]/50 shadow-[0_0_20px_rgba(168,155,250,0.25)]"
                 : "text-white/85 hover:text-white hover:bg-white/[0.08]"
@@ -134,7 +134,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 7. FAQ */}
           <Link
             href={isHome ? "#faq" : "/#faq"}
-            className="px-3 xl:px-3.5 py-2 text-[14px] xl:text-[15px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold"
+            className="px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
           >
             FAQ
           </Link>
@@ -142,7 +142,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 8. Contact */}
           <Link
             href={isHome ? "#kontakt" : "/#kontakt"}
-            className="px-3 xl:px-3.5 py-2 text-[14px] xl:text-[15px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold"
+            className="px-2 xl:px-2.5 2xl:px-3 py-1.5 text-[12.5px] xl:text-[13.5px] 2xl:text-[14.5px] text-white/85 hover:text-white rounded-xl hover:bg-white/[0.08] transition-all font-semibold whitespace-nowrap"
           >
             Contact
           </Link>
@@ -150,7 +150,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           {/* 9. Election Campaign - Golden Highlighted Heading Link next to Contact */}
           <Link
             href="/ec"
-            className={`px-3 xl:px-3.5 py-1.5 text-[13px] xl:text-[14px] whitespace-nowrap rounded-xl transition-all font-bold tracking-wide flex items-center gap-1.5 ${
+            className={`px-2.5 xl:px-3 py-1.5 text-[12px] xl:text-[13px] 2xl:text-[13.5px] whitespace-nowrap rounded-xl transition-all font-bold tracking-normal flex items-center gap-1.5 shrink-0 ${
               isEc
                 ? "text-[#F3E5AB] bg-[#D4AF37]/25 border border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.45)]"
                 : "text-[#E6C665] hover:text-[#FFF8DC] bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 border border-[#D4AF37]/40 hover:border-[#D4AF37]/80 shadow-sm"
@@ -160,8 +160,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
           </Link>
         </nav>
 
-        {/* Right Actions - Magnified Button */}
-        <div className="flex items-center space-x-3 shrink-0">
+        {/* Right Actions - Balanced Sleek Button with Guaranteed Margin */}
+        <div className="flex items-center space-x-2.5 xl:space-x-3 shrink-0 pl-1 xl:pl-3">
           <Link
             href={isHome ? "#kontakt" : "/#kontakt"}
             onClick={(e) => {
@@ -170,10 +170,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenContact }) => {
                 onOpenContact();
               }
             }}
-            className="group hidden sm:inline-flex items-center space-x-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white hover:bg-[#f4f2f7] text-[#0e0d12] text-sm sm:text-[15px] font-bold tracking-wide shadow-xl hover:shadow-[#7c6af2]/30 transition-all duration-200 active:scale-95"
+            className="group hidden sm:inline-flex items-center space-x-1.5 xl:space-x-2 px-4 xl:px-5 2xl:px-6 py-2 xl:py-2.5 rounded-full bg-white hover:bg-[#f4f2f7] text-[#0e0d12] text-xs xl:text-sm font-bold tracking-wide shadow-xl hover:shadow-[#7c6af2]/30 transition-all duration-200 active:scale-95 whitespace-nowrap"
           >
             <span>Discuss Project</span>
-            <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="w-3.5 h-3.5 xl:w-4 xl:h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
 
           <button
